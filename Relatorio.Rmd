@@ -1,0 +1,88 @@
+---
+title: ''
+subtitle: ''
+author: ''
+date: ''
+output:
+  pdf_document:
+    latex_engine: xelatex
+    number_sections: yes
+highlight: tango
+fig_caption: yes
+keep_tex: yes
+includes:
+  in_header: Estilo.sty
+classoption: a4paper
+editor_options: 
+  markdown: 
+    wrap: 72
+header-includes:
+  - \usepackage{indentfirst}
+  - \setlength{\parindent}{24pt}
+  - \usepackage[brazil]{babel}
+---
+
+
+\begin{titlepage}
+\begin{center}
+{\Large Departamento de Estatística} \\
+\vspace{0.5cm}
+\begin{figure}[!t]
+    \centering
+    \includegraphics[width=9cm, keepaspectratio]{unb_logo.jpg}
+\end{figure}
+\vskip 10em
+{\LARGE \textbf{Título}} \\
+\vskip 20em
+{\Large Profa. Joanlise} \\
+\vskip 1em
+{\Large Alunos: Nathália Lobo - 211061082} \\
+\vskip 1em
+{\Large Hugo - } \\
+\vskip 1em
+{\Large Hélio - } \\
+\vskip 1em
+{\Large Francisco - } \\
+\vskip 1em
+{\Large Trabalho Prático de Laboratório em Estatística 2} \\
+\vskip 1em
+\end{center}
+\vspace{5cm}
+\begin{center}
+{\bf{Brasília} \\ }
+\bf{2025}
+\end{center}
+\end{titlepage}
+
+```{r setup, include=F}
+# pacotes
+if (!require("pacman")) install.packages("pacman")
+pacman::p_load(tidyverse, RBE3, evd, moments, sidrar, sf, geobr,
+               knitr, kableExtra)
+
+#knitr::opts_chunk$set(echo = T) default
+options(scipen=999)
+#options(tinytex.verbose = TRUE)
+
+# bancos
+library(readxl)
+escolas_adesao <- read_excel("DadosAtividadesePop/Saúde na Escola/Escolas com Adesão - Denominador/escolas_adesao_2023_2024.xlsx", 
+    skip = 4)
+
+```
+
+\newpage
+
+\setcounter{tocdepth}{2}
+\renewcommand{\contentsname}{Sumário}
+\tableofcontents
+
+\newpage
+\thispagestyle{plain}
+\mbox{}
+
+\section{Introdução}
+
+
+
+
