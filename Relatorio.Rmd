@@ -38,7 +38,7 @@ header-includes:
 \vskip 1em
 {\Large Alunos: Nathália Lobo - 211061082} \\
 \vskip 1em
-{\Large Hugo - } \\
+{\Large Hugo Saigg - 202017924 } \\
 \vskip 1em
 {\Large Hélio - } \\
 \vskip 1em
