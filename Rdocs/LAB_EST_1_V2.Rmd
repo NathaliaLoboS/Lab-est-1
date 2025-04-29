@@ -35,11 +35,12 @@ escolas_adesao_2023_2024 <- read_excel("DadosAtividadesePop/Saúde na Escola/Esc
 ```{r pressure, echo=FALSE}
 prom_saude_2023 <- prom_saude_2023 %>%
   rename('IBGE' = 'Ibge',
-        'Praticas_atividades_corporais' = 'Práticas.corporais...atividade',
+        'Praticas_atividades_corporais' = 'Práticas.corporais./.atividade',
         'Verific_sit_vacina' = 'Verificação.da.situação.vacina')
 
 pop_cad_2023 <- pop_cad_2023%>%
-  rename('POP_CADASTRADA_IBGE' = 'Qt..Total.de.cadastros...limitado.pela.população.IBGE.')
+  rename('POP_CADASTRADA_IBGE' = `Qt. Total de cadastros 
+(limitado pela população IBGE)`)
 
 pse_2023 <- pse_2023 %>%
   rename('IBGE' = 'Ibge')
@@ -62,7 +63,7 @@ base_temas_saude_2023 <- merge(pop_cad_2023, temas_saude_2023, by = "IBGE")
 
 base_temas_saude_2023 <- base_temas_saude_2023 %>%
   select('Região', 'UF', 'IBGE', 'Município', 'População', 'POP_CADASTRADA_IBGE', 
-         'Cobertura.APS', 'Saude_bucal', 'Aliment_saudav',
+         `Cobertura APS`, 'Saude_bucal', 'Aliment_saudav',
 'Saude_reprodut', 'Saúde.mental', 'auto_cuid_doenc_cronic')
 
 base_temas_saude_2023 <- base_temas_saude_2023 %>%
@@ -71,7 +72,7 @@ base_temas_saude_2023 <- base_temas_saude_2023 %>%
       IBGE,
       População,
       POP_CADASTRADA_IBGE,
-      Cobertura.APS,
+      `Cobertura APS`,
       Saude_bucal,
       Aliment_saudav,
       Saude_reprodut,
@@ -86,7 +87,7 @@ base_temas_saude_2023 <- base_temas_saude_2023 %>%
 base_pratic_saude_2023 <- merge(pop_cad_2023, prom_saude_2023, by = "IBGE")
 base_pratic_saude_2023 <- base_pratic_saude_2023 %>%
   select('Região', 'UF', 'IBGE', 'Município', 'População', 'POP_CADASTRADA_IBGE', 
-         'Cobertura.APS', 'Antropometria', 'Praticas_atividades_corporais',
+         'Cobertura APS', 'Antropometria', 'Praticas_atividades_corporais',
          'Verific_sit_vacina')
 
 base_pratic_saude_2023 <- base_pratic_saude_2023 %>%
@@ -94,7 +95,7 @@ base_pratic_saude_2023 <- base_pratic_saude_2023 %>%
     c(IBGE,
       População,
       POP_CADASTRADA_IBGE,
-      Cobertura.APS,
+      `Cobertura APS`,
       Antropometria, 
       Praticas_atividades_corporais,
       Verific_sit_vacina),
@@ -121,6 +122,7 @@ group_esc_adesao_2023_2024 <- escolas_adesao_2023_2024%>%
 base_adesão_escolas_pse_2023 <- merge(group_esc_adesao_2023_2024, pse_2023, by = "IBGE")
 
 base_adesão_escolas_pse_2023 <- base_adesão_escolas_pse_2023%>%
+  mutate(Muni)
   select('IBGE', 'MUNICÍPIO', 'UF', 'QTD_escolas', 'Educação', 'Saúde')
 
 base_adesão_escolas_pse_2023 <- base_adesão_escolas_pse_2023 %>%
