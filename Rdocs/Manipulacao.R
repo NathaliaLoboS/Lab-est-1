@@ -26,16 +26,18 @@ IDHM <- ipeadata("IDHM", language = "br") %>%
 search_series("PIB") # series relacionadas
 teste <- print(search_series("PIB"), n=170)
 
-# brasil - 2023
-PIB <- ipeadata("WEO_PIBWEOBRA", language = 'br') %>% 
+# brasil - 2024
+PIB_B <- ipeadata("SCN10_DIPIBG10", language = 'br') %>% 
   filter(date == max(date))
 # municipio - teste 
-PIB_mun <- ipeadata("IMPPIB", language = 'br') %>% 
+PIB_mun <- ipeadata("PIB", language = 'br') %>% 
+  filter(date == max(date))
+# estadual - 2021
+PIB_mun <- ipeadata("PIBPMCE", language = 'br') %>% 
   filter(date == max(date))
 
-
 ## Indice de GINI ----
-teste <- search_series("Gini") # series relacionadas
+search_series("Gini") # series relacionadas
 
 
 # brasil, regiao e municipio - 2023

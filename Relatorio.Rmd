@@ -83,6 +83,16 @@ escolas_adesao <- read_excel("DadosAtividadesePop/Saúde na Escola/Escolas com A
 
 \section{Introdução}
 
+\section{Objetivo}
+
+\section{Referencial Teórico}
+
+\section{Metodologia}
+
+\section{Análise de Resultados}
+
+\section{Referências}
+
 
 
 
