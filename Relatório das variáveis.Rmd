@@ -1,0 +1,715 @@
+---
+title: "RELACAO INDICADORES "
+date: "2025-04-26"
+---
+
+# 1. Introdução
+
+# 2. Objetivo
+
+O presente estudo possui o objetivo de verificar a relação entre os indicadores socioeconômicos com indicadores sínteses de práticas de saúde.
+
+# 3. Referêncial Teórico
+
+## 3.1 Estudos indicadores de práticas de saúde
+
+# 4. Metodologia 
+
+O presente estudo possui uma abordagem de pesquisa quantitativa e em relação a seu objetivo, esta pesquisa possui um perfil exploratório, uma vez que apresentará o resultado a análise quantitativa da relação dos indicadores socioeconômicos com os indicadores síntese de práticas de saúde. 
+
+Os dados socioeconômicos tiveram como periodo de referência o ano de 2023 e foram coletados por meio do pacote “ipeadataR” e importados para o Rstudio. Foram coletadas as seguintes variáveis: 
+
+-   IDHM(Estados, Municípios, Regional e Federal);
+
+-   Pib a preços de mercado (Estados, Municípios, Regional e Federal);
+
+-   Indice de Gini (Estados, Municípios, Regional e Federal);
+
+-   Indice de Vulnerabilidade social (Estados, Municípios, Regional e Federal);
+
+No que diz respeito aos indicadores síntese de práticas de saúde, foram coletados a parir dos dados disponibilizados pela Secretaria de Atenção Primária à Saúde - SAPS/MS em relação ao ano de 2023, conforme descrição abaixo:
+
+|         Grupo:          |                     Variável:                      |
+|:-----------------------:|:--------------------------------------------:|
+|     Temas de saúde      |                    Saúde bucal                     |
+|     Temas de saúde      |                Alimentação saudável                |
+|     Temas de saúde      |             Saúde sexual e reprodutiva             |
+|     Temas de saúde      |                    Saúde mental                    |
+|     Temas de saúde      |    Autocuidado de pessoas com doenças crônicas     |
+|    Práticas de saúde    |                   Antropometria                    |
+|    Práticas de saúde    |        Práticas corporais/atividade física         |
+|    Práticas de saúde    |            Verificação da saúde vacinal            |
+| Prog. saúde nas escolas |                      Educação                      |
+| Prog. saúde nas escolas |                       Saúde                        |
+|      Bolsa Família      | Percentual cobertura de beneficiários acompanhados |
+
+Os indicadores foram construídos com base em proporções relativas a diferentes contextos. No que diz respeito aos indicadores de práticas e temas de saúde, considerou-se a razão entre a quantidade de práticas de saúde em relação a população cadastrada pelo IBGE. No que tange aos indicadores do programa de saúde nas escolas, adotou-se a razão entre a  quantidade de práticas de saúde nas escolas em relação ao quantitativo de estabelecimentos de ensino (programa saúde nas escolas). Por fim, sobre a variável de percentual de cobertura de beneficiários acompanhados pelo Bolsa Família, como o dado já está padronizado em percentual, considerou-se que a avaliação em relação aos indicadores socioeconômicos será direta. 
+
+# 5. Análise de Resultados
+
+## 5.4 **Grupo saúde nas escolas (Análise descritiva por município, UF, Região e BR)**
+
+Os dados evidenciam uma elevada dispersão nos indicadores de saúde e educação no âmbito estadual, regional e nacional. Além da dispersão elevada, destaca-se o descolamento das métricas das medias obtidas por meio das taxas municipais das medianas, o que compromete a utilização da hipótese de normalidade do comportamento de ambos os indicadores.
+
+```         
+Em relação as métricas utilizadas, a variável “indicador” é representada pelo somatório das práticas de saúde e educação dividida pelo total de escolas da UF e/ou Região. Em relação a “taxa média”, ela é obtida por meio das taxas de práticas de saúde e educação dos municípios dividido pela quantidade de municípios por UF e Região. 
+```
+
+### Ajustes Banco de dados 
+
+##### Importação de pacotes
+
+```{r setup, include=FALSE}
+library(openxlsx) 
+library(xlsx)
+library(tidyverse)
+library(ggplot2)
+library(sf)
+library(readxl)
+library(geobr)
+library(scales)
+library(knitr)
+library(officer)
+library(rtf)
+options(scipen = 99999)
+options(knitr.duplicate.label = "allow")
+```
+
+##### Importação de arquivos
+
+```{r, echo=FALSE}
+pop_cad_2023 <- read_excel('DadosAtividadesePop/grupos 1 e 2 População Cadastrada/pop_cadastrada_2023.xls')
+
+pse_2023 <- read.xlsx('DadosAtividadesePop/Saúde na Escola/Produção do PSE/producao_pse_2023.xlsx', sheetName = 'Dados' ,startRow = 10)
+
+prom_saude_2023 <- read.xlsx('DadosAtividadesePop/grupo 2 Práticas para a Saúde/praticas2023.xlsx', sheetName = 'Dados',startRow = 10)
+
+temas_saude_2023 <- read.xlsx('DadosAtividadesePop/grupo 1 Temas para a Saúde/temas2023.xlsx', sheetName = 'Dados',startRow = 10)
+
+escolas_adesao_2023_2024 <- read_excel("DadosAtividadesePop/Saúde na Escola/Escolas com Adesão - Denominador/escolas_adesao_2023_2024.xlsx",skip = 5)
+
+```
+
+##### Padronização nomes colunas
+
+```{r , echo=FALSE}
+prom_saude_2023 <- prom_saude_2023 %>%
+  rename('IBGE' = 'Ibge',
+        'Praticas_atividades_corporais' = 'Práticas.corporais...atividade',
+        'Verific_sit_vacina' = 'Verificação.da.situação.vacina')
+
+pop_cad_2023 <- pop_cad_2023%>%
+  rename('POP_CADASTRADA_IBGE' = `Qt. Total de cadastros 
+(limitado pela população IBGE)`)
+
+pop_cad_2023 <- pop_cad_2023 %>%
+  filter(POP_CADASTRADA_IBGE > 0)
+
+pse_2023 <- pse_2023 %>%
+  rename('IBGE' = 'Ibge')
+
+temas_saude_2023 <- temas_saude_2023 %>%
+  rename('IBGE' = 'Ibge',
+         'auto_cuid_doenc_cronic' = 'Autocuidado.de.pessoas.com.doe',
+         'Saude_reprodut' = 'Saúde.sexual.e.reprodutiva',
+         'Saude_bucal' = 'Saúde.bucal',
+         'Aliment_saudav' = 'Alimentação.saudável')
+```
+
+##### Tratamento dados - Temas de saúde
+
+```{r , echo=FALSE}
+temas_saude_2023 <- temas_saude_2023%>%
+  rename('UF_SIGLA' = 'Uf')%>%
+  mutate(Municipio_UF = str_c(Municipio, UF_SIGLA, sep = " - ")) %>%
+  select('IBGE', 'UF_SIGLA', 'Municipio_UF', 'Saude_bucal', 'Aliment_saudav',
+         'Saude_reprodut', 'Saúde.mental', 
+         'auto_cuid_doenc_cronic')
+
+base_temas_saude_2023 <- merge(pop_cad_2023, temas_saude_2023, by = "IBGE")
+```
+
+```{r}
+#base_temas_saude_2023 <- base_temas_saude_2023 %>%
+#  select('Região', 'UF', 'UF_SIGLA', 'IBGE', 'Município', 'Municipio_UF', #'População', 'POP_CADASTRADA_IBGE', 'Cobertura.APS', 'Saude_bucal', 'Aliment_saudav', 'Saude_reprodut', 'Saúde.mental', 'auto_cuid_doenc_cronic')
+
+base_temas_saude_2023 <- base_temas_saude_2023 %>%
+  mutate(across(
+    c(
+      IBGE,
+      População,
+      POP_CADASTRADA_IBGE,
+      `Cobertura APS`,
+      Saude_bucal,
+      Aliment_saudav,
+      Saude_reprodut,
+      Saúde.mental,
+      auto_cuid_doenc_cronic
+      ),
+    as.numeric
+  ))
+```
+
+##### Tratamento dados - Práticas de promoção a saúde
+
+```{r , echo=FALSE}
+base_pratic_saude_2023 <- merge(pop_cad_2023, prom_saude_2023, by = "IBGE")
+
+base_pratic_saude_2023 <- base_pratic_saude_2023 %>%
+    mutate(UF_SIGLA = case_when(
+    UF == 'ACRE' ~ "AC",
+    UF == 'ALAGOAS' ~ "AL",
+    UF == 'AMAPA' ~ "AP",
+    UF == 'AMAZONAS' ~ "AM",
+    UF == 'BAHIA' ~ "BA",
+    UF == 'CEARA' ~ "CE",
+    UF == 'DISTRITO FEDERAL' ~ "DF",
+    UF == 'ESPIRITO SANTO' ~ "ES",
+    UF == 'GOIAS' ~ "GO",
+    UF == 'MARANHAO' ~ "MA",
+    UF == 'MATO GROSSO' ~ "MT",
+    UF == 'MATO GROSSO DO SUL' ~ "MS",
+    UF == 'MINAS GERAIS' ~ "MG",
+    UF == 'PARA' ~ "PA",
+    UF == 'PARAIBA' ~ "PB",
+    UF == 'PARANA' ~ "PR",
+    UF == 'PERNAMBUCO' ~ "PE",
+    UF == 'PIAUI' ~ "PI",
+    UF == 'RIO DE JANEIRO' ~ "RJ",
+    UF == 'RIO GRANDE DO NORTE' ~ "RN",
+    UF == 'RIO GRANDE DO SUL' ~ "RS",
+    UF == 'RONDONIA' ~ "RO",
+    UF == 'RORAIMA' ~ "RR",
+    UF == 'SANTA CATARINA' ~ "SC",
+    UF == 'SAO PAULO' ~ "SP",
+    UF == 'SERGIPE' ~ "SE",
+    UF == 'TOCANTINS' ~ "TO",
+    TRUE ~ NA_character_
+  ))
+
+base_pratic_saude_2023 <- base_pratic_saude_2023 %>%
+  mutate(Municipio_UF = str_c(Município, UF_SIGLA, sep = " - ")) %>%
+  select('Região', 'UF', 'UF_SIGLA', 'IBGE', 'Município', 'Municipio_UF', 'População', 'POP_CADASTRADA_IBGE', 'Cobertura APS', 'Antropometria', 
+         'Praticas_atividades_corporais',
+         'Verific_sit_vacina')
+
+base_pratic_saude_2023 <- base_pratic_saude_2023 %>%
+  mutate(across(
+    c(IBGE,
+      População,
+      POP_CADASTRADA_IBGE,
+      `Cobertura APS`,
+      Antropometria, 
+      Praticas_atividades_corporais,
+      Verific_sit_vacina),
+    as.numeric
+  ))
+```
+
+##### Tratamento dados - Adesão Escolas
+
+```{r , echo=FALSE}
+esc_ades_23_2024_pse_23 <- anti_join(pse_2023, escolas_adesao_2023_2024, by = "IBGE")
+pse_23_esc_ades_23_2024 <- anti_join(escolas_adesao_2023_2024, pse_2023, by = "IBGE")
+municipios_ausentes_pop_pse <- anti_join(pse_2023, pop_cad_2023, by = "IBGE")
+municipios_ausentes_pse_pop <- anti_join(pop_cad_2023, pse_2023, by = "IBGE")
+
+group_esc_adesao_2023_2024 <- escolas_adesao_2023_2024%>%
+  mutate(Municipio_UF = str_c(MUNICÍPIO, UF, sep = " - ")) %>%
+  select('UF',	'MUNICÍPIO', 'Municipio_UF', 'IBGE', 'CICLO', 'TIPO DE LOCALIZACAÇÃO',	
+  'LOCALIZAÇÃO DIFERENCIADA', 'ESFERA ADMINISTRATIVA', 'NOME DA ESCOLA')
+
+group_esc_adesao_2023_2024 <- escolas_adesao_2023_2024%>%
+  group_by(IBGE, MUNICÍPIO, UF) %>%
+  summarise(QTD_escolas = n()) %>%
+  ungroup()
+
+base_adesão_escolas_pse_2023 <- merge(group_esc_adesao_2023_2024, pse_2023, by = "IBGE")
+
+base_adesão_escolas_pse_2023 <- base_adesão_escolas_pse_2023%>%
+    mutate(Municipio_UF = str_c(MUNICÍPIO, UF, sep = " - ")) %>%
+    select('IBGE', 'MUNICÍPIO', 'Municipio_UF', 'UF', 'QTD_escolas', 'Educação', 'Saúde')
+
+base_adesão_escolas_pse_2023 <- base_adesão_escolas_pse_2023 %>%
+    mutate(Região = case_when(
+    UF == 'AC' ~ "NORTE",
+    UF == 'AL' ~ "NORDESTE",
+    UF == 'AP' ~ "NORTE",
+    UF == 'AM' ~ "NORTE",
+    UF == 'BA' ~ "NORDESTE",
+    UF == 'CE' ~ "NORDESTE",
+    UF == 'DF' ~ "CENTRO-OESTE",
+    UF == 'ES' ~ "SUDESTE",
+    UF == 'GO' ~ "CENTRO-OESTE",
+    UF == 'MA' ~ "NORDESTE",
+    UF == 'MT' ~ "CENTRO-OESTE",
+    UF == 'MS' ~ "CENTRO-OESTE",
+    UF == 'MG' ~ "SUDESTE",
+    UF == 'PA' ~ "NORTE",
+    UF == 'PB' ~ "NORDESTE",
+    UF == 'PR' ~ "SUL",
+    UF == 'PE' ~ "NORDESTE",
+    UF == 'PI' ~ "NORDESTE",
+    UF == 'RJ' ~ "SUDESTE",
+    UF == 'RN' ~ "NORDESTE",
+    UF == 'RS' ~ "SUL",
+    UF == 'RO' ~ "NORTE",
+    UF == 'RR' ~ "NORTE",
+    UF == 'SC' ~ "SUL",
+    UF == 'SP' ~ "SUDESTE",
+    UF == 'SE' ~ "NORDESTE",
+    UF == 'TO' ~ "NORTE",
+    TRUE ~ NA_character_
+  ))
+
+
+base_adesão_escolas_pse_2023 <- base_adesão_escolas_pse_2023 %>%
+  mutate(across(
+    c(IBGE,
+      Educação,
+      Saúde),
+    as.numeric
+  ))
+
+```
+
+##### Apuração Indicadores - Temas Saúde
+
+```{r , echo=FALSE}
+ind_temas_saude <- base_temas_saude_2023 %>%
+  mutate(
+    ind_saude_bucal = if_else(POP_CADASTRADA_IBGE == 0, NA_real_, (Saude_bucal / POP_CADASTRADA_IBGE) * 100000),
+    ind_Aliment_saudav = if_else(POP_CADASTRADA_IBGE == 0, NA_real_, (Aliment_saudav / POP_CADASTRADA_IBGE) * 100000),
+    ind_Saude_reprodut = if_else(POP_CADASTRADA_IBGE == 0, NA_real_, (Saude_reprodut / POP_CADASTRADA_IBGE) * 100000),
+    ind_Saude_mental = if_else(POP_CADASTRADA_IBGE == 0, NA_real_, (Saúde.mental / POP_CADASTRADA_IBGE) * 100000),
+    ind_auto_cuid_doenc_cronic = if_else(POP_CADASTRADA_IBGE == 0, NA_real_, (auto_cuid_doenc_cronic / POP_CADASTRADA_IBGE) * 100000)
+  ) %>%
+  select(UF, IBGE, Município, Região, Municipio_UF,ind_saude_bucal, ind_Aliment_saudav, ind_Saude_reprodut,
+         ind_Saude_mental, ind_auto_cuid_doenc_cronic)
+```
+
+##### Considerando todas as cidades pop = 0 - Apuração Indicadores
+
+```{r, eval=FALSE}
+ind_temas_saude <- base_temas_saude_2023 %>%
+  mutate(ind_saude_bucal = ((Saude_bucal / POP_CADASTRADA_IBGE) * 100000),
+         ind_Aliment_saudav = ((Aliment_saudav / POP_CADASTRADA_IBGE) * 100000),
+         ind_Saude_reprodut = ((Saude_reprodut / POP_CADASTRADA_IBGE) * 100000),
+         ind_Saude_mental = ((Saúde.mental / POP_CADASTRADA_IBGE) * 100000),
+         ind_auto_cuid_doenc_cronic = ((auto_cuid_doenc_cronic  / POP_CADASTRADA_IBGE) * 100000)
+  ) %>%
+  select(UF, IBGE, Município, Municipio_UF, Região, ind_saude_bucal, ind_Aliment_saudav, ind_Saude_reprodut, ind_Saude_mental, ind_auto_cuid_doenc_cronic)
+```
+
+##### Apuração Indicadores - Práticas de Saúde
+
+```{r , echo=FALSE}
+ind_praticas_saude <- base_pratic_saude_2023 %>%
+  mutate(ind_Antropometria = ((Antropometria / POP_CADASTRADA_IBGE) * 100000),
+         ind_Praticas_atividades_corporais = ((Praticas_atividades_corporais / POP_CADASTRADA_IBGE) * 100000),
+         ind_Verific_sit_vacina = ((Verific_sit_vacina / POP_CADASTRADA_IBGE) * 100000))%>%
+  select(UF, IBGE, Município, Municipio_UF, Região, ind_Antropometria, ind_Praticas_atividades_corporais, ind_Verific_sit_vacina)
+
+```
+
+##### Apuração Indicadores - Adesão Escolas
+
+```{r , echo=FALSE}
+ind_adesão_escolas <- base_adesão_escolas_pse_2023 %>%
+  mutate(ind_Educação = Educação / QTD_escolas,
+         ind_Saúde = Saúde / QTD_escolas)%>%
+  select(UF, IBGE, MUNICÍPIO, Municipio_UF, Região, ind_Educação, ind_Saúde)
+```
+
+```{r, warning=FALSE, message=FALSE, echo=TRUE, include= FALSE, eval=FALSE}
+UF_temas_saude <- base_temas_saude_2023 %>%
+  group_by(UF_SIGLA) %>%
+  summarise(População_UF_CAD_IBGE = (sum(POP_CADASTRADA_IBGE)),
+            tx_Saude_bucal_UF = ((sum(Saude_bucal) / População_UF_CAD_IBGE)*100000),
+            tx_Aliment_saudav_UF = ((sum(Aliment_saudav)/ População_UF_CAD_IBGE)*100000),
+            tx_Saude_reprodut_UF = ((sum(Saude_reprodut)/ População_UF_CAD_IBGE)*100000),
+            tx_Saude_mental_UF = ((sum(Saúde.mental)/ População_UF_CAD_IBGE)*100000),
+            tx_auto_cuid_doenc_cronic_UF = ((sum(auto_cuid_doenc_cronic) / População_UF_CAD_IBGE)*100000))%>%
+            ungroup()%>%
+   mutate(UF_SIGLA = case_when(
+    UF_SIGLA == 'ACRE' ~ "AC",
+    UF_SIGLA == 'ALAGOAS' ~ "AL",
+    UF_SIGLA == 'AMAPA' ~ "AP",
+    UF_SIGLA == 'AMAZONAS' ~ "AM",
+    UF_SIGLA == 'BAHIA' ~ "BA",
+    UF_SIGLA == 'CEARA' ~ "CE",
+    UF_SIGLA == 'DISTRITO FEDERAL' ~ "DF",
+    UF_SIGLA == 'ESPIRITO SANTO' ~ "ES",
+    UF_SIGLA == 'GOIAS' ~ "GO",
+    UF_SIGLA == 'MARANHAO' ~ "MA",
+    UF_SIGLA == 'MATO GROSSO' ~ "MT",
+    UF_SIGLA == 'MATO GROSSO DO SUL' ~ "MS",
+    UF_SIGLA == 'MINAS GERAIS' ~ "MG",
+    UF_SIGLA == 'PARA' ~ "PA",
+    UF_SIGLA == 'PARAIBA' ~ "PB",
+    UF_SIGLA == 'PARANA' ~ "PR",
+    UF_SIGLA == 'PERNAMBUCO' ~ "PE",
+    UF_SIGLA == 'PIAUI' ~ "PI",
+    UF_SIGLA == 'RIO DE JANEIRO' ~ "RJ",
+    UF_SIGLA == 'RIO GRANDE DO NORTE' ~ "RN",
+    UF_SIGLA == 'RIO GRANDE DO SUL' ~ "RS",
+    UF_SIGLA == 'RONDONIA' ~ "RO",
+    UF_SIGLA == 'RORAIMA' ~ "RR",
+    UF_SIGLA == 'SANTA CATARINA' ~ "SC",
+    UF_SIGLA == 'SAO PAULO' ~ "SP",
+    UF_SIGLA == 'SERGIPE' ~ "SE",
+    UF_SIGLA == 'TOCANTINS' ~ "TO",
+    TRUE ~ NA_character_
+  ))
+
+```
+
+```{r, warning=FALSE, message=FALSE, echo=TRUE, include= FALSE, eval=FALSE}
+UF_pratica_saude <- base_pratic_saude_2023 %>%
+  group_by(UF_SIGLA) %>%
+  summarise(População_UF_CAD_IBGE = (sum(POP_CADASTRADA_IBGE)),
+            tx_Antropometria = ((sum(Antropometria) / População_UF_CAD_IBGE)*100000),
+            tx_Aliment_saudav_UF = ((sum(Praticas_atividades_corporais)/ População_UF_CAD_IBGE)*100000),
+            tx_Verific_sit_vacina_UF = ((sum(Verific_sit_vacina)/ População_UF_CAD_IBGE)*100000))%>%
+            ungroup()
+
+```
+
+```{r, warning=FALSE, message=FALSE, echo=TRUE, include= FALSE, eval=FALSE}
+UF_adesão_escolas <- base_adesão_escolas_pse_2023 %>%
+  group_by(UF) %>%
+  summarise(QTD_escolas_UF = (sum(QTD_escolas)),
+            tx_educação_UF = ((sum(Educação) / QTD_escolas_UF)),
+            tx_Aliment_saudav_UF = ((sum(Saúde) / QTD_escolas_UF)))%>%
+            ungroup()
+
+```
+
+##### Medidas descritivas - Temas de Saúde - UF
+
+```{r, warning=FALSE, message=FALSE, echo=TRUE, include= FALSE}
+
+resumo_indicador <- function(data, var_nome) {
+  var <- data[[var_nome]]
+  
+  tibble(
+    indicador = var_nome,
+    media = mean(var, na.rm = TRUE),
+    mediana = median(var, na.rm = TRUE),
+    desv_pad = sd(var, na.rm = TRUE),
+    min = min(var, na.rm = TRUE),
+    max = max(var, na.rm = TRUE),
+    numero_municipios = sum(!is.na(var))
+  )
+}
+
+variaveis <- c(
+  "ind_saude_bucal",
+  "ind_Aliment_saudav",
+  "ind_Saude_reprodut",
+  "ind_Saude_mental",
+  "ind_auto_cuid_doenc_cronic"
+)
+
+BR_Med_descrit_tema_saude <- map_dfr(variaveis, ~resumo_indicador(ind_temas_saude, .x))
+
+```
+
+```{r, warning=FALSE, message=FALSE, echo=TRUE, include= FALSE}
+
+resumo_indicador <- function(data, var_nome) {
+  var <- data[[var_nome]]
+  
+  tibble(
+    indicador = var_nome,
+    media = mean(var, na.rm = TRUE),
+    mediana = median(var, na.rm = TRUE),
+    desv_pad = sd(var, na.rm = TRUE),
+    min = min(var, na.rm = TRUE),
+    max = max(var, na.rm = TRUE),
+    numero_municipios = sum(!is.na(var))
+  )
+}
+
+variaveis <- c(
+  "ind_Antropometria",
+  "ind_Praticas_atividades_corporais",
+  "ind_Verific_sit_vacina"
+)
+
+BR_Med_descrit_pratic_saude <- map_dfr(variaveis, ~resumo_indicador(ind_praticas_saude, .x))
+
+```
+
+```{r, warning=FALSE, message=FALSE, echo=TRUE, include= FALSE}
+
+resumo_indicador <- function(data, var_nome) {
+  var <- data[[var_nome]]
+  
+  tibble(
+    indicador = var_nome,
+    media = mean(var, na.rm = TRUE),
+    mediana = median(var, na.rm = TRUE),
+    desv_pad = sd(var, na.rm = TRUE),
+    min = min(var, na.rm = TRUE),
+    max = max(var, na.rm = TRUE),
+    numero_municipios = sum(!is.na(var))
+  )
+}
+
+variaveis <- c(
+  "ind_Educação",
+  "ind_Saúde"
+)
+
+BR_Med_descrit_adesão_esc <- map_dfr(variaveis, ~resumo_indicador(ind_adesão_escolas, .x))
+
+```
+
+##### Medidas descritivas - Temas de Saúde - UF
+
+```{r, warning=FALSE, message=FALSE, echo=TRUE, include= FALSE}
+UF_Medidas_descritivas_saude_bucal <- ind_temas_saude%>%
+  group_by(UF) %>%
+  summarise(
+    media = mean(ind_saude_bucal, na.rm = TRUE),
+    mediana = median(ind_saude_bucal, na.rm = TRUE),
+    desvio_padrao = sd(ind_saude_bucal, na.rm = TRUE),
+    minimo = min(ind_saude_bucal, na.rm = TRUE),
+    maximo = max(ind_saude_bucal, na.rm = TRUE),
+    pvalor_shapiro = ifelse(sum(!is.na(ind_saude_bucal)) >= 3,
+      round(tryCatch(shapiro.test(ind_saude_bucal)$p.value, error = function(e) NA), 5),NA),
+    numero_municipios = n()
+  )
+
+```
+
+```{r, warning=FALSE, message=FALSE, echo=TRUE, include= FALSE}
+UF_Medidas_descritivas_Aliment_saudav <- ind_temas_saude%>%
+  group_by(UF) %>%
+  summarise(
+    media = mean(ind_Aliment_saudav, na.rm = TRUE),
+    mediana = median(ind_Aliment_saudav, na.rm = TRUE),
+    desvio_padrao = sd(ind_Aliment_saudav, na.rm = TRUE),
+    minimo = min(ind_Aliment_saudav, na.rm = TRUE),
+    maximo = max(ind_Aliment_saudav, na.rm = TRUE),
+    pvalor_shapiro = ifelse(sum(!is.na(ind_Aliment_saudav)) >= 3,
+      round(tryCatch(shapiro.test(ind_Aliment_saudav)$p.value, error = function(e) NA), 5),NA),
+    numero_municipios = n()
+  )
+
+```
+
+```{r, warning=FALSE, message=FALSE, echo=TRUE, include= FALSE}
+UF_Medidas_descritivas_saude_reprodut <- ind_temas_saude%>%
+  group_by(UF) %>%
+  summarise(
+    media = mean(ind_Saude_reprodut, na.rm = TRUE),
+    mediana = median(ind_Saude_reprodut, na.rm = TRUE),
+    desvio_padrao = sd(ind_Saude_reprodut, na.rm = TRUE),
+    minimo = min(ind_Saude_reprodut, na.rm = TRUE),
+    maximo = max(ind_Saude_reprodut, na.rm = TRUE),
+    pvalor_shapiro = ifelse(sum(!is.na(ind_Saude_reprodut)) >= 3,
+      round(tryCatch(shapiro.test(ind_Saude_reprodut)$p.value, error = function(e) NA), 5),NA),
+    numero_municipios = n()
+  )
+
+```
+
+```{r, warning=FALSE, message=FALSE, echo=TRUE, include= FALSE}
+UF_Medidas_descritivas_Saude_mental <- ind_temas_saude%>%
+  group_by(UF) %>%
+  summarise(
+    media = mean(ind_Saude_mental, na.rm = TRUE),
+    mediana = median(ind_Saude_mental, na.rm = TRUE),
+    desvio_padrao = sd(ind_Saude_mental, na.rm = TRUE),
+    minimo = min(ind_Saude_mental, na.rm = TRUE),
+    maximo = max(ind_Saude_mental, na.rm = TRUE),
+    pvalor_shapiro = ifelse(sum(!is.na(ind_Saude_mental)) >= 3,
+      round(tryCatch(shapiro.test(ind_Saude_mental)$p.value, error = function(e) NA), 5),NA),
+    numero_municipios = n()
+  )
+
+```
+
+```{r, warning=FALSE, message=FALSE, echo=TRUE, include= FALSE}
+UF_Medidas_descritivas_ind_auto_cuid_doenc_cronic <- ind_temas_saude%>%
+  group_by(UF) %>%
+  summarise(
+    media = mean(ind_auto_cuid_doenc_cronic, na.rm = TRUE),
+    mediana = median(ind_auto_cuid_doenc_cronic, na.rm = TRUE),
+    desvio_padrao = sd(ind_auto_cuid_doenc_cronic, na.rm = TRUE),
+    minimo = min(ind_auto_cuid_doenc_cronic, na.rm = TRUE),
+    maximo = max(ind_auto_cuid_doenc_cronic, na.rm = TRUE),
+    pvalor_shapiro = ifelse(sum(!is.na(ind_auto_cuid_doenc_cronic)) >= 3,
+      round(tryCatch(shapiro.test(ind_auto_cuid_doenc_cronic)$p.value, error = function(e) NA), 5),NA),
+    numero_municipios = n()
+  )
+
+```
+
+##### Medidas descritivas - Práticas de saúde - UF
+
+```{r, warning=FALSE, message=FALSE, echo=TRUE, include= FALSE}
+UF_Medidas_descritivas_Antropometria <- ind_praticas_saude%>%
+  group_by(UF) %>%
+  summarise(
+    media = mean(ind_Antropometria, na.rm = TRUE),
+    mediana = median(ind_Antropometria, na.rm = TRUE),
+    desvio_padrao = sd(ind_Antropometria, na.rm = TRUE),
+    minimo = min(ind_Antropometria, na.rm = TRUE),
+    maximo = max(ind_Antropometria, na.rm = TRUE),
+    pvalor_shapiro = ifelse(sum(!is.na(ind_Antropometria)) >= 3,
+      round(tryCatch(shapiro.test(ind_Antropometria)$p.value, error = function(e) NA), 5),NA),
+    numero_municipios = n()
+  )
+
+```
+
+```{r, warning=FALSE, message=FALSE, echo=TRUE, include= FALSE}
+UF_Medidas_descritivas_praticas_Atividades_corporais <- ind_praticas_saude%>%
+  group_by(UF) %>%
+  summarise(
+    media = mean(ind_Praticas_atividades_corporais, na.rm = TRUE),
+    mediana = median(ind_Praticas_atividades_corporais, na.rm = TRUE),
+    desvio_padrao = sd(ind_Praticas_atividades_corporais, na.rm = TRUE),
+    minimo = min(ind_Praticas_atividades_corporais, na.rm = TRUE),
+    maximo = max(ind_Praticas_atividades_corporais, na.rm = TRUE),
+    pvalor_shapiro = ifelse(sum(!is.na(ind_Praticas_atividades_corporais)) >= 3,
+      round(tryCatch(shapiro.test(ind_Praticas_atividades_corporais)$p.value, error = function(e) NA), 5),NA),
+    numero_municipios = n()
+  )
+```
+
+```{r, warning=FALSE, message=FALSE, echo=TRUE, include= FALSE}
+UF_Medidas_descritivas_verific_sit_vacina <- ind_praticas_saude%>%
+  group_by(UF) %>%
+  summarise(
+    media = mean(ind_Verific_sit_vacina, na.rm = TRUE),
+    mediana = median(ind_Verific_sit_vacina, na.rm = TRUE),
+    desvio_padrao = sd(ind_Verific_sit_vacina, na.rm = TRUE),
+    minimo = min(ind_Verific_sit_vacina, na.rm = TRUE),
+    maximo = max(ind_Verific_sit_vacina, na.rm = TRUE),
+    pvalor_shapiro = ifelse(sum(!is.na(ind_Verific_sit_vacina)) >= 3,
+      round(tryCatch(shapiro.test(ind_Verific_sit_vacina)$p.value, error = function(e) NA), 5),NA),
+    numero_municipios = n()
+  )
+
+```
+
+##### Medidas descritivas - Práticas de saúde - UF
+
+```{r, warning=FALSE, message=FALSE, echo=TRUE, include= FALSE}
+UF_Medidas_descritivas_Educação <- ind_adesão_escolas%>%
+  group_by(UF) %>%
+  summarise(
+    media = mean(ind_Educação, na.rm = TRUE),
+    mediana = median(ind_Educação, na.rm = TRUE),
+    desvio_padrao = sd(ind_Educação, na.rm = TRUE),
+    minimo = min(ind_Educação, na.rm = TRUE),
+    maximo = max(ind_Educação, na.rm = TRUE),
+    pvalor_shapiro = ifelse(sum(!is.na(ind_Educação)) >= 3,
+      round(tryCatch(shapiro.test(ind_Educação)$p.value, error = function(e) NA), 5),NA),
+    numero_municipios = n())
+
+```
+
+```{r, warning=FALSE, message=FALSE, echo=TRUE, include= FALSE}
+UF_Medidas_descritivas_Saude <- ind_adesão_escolas%>%
+  group_by(UF) %>%
+  summarise(
+    media = mean(ind_Saúde, na.rm = TRUE),
+    mediana = median(ind_Saúde, na.rm = TRUE),
+    desvio_padrao = sd(ind_Saúde, na.rm = TRUE),
+    minimo = min(ind_Saúde, na.rm = TRUE),
+    maximo = max(ind_Saúde, na.rm = TRUE),
+    pvalor_shapiro = ifelse(sum(!is.na(ind_Saúde)) >= 3,
+      round(tryCatch(shapiro.test(ind_Saúde)$p.value, error = function(e) NA), 5),NA),
+    numero_municipios = n()
+  )
+
+```
+
+##### Medidas descritivas - Temas de Saúde - Região
+
+```{r, warning=FALSE, message=FALSE, echo=TRUE, include= FALSE, eval=FALSE}
+Reg_temas_saude <- base_temas_saude_2023 %>%
+  group_by(Região) %>%
+  summarise(População_UF_CAD_IBGE = sum(!is.na(POP_CADASTRADA_IBGE)),
+            tx_Saude_bucal_Reg = sum(!is.na(Saude_bucal)) / População_UF_CAD_IBGE*100000,
+            tx_Aliment_saudav_Reg = sum(!is.na(Aliment_saudav))/ População_UF_CAD_IBGE*100000,
+            tx_Saude_reprodut_Reg = sum(!is.na(Saude_reprodut))/ População_UF_CAD_IBGE*100000,
+            tx_Saude_mental_Reg = sum(!is.na(Saúde.mental))/ População_UF_CAD_IBGE*100000,
+            tx_auto_cuid_doenc_cronic_UF = sum(!is.na(auto_cuid_doenc_cronic)) / População_UF_CAD_IBGE*100000)%>%
+            ungroup()
+```
+
+```{r, warning=FALSE, message=FALSE, echo=TRUE, include= FALSE}
+Reg_praticas_saude <- base_pratic_saude_2023 %>%
+  group_by(`Região`) %>%
+  summarise(População_UF_CAD_IBGE = sum(!is.na(POP_CADASTRADA_IBGE)),
+            tx_Antropometria_Reg = sum(!is.na(Antropometria)) / População_UF_CAD_IBGE*100000,
+            tx_Praticas_atividades_corporais_Reg = sum(!is.na(Praticas_atividades_corporais))/ População_UF_CAD_IBGE*100000,
+            tx_Verific_sit_vacina_Reg = sum(!is.na(Verific_sit_vacina))/ População_UF_CAD_IBGE*100000 )%>%
+            ungroup()
+
+```
+
+```{r, warning=FALSE, message=FALSE, echo=TRUE, include= FALSE}
+Reg_adesão_escolas <- base_adesão_escolas_pse_2023 %>%
+  group_by(`Região`) %>%
+  summarise(QTD_escolas_Reg = (sum(QTD_escolas)),
+            tx_educação_Reg = ((sum(Educação) / QTD_escolas_Reg)),
+            tx_Saude_Reg = ((sum(Saúde)/ QTD_escolas_Reg)))%>%
+            ungroup()
+```
+
+##### Junção dos bancos
+
+```{r}
+BR_med_descrit_total <- full_join(BR_Med_descrit_adesão_esc,BR_Med_descrit_pratic_saude)
+BR_med_descrit_total <- full_join(BR_med_descrit_total,BR_Med_descrit_tema_saude)
+
+REG_ind_total <- merge(Reg_adesão_escolas,Reg_praticas_saude, by="Região")
+REG_ind_total <- merge(REG_ind_total,Reg_temas_saude, by="Região")
+```
+
+### Grafico Histograma
+
+```{r}
+r <- ggplot(ind_temas_saude) +   geom_histogram(aes(x = ind_Saude_mental)) +   labs(     title = "Histograma Indicador Saúde Bucal",      subtitle = "Ano: 2023",      caption = "Fonte: Ministério da Saúde"   ) +   theme_bw() +   theme(     plot.title = element_text(size = 15, face = "bold"),     plot.subtitle = element_text(size = 12)   ) 
+r
+```
+
+### Grafico Box-plot
+
+```{r}
+#hist(ind_temas_saude$ind_auto_cuid_doenc_cronic)
+
+#geom_boxplot(ind_temas_saude$ind_auto_cuid_doenc_cronic)
+
+
+r <- ggplot(ind_temas_saude) +
+  geom_boxplot(aes(y = ind_Saude_mental)) +
+  labs(
+    title = "Indicador Saúde Bucal - Por estados", 
+    subtitle = "Ano: 2023", 
+    caption = "Fonte: Ministério da Saúde"
+  ) +
+  theme_bw() +
+  theme(
+    plot.title = element_text(size = 15, face = "bold"),
+    plot.subtitle = element_text(size = 12)
+  )
+r
+```
+
+### Tabelas
+
+```{r}
+BR_med_descrit_total
+```
+
+```{r}
+REG_ind_total
+```
