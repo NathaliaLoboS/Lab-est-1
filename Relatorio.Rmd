@@ -42,7 +42,7 @@ header-includes:
 \vskip 1em
 {\Large Hélio - } \\
 \vskip 1em
-{\Large Francisco - } \\
+{\Large Francisco Italo Rios Andrade - 170103170} \\
 \vskip 1em
 {\Large Trabalho Prático de Laboratório em Estatística 2} \\
 \vskip 1em
@@ -90,6 +90,47 @@ escolas_adesao <- read_excel("DadosAtividadesePop/Saúde na Escola/Escolas com A
 \section{Metodologia}
 
 \section{Análise de Resultados}
+
+## Índice de Vulnerabilidade Social (IVS) – 2022
+
+O IVS, cuja escala varia de 0 (melhor situação) a 1 (pior situação), indica maior vulnerabilidade nas regiões Norte (0,260) e Nordeste (0,270). As regiões Sul (0,165) e Sudeste (0,204) apresentam os melhores indicadores, revelando disparidades territoriais claras.
+
+## Índice de Desenvolvimento Humano Municipal (IDHM) – 2021
+
+O IDHM médio do Brasil foi 0,766, considerado alto. Os estados com maiores valores incluem:
+
+Distrito Federal (0,814)
+
+São Paulo (0,806)
+
+Santa Catarina (0,792)
+
+Já os estados com menores índices foram:
+
+Maranhão (0,676)
+
+Alagoas (0,684)
+
+Pará (0,690)
+
+Essas diferenças indicam desigualdade persistente no acesso a saúde, educação e renda.
+
+## Índice de Gini – 2023
+O Gini, que mede a desigualdade de renda (0 = igualdade, 1 = desigualdade total), reforça a concentração de renda elevada, especialmente em:
+
+Distrito Federal (0,543)
+
+Pernambuco (0,559)
+
+Maranhão (0,552)
+
+Enquanto os menores níveis foram encontrados em:
+
+Santa Catarina (0,418)
+
+Mato Grosso do Sul (0,452)
+
+Rondônia (0,455)
 
 \section{Referências}
 
