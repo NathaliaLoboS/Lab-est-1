@@ -84,21 +84,20 @@ library(scales)
 
 options(scipen = 99999)
 
-setwd('C:/Users/helio/OneDrive/Documents/UNB/LAB_EST_I')
 ```
 
 ```{r, echo=FALSE}
-pop_cad_2023 <- read.xlsx("C:/Users/helio/OneDrive/Documents/UNB/LAB_EST_I/DadosAtividadesePop/grupos 1 e 2 População Cadastrada/pop_cadastrada_2023.xlsx", sheetName = 'BRASIL')
+pop_cad_2023 <- read.xlsx("DadosAtividadesePop/grupos 1 e 2 População Cadastrada/pop_cadastrada_2023.xls", sheetName = 'BRASIL')
 
-pse_2023 <- read.xlsx('C:/Users/helio/OneDrive/Documents/UNB/LAB_EST_I/DadosAtividadesePop/Saúde na Escola/Produção do PSE/producao_pse_2023.xlsx', sheetName = 'Dados', startRow = 10, endRow = 5370)
+pse_2023 <- read.xlsx('DadosAtividadesePop/Saúde na Escola/Produção do PSE/producao_pse_2023.xlsx', sheetName = 'Dados', startRow = 10, endRow = 5370)
 
-prom_saude_2023 <- read.xlsx('C:/Users/helio/OneDrive/Documents/UNB/LAB_EST_I/DadosAtividadesePop/grupo 2 Práticas para a Saúde/praticas2023.xlsx', sheetName = 'Dados', startRow = 12, endRow = 5372)
+prom_saude_2023 <- read.xlsx('DadosAtividadesePop/grupo 2 Práticas para a Saúde/praticas2023.xlsx', sheetName = 'Dados', startRow = 12, endRow = 5372)
 
-temas_saude_2023 <- read.xlsx('C:/Users/helio/OneDrive/Documents/UNB/LAB_EST_I/DadosAtividadesePop/grupo 1 Temas para a Saúde/temas2023.xlsx', sheetName = 'Dados', startRow = 12, endRow = 5442)
+temas_saude_2023 <- read.xlsx('DadosAtividadesePop/grupo 1 Temas para a Saúde/temas2023.xlsx', sheetName = 'Dados', startRow = 12, endRow = 5442)
 
-escolas_adesao_2023_2024 <- read_excel("C:/Users/helio/OneDrive/Documents/UNB/LAB_EST_I/DadosAtividadesePop/Saúde na Escola/Escolas com Adesão - Denominador/escolas_adesao_2023_2024.xlsx", sheet = "ADESÕES", skip = 5)
+escolas_adesao_2023_2024 <- read_excel("DadosAtividadesePop/Saúde na Escola/Escolas com Adesão - Denominador/escolas_adesao_2023_2024.xlsx", sheet = "ADESÕES", skip = 5)
 
-Bolsa_familia_2023 <- read.xlsx('C:/Users/helio/OneDrive/Documents/UNB/LAB_EST_I/DadosAtividadesePop/Bolsa Família/Bfa_Consolidado-geral-22023-porMunicipio.xlsx', sheetName = 'Bfa_Consolidado-geral-22023-por', startRow = 8, endRow = 5578)
+Bolsa_familia_2023 <- read.xlsx('DadosAtividadesePop/Bolsa Família/Bfa_Consolidado-geral-22023-porMunicipio.xlsx', sheetName = 'Bfa_Consolidado-geral-22023-por', startRow = 8, endRow = 5578)
 ```
 
 ```{r, echo=FALSE}
