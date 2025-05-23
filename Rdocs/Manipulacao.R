@@ -1,5 +1,5 @@
 # carregando pacotes
-pacman::p_load(tidyverse, ipeadatar)
+pacman::p_load(tidyverse, ipeadatar, readr)
 
 
 # Indicadores socioeconomicos e desigualdade social ----
@@ -9,6 +9,7 @@ search_series("Vulnerabilidade Social") # series relacionadas
 
 IVS <- ipeadata("AVS_IVS", language = "br") %>% 
   filter(date == max(date))
+write_csv(IVS, "DadosAtividadesePop/Socioeconomico/IVS.csv")
 # ultimo ano foi 2022
 # Brasil, regiao e estado
 
@@ -17,33 +18,36 @@ search_series("IDHM")  # series relacionadas
 print(search_series("IDHM"), n=38)
 
 IDHM <- ipeadata("IDHM", language = "br") %>% 
-  filter(date == max(date))
+  filter(year(date) == 2021)
+write_csv(IDHM, "DadosAtividadesePop/Socioeconomico/IDHM.csv")
 # ultimo ano foi 2021
 # Brasil e estados
 
 
-## Produto interno bruto - PIB ----
+## Produto interno bruto - PIB per capita ----
 search_series("PIB") # series relacionadas
 teste <- print(search_series("PIB"), n=170)
 
 # brasil - 2024
-PIB_B <- ipeadata("SCN10_DIPIBG10", language = 'br') %>% 
+PIB_B <- ipeadata("GAC_PIBCAPN", language = 'br') %>% 
   filter(date == max(date))
-# municipio - teste 
-PIB_mun <- ipeadata("PIB", language = 'br') %>% 
-  filter(date == max(date))
+PIB_B$uname <- "Brasil"
+PIB_B$tcode <- 0
 # estadual - 2021
-PIB_mun <- ipeadata("PIBPMCE", language = 'br') %>% 
+PIB_est <- ipeadata("PIBPCE", language = 'br') %>% 
   filter(date == max(date))
+
+PIB <- rbind(PIB_B, PIB_est)
+write_csv(PIB, "DadosAtividadesePop/Socioeconomico/PIB.csv")
+
 
 ## Indice de GINI ----
 search_series("Gini") # series relacionadas
 
-
 # brasil, regiao e municipio - 2023
 GINI <- ipeadata("PNADCA_GINIUF", language = 'br') %>% 
   filter(date == max(date))
-
+write_csv(GINI, "DadosAtividadesePop/Socioeconomico/GINI.csv")
 
 
 
