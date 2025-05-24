@@ -220,9 +220,9 @@ mapa_padrao_pib(
 # Carregar pacotes necessários
 pacman::p_load(tidyverse, ipeadatar, ggcorrplot)
 
-# -----------------------------------------------
-# 1. Baixar e tratar os indicadores
-# -----------------------------------------------
+
+# Baixar e tratar os indicadores
+
 
 # IVS
 IVS <- ipeadata("AVS_IVS", language = "br") %>% filter(date == max(date)) %>%
@@ -240,9 +240,9 @@ GINI <- ipeadata("PNADCA_GINIUF", language = "br") %>% filter(date == max(date))
 PIB <- ipeadata("PIBPCE", language = 'br') %>% filter(date == max(date)) %>%
   select(tcode, value_PIB = value)
 
-# -----------------------------------------------
-# 2. Adicionar nomes de estados e regiões
-# -----------------------------------------------
+
+# Adicionar nomes de estados e regiões
+
 
 # Estados e códigos
 ufs <- tibble(
@@ -256,9 +256,9 @@ ufs <- tibble(
              rep("Sul",3), rep("Centro-Oeste",4))
 )
 
-# -----------------------------------------------
-# 3. Juntar os indicadores em uma base unificada
-# -----------------------------------------------
+
+# Juntar os indicadores em uma base unificada
+
 
 dados <- ufs %>%
   left_join(IVS,  by = "tcode") %>%
@@ -266,9 +266,9 @@ dados <- ufs %>%
   left_join(GINI, by = "tcode") %>%
   left_join(PIB,  by = "tcode")
 
-# -----------------------------------------------
-# 4. Correlograma dos indicadores por região
-# -----------------------------------------------
+
+#  Correlograma dos indicadores por região
+
 
 # Para cada região, fazer o correlograma entre IVS, IDHM, GINI e PIB
 for (reg in unique(dados$regiao)) {
