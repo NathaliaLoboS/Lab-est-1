@@ -217,3 +217,74 @@ mapa_padrao_pib(
 
 
 
+# Carregar pacotes necessários
+pacman::p_load(tidyverse, ipeadatar, ggcorrplot)
+
+# -----------------------------------------------
+# 1. Baixar e tratar os indicadores
+# -----------------------------------------------
+
+# IVS
+IVS <- ipeadata("AVS_IVS", language = "br") %>% filter(date == max(date)) %>%
+  select(tcode, value_IVS = value)
+
+# IDHM
+IDHM <- ipeadata("IDHM", language = "br") %>% filter(lubridate::year(date) == 2021) %>%
+  select(tcode, value_IDHM = value)
+
+# GINI
+GINI <- ipeadata("PNADCA_GINIUF", language = "br") %>% filter(date == max(date)) %>%
+  select(tcode, value_GINI = value)
+
+# PIB per capita estadual
+PIB <- ipeadata("PIBPCE", language = 'br') %>% filter(date == max(date)) %>%
+  select(tcode, value_PIB = value)
+
+# -----------------------------------------------
+# 2. Adicionar nomes de estados e regiões
+# -----------------------------------------------
+
+# Estados e códigos
+ufs <- tibble(
+  tcode = c(11, 12, 13, 14, 15, 16, 17, 21, 22, 23, 24, 25, 26, 27,
+            28, 29, 31, 32, 33, 35, 41, 42, 43, 50, 51, 52, 53),
+  estado = c("RO", "AC", "AM", "RR", "PA", "AP", "TO",
+             "MA", "PI", "CE", "RN", "PB", "PE", "AL",
+             "SE", "BA", "MG", "ES", "RJ", "SP",
+             "PR", "SC", "RS", "MS", "MT", "GO", "DF"),
+  regiao = c(rep("Norte",7), rep("Nordeste",9), rep("Sudeste",4), 
+             rep("Sul",3), rep("Centro-Oeste",4))
+)
+
+# -----------------------------------------------
+# 3. Juntar os indicadores em uma base unificada
+# -----------------------------------------------
+
+dados <- ufs %>%
+  left_join(IVS,  by = "tcode") %>%
+  left_join(IDHM, by = "tcode") %>%
+  left_join(GINI, by = "tcode") %>%
+  left_join(PIB,  by = "tcode")
+
+# -----------------------------------------------
+# 4. Correlograma dos indicadores por região
+# -----------------------------------------------
+
+# Para cada região, fazer o correlograma entre IVS, IDHM, GINI e PIB
+for (reg in unique(dados$regiao)) {
+  df_reg <- dados %>%
+    filter(regiao == reg) %>%
+    select(value_IVS, value_IDHM, value_GINI, value_PIB) %>%
+    na.omit()
+  
+  if (nrow(df_reg) >= 3) {
+    mat_cor <- cor(df_reg, use = "pairwise.complete.obs")
+    p <- ggcorrplot(mat_cor, lab = TRUE, type = "lower", title = paste("Correlograma -", reg))
+    print(p)  # Mostra no Plots
+    
+    # Salva o arquivo PNG
+    ggsave(filename = paste0("correlograma_", reg, ".png"), plot = p, width = 6, height = 5)
+  }
+}
+
+
