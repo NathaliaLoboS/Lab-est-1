@@ -1,0 +1,4030 @@
+---
+title: "Grupo II - Avaliação de indicadores de práticas de saúde em relação a variáveis socioeconômicas"
+output:
+  html_document:
+    toc: yes
+    toc_float:
+      collapsed: yes
+      smooth_scroll: no
+      css: estilo.css
+
+encoding: UTF-8
+    
+---
+
+<style>
+
+h1.title {
+  font-size: 20px;
+}
+
+h1 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 12px;
+  font-weight: bold;
+}
+</style>
+
+# 1 Introdução
+
+<div style="text-align: justify; text-indent: 2em;">
+A adoção de estratégias de práticas de saúde no ambiente escolar ou em comunidades mais amplas oferece inúmeros benefícios à população atendida. Nesse contexto, diante de um cenário marcado por desigualdades sociais e heterogeneidade nos indicadores socioeconômicos, a avaliação da relação entre esses indicadores e o contexto socioeconômico regional torna-se essencial. Tal análise é fundamental para promover maior eficiência no planejamento e na implementação de políticas públicas, além de possibilitar comparações entre diferentes regiões e o país de forma abrangente.
+</div>
+
+<div style="text-align: justify; text-indent: 2em;">
+Desta forma, a presente pesquisa possui o objetivo de avaliar a relação dos indicadores socioeconomicos com os indicadores de práticas de saúde no ano de 2023 no Brasil.
+</div>
+
+# 2 Objetivo
+
+<div style="text-align: justify; text-indent: 2em;">
+O presente estudo possui o objetivo de verificar a relação entre os indicadores socioeconômicos com indicadores sínteses de promoção à saúde .
+</div>
+
+
+# 3 Referencial Teórico
+
+# 3.1 Estudos de práticas de promoção à saúde
+
+<div style="text-align: justify; text-indent: 2em;">
+A OMS (Organização mundial da saúde) por meio da carta de Ottawa define a promoção à saúde como processo de capacitação da comunidade para atuar na melhoria de sua qualidade de vida e saúde, incluindo uma maior participação no controle deste processo. Esta definição apresenta um caráter mais amplo pois impacta os elementos que afetam a qualidade de vida das pessoas, englobando assim aspectos econômicos, sociais educacionais, lazer etc.
+</div>
+
+<div style="text-align: justify; text-indent: 2em;">
+A promoção à saúde é um tema de alta relevância nas políticas públicas sanitárias. A mudança de paradigma nos conceitos de definição de saúde e na sua abordagem trouxeram novas perspectivas no desenvolvimento de soluções sanitárias para a sociedade. Desta forma, Heidman et. al (2006) destaca o caráter intersetorial e a elaboração de políticas públicas como pilares da promoção à saúde. Além disso dentro do contexto latino-americano, a promoção à saúde se torna mais relevante por oferecer ferramentas que proporcionam maior equidade no acesso as soluções sanitárias.
+</div>
+
+<div style="text-align: justify; text-indent: 2em;">
+Neste contexto, como práticas a promoção a saúde temos os seguintes grupos de indicadores:
+
+- Indicadores de temas de saúde;
+- Indicadores de práticas de saúde; 
+- Indicadores de práticas de promoção a saúde nas escolas
+</div>
+
+<div style="text-align: justify; text-indent: 2em;">
+Como pontos positivos para as praticas de promoção a saúde nas escolas, Baggio et al (2019) destacam que o programa pode proporcionar interação entre saúde, escola e família e consequente vinculação desta última à Unidade Básica de Saúde, permeada pela interação colaborativa entre profissionais de saúde e educação. Problemas na implantação do PSE são capazes de fornecer subsídios para a compreensão de cenários, como restrita articulação na gestão dos entes federal e municipal, bem como a fragilidade na articulação entre os setores de educação e saúde.
+</div>
+
+<div style="text-align: justify; text-indent: 2em;">
+Assim, o impacto das políticas públicas afeta de maneira relevante a saúde de uma comunidade. Neste contexto, Buss et.al (2020) destacam que os profissionais de saúde, os movimentos sociais e as organizações populares, políticos e autoridades públicas têm responsabilidades sobre as repercussões positivas ou negativas que as políticas públicas têm sobre a situação de saúde e as condições de vida. A estratégia dos municípios saudáveis é uma das iniciativas que pode proporcionar a promoção da saúde através da ação intersetorial.
+</div>
+
+<div style="text-align: justify; text-indent: 2em;">
+Nesta linha, o Ministério da Saúde (2010), afirma a promoção da saúde é uma estratégia de interligada transversalmente na qual se verifica visibilidade aos fatores que colocam a saúde da população em risco e às diferenças entre necessidades, territórios e culturas presentes no nosso país, visando à criação de instrumentos e procedimentos que reduzam as situações de vulnerabilidade, defendam radicalmente a equidade e incorporem a participação e o controle sociais na gestão das políticas públicas.
+De forma complementar, Buss (2000) destaca que a relações intersetorial e entre população e o Estado, assim como a qualificação para o exercício da cidadania e do controle social são contribuições relevantes que o exercício da promoção da saúde, por profissionais e ativistas da saúde, pode trazer para a sociedade.
+</div>
+
+<div style="text-align: justify; text-indent: 2em;">
+Em relação aos benefícios trazidos pela promoção à saúde para a comunidade, Pinheiro et. al (2023) destaca a relevância da educação em saúde como instrumento para prevenção e promoção da saúde da sociedade. As atividades educacionais, apresentaram um grande potencial de influência na adesão de comportamentos saudáveis de vida com o objetivo de prevenir de doenças e promover o bem-estar, uma vez que as estratégias utilizadas, como as orientações verbais, uso de cartazes e distribuição de panfletos possibilitaram a ampliação de conhecimento e aproximação dos estudantes com a população.
+</div>
+
+# 4 Metodologia
+
+<div style="text-align: justify; text-indent: 2em;">
+O presente estudo possui uma abordagem de pesquisa quantitativa e, em relação a seu objetivo, esta pesquisa possui um perfil exploratório, uma vez que apresentará o resultado da análise quantitativa da relação dos indicadores socioeconômicos com os indicadores síntese de práticas de saúde.
+</div>
+
+<div style="text-align: justify; text-indent: 2em;">
+Os dados socioeconômicos tiveram como período de referência o ano de 2023 e foram coletados por meio dos pacote `ipeadataR` e `Sidrar` e importados para o RStudio. Foram coletadas as seguintes variáveis:
+</div>
+
+<div style="text-align: justify; text-indent: 2em;">
+- IDHM (Estados, Regional e Federal);
+- PIB a preços de mercado (Estados, Municípios, Regional e Federal);
+- PIB per Capita (Municípios, Estados, Regional e Federal);
+- Índice de Gini (Estados, Regional e Federal);
+- Índice de Vulnerabilidade Social (Estados,  Regional e Federal).
+</div>
+
+<div style="text-align: justify; text-indent: 2em;">
+No que diz respeito aos indicadores síntese de práticas de saúde, foram coletados a partir dos dados disponibilizados pela Secretaria de Atenção Primária à Saúde (SAPS/MS) em relação ao ano de 2023, conforme descrição abaixo:
+</div>
+
+**Tabela 1 – Variáveis analisadas**
+
+| Grupo                | Variável                                          |
+|----------------------|---------------------------------------------------|
+| Temas de saúde       | Saúde bucal                                       |
+| Temas de saúde       | Alimentação saudável                              |
+| Temas de saúde       | Saúde sexual e reprodutiva                        |
+| Temas de saúde       | Saúde mental                                      |
+| Temas de saúde       | Autocuidado de pessoas com doenças crônicas       |
+| Práticas de saúde    | Antropometria                                     |
+| Práticas de saúde    | Práticas corporais/atividade física               |
+| Práticas de saúde    | Verificação da saúde vacinal                      |
+| Prog. saúde nas escolas | Educação                                       |
+| Prog. saúde nas escolas | Saúde                                          |
+| Bolsa Família        | Percentual de cobertura de beneficiários acompanhados |
+
+*Fonte: Elaboração própria*
+
+<div style="text-align: justify; text-indent: 2em;">
+Os indicadores foram construídos com base em proporções relativas a diferentes contextos. No que diz respeito aos indicadores de práticas e temas de saúde, considerou-se a razão entre a quantidade de práticas de saúde e a população cadastrada pelo IBGE. 
+</div>
+
+<div style="text-align: justify; text-indent: 2em;">
+No que tange aos indicadores do Programa Saúde nas Escolas, adotou-se a razão entre a quantidade de práticas de saúde nas escolas e o quantitativo de estabelecimentos de ensino participantes do programa. 
+</div>
+
+<div style="text-align: justify; text-indent: 2em;">
+Por fim, sobre a variável de percentual de cobertura de beneficiários acompanhados pelo Bolsa Família, como o dado já está padronizado em percentual, considerou-se que a avaliação em relação aos indicadores socioeconômicos será direta.
+</div>
+
+```{r, warning=FALSE, message=FALSE, echo = FALSE}
+library(openxlsx)
+library(kableExtra)
+library(xlsx)
+library(tidyverse)
+library(ggplot2)
+library(sf)
+library(geobr)
+library(readxl)
+library(scales)
+library(ggplot2)
+library(scales)
+library(scales)
+library(ipeadatar)
+
+options(scipen = 99999)
+
+setwd('C:/Users/helio/OneDrive/Documents/UNB/LAB_EST_I')
+```
+
+```{r, echo=FALSE}
+pop_cad_2023 <- read.xlsx("C:/Users/helio/OneDrive/Documents/UNB/LAB_EST_I/DadosAtividadesePop/grupos 1 e 2 População Cadastrada/pop_cadastrada_2023.xlsx", sheetName = 'BRASIL')
+
+pse_2023 <- read.xlsx('C:/Users/helio/OneDrive/Documents/UNB/LAB_EST_I/DadosAtividadesePop/Saúde na Escola/Produção do PSE/producao_pse_2023.xlsx', sheetName = 'Dados', startRow = 10, endRow = 5370)
+
+prom_saude_2023 <- read.xlsx('C:/Users/helio/OneDrive/Documents/UNB/LAB_EST_I/DadosAtividadesePop/grupo 2 Práticas para a Saúde/praticas2023.xlsx', sheetName = 'Dados', startRow = 12, endRow = 5372)
+
+temas_saude_2023 <- read.xlsx('C:/Users/helio/OneDrive/Documents/UNB/LAB_EST_I/DadosAtividadesePop/grupo 1 Temas para a Saúde/temas2023.xlsx', sheetName = 'Dados', startRow = 12, endRow = 5442)
+
+escolas_adesao_2023_2024 <- read_excel("C:/Users/helio/OneDrive/Documents/UNB/LAB_EST_I/DadosAtividadesePop/Saúde na Escola/Escolas com Adesão - Denominador/escolas_adesao_2023_2024.xlsx", sheet = "ADESÕES", skip = 5)
+
+Bolsa_familia_2023 <- read.xlsx('C:/Users/helio/OneDrive/Documents/UNB/LAB_EST_I/DadosAtividadesePop/Bolsa Família/Bfa_Consolidado-geral-22023-porMunicipio.xlsx', sheetName = 'Bfa_Consolidado-geral-22023-por', startRow = 8, endRow = 5578)
+
+```
+
+```{r, echo=FALSE}
+pop_cad_2023 <-pop_cad_2023 %>%
+  mutate(SIGLA_UF = case_when(
+    UF == 'ACRE' ~ "AC",
+    UF == 'ALAGOAS' ~ "AL",
+    UF == 'AMAPA' ~ "AP",
+    UF == 'AMAZONAS' ~ "AM",
+    UF == 'BAHIA' ~ "BA",
+    UF == 'CEARA' ~ "CE",
+    UF == 'DISTRITO FEDERAL' ~ "DF",
+    UF == 'ESPIRITO SANTO' ~ "ES",
+    UF == 'GOIAS' ~ "GO",
+    UF == 'MARANHAO' ~ "MA",
+    UF == 'MATO GROSSO' ~ "MT",
+    UF == 'MATO GROSSO DO SUL' ~ "MS",
+    UF == 'MINAS GERAIS' ~ "MG",
+    UF == 'PARA' ~ "PA",
+    UF == 'PARAIBA' ~ "PB",
+    UF == 'PARANA' ~ "PR",
+    UF == 'PERNAMBUCO' ~ "PE",
+    UF == 'PIAUI' ~ "PI",
+    UF == 'RIO DE JANEIRO' ~ "RJ",
+    UF == 'RIO GRANDE DO NORTE' ~ "RN",
+    UF == 'RIO GRANDE DO SUL' ~ "RS",
+    UF == 'RONDONIA' ~ "RO",
+    UF == 'RORAIMA' ~ "RR",
+    UF == 'SANTA CATARINA' ~ "SC",
+    UF == 'SAO PAULO' ~ "SP",
+    UF == 'SERGIPE' ~ "SE",
+    UF == 'TOCANTINS' ~ "TO",
+    TRUE ~ NA_character_
+  ))
+
+pop_cad_2023 <- pop_cad_2023 %>%
+  mutate(Municipio_UFS = str_c(Município, SIGLA_UF, sep = " - "))
+
+```
+
+```{r, echo=FALSE}
+# TEMA
+tema_padrao <- function() {
+  theme_minimal() +
+    theme(
+      plot.title = element_text(hjust = 0.5, face = "bold", size = 14),
+      plot.caption = element_text(hjust = 0.5, size = 9),
+      legend.position = "bottom",
+      legend.title = element_text(face = "bold"),
+      axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)
+    )
+}
+
+# MAPA
+mapa_padrao <- function(data, titulo, legenda, paleta, limites = NULL, fonte = "Fonte: IPEA") {
+  ggplot(data) +
+    geom_sf(aes(fill = value), color = "white", size = 0.2) +
+    geom_text(aes(x = coord_x, y = coord_y, 
+                  label = format(round(value, 1), nsmall = 3)),
+              color = "white", size = 1.4, fontface = "bold") +
+    scale_fill_viridis_c(name = legenda, option = paleta, direction = -1, limits = limites) +
+    labs(title = titulo, caption = fonte) +
+    theme_void() +
+    theme(
+      plot.title = element_text(hjust = 0.5, face = "bold", size = 14),
+      plot.caption = element_text(hjust = 0.5),
+      legend.position = "bottom"
+    )
+}
+```
+
+
+```{r, echo=FALSE}
+# DADOS DO IPEA
+IVS <- ipeadata("AVS_IVS", language = "br") %>% filter(date == max(date))
+GINI <- ipeadata("PNADCA_GINIUF", language = "br") %>% filter(date == max(date))
+IDHM <- ipeadata("IDHM", language = "br") %>% filter(date == '2021-01-01')
+PIB <- ipeadata("PIBPMCE", language = "br") %>% filter(date == max(date))
+PIB_EST_PC <- read_excel('C:/Users/helio/OneDrive/Documents/UNB/LAB_EST_I/UF_Renda_Per_Capita.xlsx')
+```
+
+```{r, echo=FALSE}
+# DADOS DO IPEA
+# Criar tabela de estados
+ufs <- data.frame(
+  tcode = c(11, 12, 13, 14, 15, 16, 17, 21, 22, 23, 24, 25, 26, 27,
+            28, 29, 31, 32, 33, 35, 41, 42, 43, 50, 51, 52, 53),
+  estado = c("RO", "AC", "AM", "RR", "PA", "AP", "TO",
+             "MA", "PI", "CE", "RN", "PB", "PE", "AL",
+             "SE", "BA", "MG", "ES", "RJ", "SP",
+             "PR", "SC", "RS", "MS", "MT", "GO", "DF"))
+
+# Criar tabela de regiões
+regioes <- data.frame(
+  tcode = c(1, 2, 3, 4, 5),
+  regiao = c("Norte", "Nordeste", "Sudeste", "Sul", "Centro-Oeste")
+)
+
+# Criar tabela unificada de nomes
+lookup_nomes <- bind_rows(
+  data.frame(tcode = 0, nome = "Brasil"),          # Código do Brasil
+  regioes %>% rename(nome = regiao),               # Regiões
+  ufs %>% rename(UF_SIGLA = estado)                # Estados
+)
+
+# Tratamento dos dados
+tratamento <- function(df) {
+  df %>% 
+    left_join(lookup_nomes, by = "tcode") %>% 
+    select(tcode, UF_SIGLA, value) %>% 
+    filter(tcode > 5)
+}
+
+dados_IVS  <- tratamento(IVS)
+dados_GINI <- tratamento(GINI)
+dados_IDHM <- tratamento(IDHM)
+dados_PIB  <- tratamento(PIB)
+dados_PIB_EST_PC  <- tratamento(PIB_EST_PC)
+
+```
+
+```{r, echo=FALSE}
+### Tratamento de dados ###
+
+prom_saude_2023 <- prom_saude_2023 %>%
+  rename('IBGE' = 'Ibge',
+        'Praticas_atividades_corporais' = 'Práticas.corporais...atividade',
+        'Verific_sit_vacina' = 'Verificação.da.situação.vacina')
+
+pop_cad_2023 <- pop_cad_2023%>%
+  rename('POP_CADASTRADA_IBGE' = 'Qt..Total.de.cadastros...limitado.pela.população.IBGE.',
+         'Regiao' = 'Região')
+
+pop_cad_2023 <- pop_cad_2023 %>%
+  filter(POP_CADASTRADA_IBGE > 0)
+
+pse_2023 <- pse_2023 %>%
+  rename('IBGE' = 'Ibge')
+
+temas_saude_2023 <- temas_saude_2023 %>%
+  rename('IBGE' = 'Ibge',
+         'auto_cuid_doenc_cronic' = 'Autocuidado.de.pessoas.com.doe',
+         'Saude_reprodut' = 'Saúde.sexual.e.reprodutiva',
+         'Saude_bucal' = 'Saúde.bucal',
+         'Aliment_saudav' = 'Alimentação.saudável',
+         'Saude_mental' = 'Saúde.mental')
+
+Bolsa_familia_2023 <- Bolsa_familia_2023 %>%
+  rename('perc_cob_ben_acomp' = 'Perc..cobertura.de.beneficiários.acompanhados....',
+         'UF_SIGLA' = 'Estado')
+
+```
+
+```{r, echo=FALSE}
+
+# Tratamento dados - Temas de saúde 
+
+temas_saude_2023 <- temas_saude_2023%>%
+  rename('UF_SIGLA' = 'Uf')%>%
+  mutate(Municipio_UF = str_c(Municipio, UF_SIGLA, sep = " - "))%>%
+  select('IBGE', 'UF_SIGLA', 'Municipio_UF', 'Saude_bucal', 'Aliment_saudav',
+         'Saude_reprodut', 'Saude_mental', 'auto_cuid_doenc_cronic')
+
+base_temas_saude_2023 <- merge(pop_cad_2023, temas_saude_2023, by = "IBGE")
+```
+
+```{r, echo=FALSE}
+
+base_temas_saude_2023 <- base_temas_saude_2023 %>%
+  mutate(across(
+    c(
+      IBGE,
+      População,
+      POP_CADASTRADA_IBGE,
+      Cobertura.APS,
+      Saude_bucal,
+      Aliment_saudav,
+      Saude_reprodut,
+      Saude_mental,
+      auto_cuid_doenc_cronic),
+    as.numeric))
+
+base_temas_saude_2023 <- base_temas_saude_2023%>%
+  mutate(Saude_bucal = round(Saude_bucal,0),
+         Aliment_saudav = round(Aliment_saudav,0),
+         Saude_reprodut = round(Saude_reprodut,0),
+         Saude_mental = round(Saude_mental,0),
+         auto_cuid_doenc_cronic = round(auto_cuid_doenc_cronic,0),)
+
+```
+
+```{r, echo=FALSE}
+
+# Tratamento dados - Práticas de promoção a saúde
+
+base_pratic_saude_2023 <- merge(pop_cad_2023, prom_saude_2023, by = "IBGE")
+
+base_pratic_saude_2023 <- base_pratic_saude_2023 %>%
+    mutate(UF_SIGLA = case_when(
+    UF == 'ACRE' ~ "AC",
+    UF == 'ALAGOAS' ~ "AL",
+    UF == 'AMAPA' ~ "AP",
+    UF == 'AMAZONAS' ~ "AM",
+    UF == 'BAHIA' ~ "BA",
+    UF == 'CEARA' ~ "CE",
+    UF == 'DISTRITO FEDERAL' ~ "DF",
+    UF == 'ESPIRITO SANTO' ~ "ES",
+    UF == 'GOIAS' ~ "GO",
+    UF == 'MARANHAO' ~ "MA",
+    UF == 'MATO GROSSO' ~ "MT",
+    UF == 'MATO GROSSO DO SUL' ~ "MS",
+    UF == 'MINAS GERAIS' ~ "MG",
+    UF == 'PARA' ~ "PA",
+    UF == 'PARAIBA' ~ "PB",
+    UF == 'PARANA' ~ "PR",
+    UF == 'PERNAMBUCO' ~ "PE",
+    UF == 'PIAUI' ~ "PI",
+    UF == 'RIO DE JANEIRO' ~ "RJ",
+    UF == 'RIO GRANDE DO NORTE' ~ "RN",
+    UF == 'RIO GRANDE DO SUL' ~ "RS",
+    UF == 'RONDONIA' ~ "RO",
+    UF == 'RORAIMA' ~ "RR",
+    UF == 'SANTA CATARINA' ~ "SC",
+    UF == 'SAO PAULO' ~ "SP",
+    UF == 'SERGIPE' ~ "SE",
+    UF == 'TOCANTINS' ~ "TO",
+    TRUE ~ NA_character_
+  ))
+
+base_pratic_saude_2023 <- base_pratic_saude_2023 %>%
+  mutate(Municipio_UF = str_c(Município, UF_SIGLA, sep = " - ")) %>%
+  select('Regiao', 'UF', 'UF_SIGLA', 'IBGE', 'Município', 'Municipio_UF', 'População', 'POP_CADASTRADA_IBGE', 'Cobertura.APS', 'Antropometria', 'Praticas_atividades_corporais',
+'Verific_sit_vacina')
+
+base_pratic_saude_2023 <- base_pratic_saude_2023 %>%
+  mutate(across(
+    c(IBGE,
+      População,
+      POP_CADASTRADA_IBGE,
+      Cobertura.APS,
+      Antropometria, 
+      Praticas_atividades_corporais,
+      Verific_sit_vacina),
+        as.numeric))
+
+base_pratic_saude_2023 <- base_pratic_saude_2023%>%
+  mutate(Antropometria = round(Antropometria,0),
+         Praticas_atividades_corporais = round(Praticas_atividades_corporais,0),
+         Verific_sit_vacina = round(Verific_sit_vacina,0))
+
+```
+
+```{r, echo=FALSE, warning=FALSE, message = FALSE}
+
+group_esc_adesao_2023_2024 <- escolas_adesao_2023_2024%>%
+  mutate(Municipio_UF = str_c(MUNICÍPIO, UF, sep = " - ")) %>%
+  select('UF',	'MUNICÍPIO', 'Municipio_UF', 'IBGE', 'CICLO', 'TIPO DE LOCALIZACAÇÃO',	
+  'LOCALIZAÇÃO DIFERENCIADA', 'ESFERA ADMINISTRATIVA', 'NOME DA ESCOLA')
+
+group_esc_adesao_2023_2024 <- escolas_adesao_2023_2024%>%
+  group_by(IBGE, MUNICÍPIO, UF) %>%
+  summarise(QTD_escolas = n()) %>%
+  ungroup()
+
+base_adesão_escolas_pse_2023 <- merge(group_esc_adesao_2023_2024, pse_2023, by = "IBGE")
+
+base_adesão_escolas_pse_2023 <- base_adesão_escolas_pse_2023%>%
+    mutate(Municipio_UF = str_c(MUNICÍPIO, UF, sep = " - ")) %>%
+    select('IBGE', 'MUNICÍPIO', 'Municipio_UF', 'UF', 'QTD_escolas', 'Educação', 'Saúde')
+
+base_adesão_escolas_pse_2023 <- base_adesão_escolas_pse_2023 %>%
+    mutate(Regiao = case_when(
+    UF == 'AC' ~ "NORTE",
+    UF == 'AL' ~ "NORDESTE",
+    UF == 'AP' ~ "NORTE",
+    UF == 'AM' ~ "NORTE",
+    UF == 'BA' ~ "NORDESTE",
+    UF == 'CE' ~ "NORDESTE",
+    UF == 'DF' ~ "CENTRO - OESTE",
+    UF == 'ES' ~ "SUDESTE",
+    UF == 'GO' ~ "CENTRO - OESTE",
+    UF == 'MA' ~ "NORDESTE",
+    UF == 'MT' ~ "CENTRO - OESTE",
+    UF == 'MS' ~ "CENTRO - OESTE",
+    UF == 'MG' ~ "SUDESTE",
+    UF == 'PA' ~ "NORTE",
+    UF == 'PB' ~ "NORDESTE",
+    UF == 'PR' ~ "SUL",
+    UF == 'PE' ~ "NORDESTE",
+    UF == 'PI' ~ "NORDESTE",
+    UF == 'RJ' ~ "SUDESTE",
+    UF == 'RN' ~ "NORDESTE",
+    UF == 'RS' ~ "SUL",
+    UF == 'RO' ~ "NORTE",
+    UF == 'RR' ~ "NORTE",
+    UF == 'SC' ~ "SUL",
+    UF == 'SP' ~ "SUDESTE",
+    UF == 'SE' ~ "NORDESTE",
+    UF == 'TO' ~ "NORTE",
+    TRUE ~ NA_character_
+  ))
+
+
+base_adesão_escolas_pse_2023 <- base_adesão_escolas_pse_2023 %>%
+  mutate(across(
+    c(IBGE,
+      Educação,
+      Saúde),
+    as.numeric
+  ))
+
+```
+
+```{r, echo=FALSE}
+
+# Tratamento dados - Bolsa Família
+
+Bolsa_familia_2023 <- Bolsa_familia_2023%>%
+  mutate(Regiao = case_when(
+    UF_SIGLA == 'AC' ~ "NORTE",
+    UF_SIGLA == 'AL' ~ "NORDESTE",
+    UF_SIGLA == 'AP' ~ "NORTE",
+    UF_SIGLA == 'AM' ~ "NORTE",
+    UF_SIGLA == 'BA' ~ "NORDESTE",
+    UF_SIGLA == 'CE' ~ "NORDESTE",
+    UF_SIGLA == 'DF' ~ "CENTRO - OESTE",
+    UF_SIGLA == 'ES' ~ "SUDESTE",
+    UF_SIGLA == 'GO' ~ "CENTRO - OESTE",
+    UF_SIGLA == 'MA' ~ "NORDESTE",
+    UF_SIGLA == 'MT' ~ "CENTRO - OESTE",
+    UF_SIGLA == 'MS' ~ "CENTRO - OESTE",
+    UF_SIGLA == 'MG' ~ "SUDESTE",
+    UF_SIGLA == 'PA' ~ "NORTE",
+    UF_SIGLA == 'PB' ~ "NORDESTE",
+    UF_SIGLA == 'PR' ~ "SUL",
+    UF_SIGLA == 'PE' ~ "NORDESTE",
+    UF_SIGLA == 'PI' ~ "NORDESTE",
+    UF_SIGLA == 'RJ' ~ "SUDESTE",
+    UF_SIGLA == 'RN' ~ "NORDESTE",
+    UF_SIGLA == 'RS' ~ "SUL",
+    UF_SIGLA == 'RO' ~ "NORTE",
+    UF_SIGLA == 'RR' ~ "NORTE",
+    UF_SIGLA == 'SC' ~ "SUL",
+    UF_SIGLA == 'SP' ~ "SUDESTE",
+    UF_SIGLA == 'SE' ~ "NORDESTE",
+    UF_SIGLA == 'TO' ~ "NORTE",
+    TRUE ~ NA_character_))
+
+```
+
+```{r, echo=FALSE}
+
+base_adesão_escolas_pse_2023 <- base_adesão_escolas_pse_2023 %>%
+  rename('UF_SIGLA' = 'UF')
+
+base_adesão_escolas_pse_2023 <- base_adesão_escolas_pse_2023%>%
+  mutate(UF = case_when(
+    UF_SIGLA == 'AC' ~ "ACRE",
+    UF_SIGLA == 'AL' ~ "ALAGOAS",
+    UF_SIGLA == 'AP' ~ "AMAPA",
+    UF_SIGLA == 'AM' ~ "AMAZONAS",
+    UF_SIGLA == 'BA' ~ "BAHIA",
+    UF_SIGLA == 'CE' ~ "CEARA",
+    UF_SIGLA == 'DF' ~ "DISTRITO - FEDERAL",
+    UF_SIGLA == 'ES' ~ "ESPIRITO SANTO",
+    UF_SIGLA == 'GO' ~ "GOIAS",
+    UF_SIGLA == 'MA' ~ "MARANHÃO",
+    UF_SIGLA == 'MT' ~ "MATO GROSSO",
+    UF_SIGLA == 'MS' ~ "MATO GROSSO DO SUL",
+    UF_SIGLA == 'MG' ~ "MINAS GERAIS",
+    UF_SIGLA == 'PA' ~ "PARA",
+    UF_SIGLA == 'PB' ~ "PARAIBA",
+    UF_SIGLA == 'PR' ~ "PARANA",
+    UF_SIGLA == 'PE' ~ "PERNAMBUCO",
+    UF_SIGLA == 'PI' ~ "PIAUI",
+    UF_SIGLA == 'RJ' ~ "RIO DE JANEIRO",
+    UF_SIGLA == 'RN' ~ "RIO GRANDE DO NORTE",
+    UF_SIGLA == 'RS' ~ "RIO GRANDE DO SUL",
+    UF_SIGLA == 'RO' ~ "RONDONIA",
+    UF_SIGLA == 'RR' ~ "RORAIMA",
+    UF_SIGLA == 'SC' ~ "SANTA CATARINA",
+    UF_SIGLA == 'SP' ~ "SAO PAULO",
+    UF_SIGLA == 'SE' ~ "SERGIPE",
+    UF_SIGLA == 'TO' ~ "TOCANTINS",
+    TRUE ~ NA_character_))
+```
+
+```{r, echo=FALSE}
+
+# Apuração Indicadores - Temas Saúde
+
+ind_temas_saude <- base_temas_saude_2023 %>%
+  mutate(ind_saude_bucal = if_else(POP_CADASTRADA_IBGE == 0, NA_real_, (Saude_bucal / POP_CADASTRADA_IBGE) * 100000),
+    ind_Aliment_saudav = if_else(POP_CADASTRADA_IBGE == 0, NA_real_, (Aliment_saudav / POP_CADASTRADA_IBGE) * 100000),
+    ind_Saude_reprodut = if_else(POP_CADASTRADA_IBGE == 0, NA_real_, (Saude_reprodut / POP_CADASTRADA_IBGE) * 100000),
+    ind_Saude_mental = if_else(POP_CADASTRADA_IBGE == 0, NA_real_, (Saude_mental / POP_CADASTRADA_IBGE) * 100000),
+    ind_auto_cuid_doenc_cronic = if_else(POP_CADASTRADA_IBGE == 0, NA_real_, (auto_cuid_doenc_cronic / POP_CADASTRADA_IBGE) * 100000)
+  ) %>%
+  select(UF, UF_SIGLA, IBGE, Município, Regiao, Municipio_UF,ind_saude_bucal, ind_Aliment_saudav, ind_Saude_reprodut,ind_Saude_mental, ind_auto_cuid_doenc_cronic, Saude_bucal,
+Aliment_saudav, Saude_reprodut, Saude_mental, auto_cuid_doenc_cronic,
+POP_CADASTRADA_IBGE)
+
+```
+
+```{r, echo=FALSE}
+
+# Considerando todas as cidades pop = 0 - Apuração Indicadores
+
+ind_temas_saude <- base_temas_saude_2023 %>%
+  mutate(Pais = 'Brasil',
+        ind_saude_bucal = ((Saude_bucal / POP_CADASTRADA_IBGE) * 100000),
+        ind_Aliment_saudav = ((Aliment_saudav / POP_CADASTRADA_IBGE) * 100000),
+        ind_Saude_reprodut = ((Saude_reprodut / POP_CADASTRADA_IBGE) * 100000),
+        ind_Saude_mental = ((Saude_mental / POP_CADASTRADA_IBGE) * 100000),
+        ind_auto_cuid_doenc_cronic = ((auto_cuid_doenc_cronic  / POP_CADASTRADA_IBGE) * 100000)
+  ) %>%
+  select(UF, Pais, IBGE, UF_SIGLA ,Município, Municipio_UF, Regiao, ind_saude_bucal, ind_Aliment_saudav, ind_Saude_reprodut, ind_Saude_mental, ind_auto_cuid_doenc_cronic, Saude_bucal,
+Aliment_saudav, Saude_reprodut, Saude_mental, auto_cuid_doenc_cronic,
+POP_CADASTRADA_IBGE)
+```
+
+```{r, echo=FALSE}
+
+# Apuração Indicadores - Práticas de Saúde
+
+ind_praticas_saude <- base_pratic_saude_2023 %>%
+  mutate(Pais = 'Brasil', 
+    ind_Antropometria = ((Antropometria / POP_CADASTRADA_IBGE) * 100000),
+        ind_Praticas_atividades_corporais = ((Praticas_atividades_corporais / POP_CADASTRADA_IBGE) * 100000),
+        ind_Verific_sit_vacina = ((Verific_sit_vacina / POP_CADASTRADA_IBGE) * 100000))%>%
+  select(UF, Pais, IBGE, UF_SIGLA, Município, Municipio_UF, Regiao, ind_Antropometria, ind_Praticas_atividades_corporais, ind_Verific_sit_vacina, Antropometria, Praticas_atividades_corporais, Verific_sit_vacina, POP_CADASTRADA_IBGE)
+
+```
+
+```{r, echo=FALSE}
+
+# Apuração Indicadores - Adesão Escolas
+
+ind_adesão_escolas <- base_adesão_escolas_pse_2023 %>%
+  mutate(Pais = 'Brasil',
+         ind_Educação = Educação / QTD_escolas,
+         ind_Saúde = Saúde / QTD_escolas)%>%
+  select(UF, Pais, IBGE, MUNICÍPIO, UF_SIGLA, Municipio_UF, QTD_escolas, Regiao, ind_Educação, Educação, Saúde, ind_Saúde)
+```
+
+# 5 Análise de Resultados
+
+# 5.1 Indicadores de quantidade de atividades coletivas de saúde bucal {.tabset}
+
+<div style="text-align: justify; text-indent: 2em;">
+Os dados evidenciam uma dispersão elevada e constatou-se uma forte concentração de referente ao número de práticas de educação e saúde nas escolas em valores próximos a zero,  sendo que este comportamento ocorreu no âmbito estadual, regional e federal. Além disso, constatou-se a ocorrência de outliers, na série, ou seja, municípios que apresentaram uma elevada quantidade de práticas de saúde e educação em comparação a outras cidades.
+</div>  
+  
+<div style="text-align: justify; text-indent: 2em;">
+Em relação as métricas utilizadas, a variável “indicador” é representada pelo somatório das práticas de saúde e educação dividida pelo total de escolas da UF e/ou Regiao. Em relação a “taxa média”, ela é obtida por meio das taxas de práticas de saúde e educação dos municípios dividido pela quantidade de municípios por UF e Regiao.
+</div>
+
+<div style="text-align: justify; text-indent: 2em;">
+Portanto, diante da alta volatilidade, assimetria dos resultados e presença de outliers, rejeita-se a adoção da premissa de normalidade das séries. Esta conclusão é reforçada pelos resultados dos testes de Shapiro-wilk, que, em todos as instâncias analisadas (estadual, regional e federal), não se verificou que o que o resultado do teste foi superior ao nível de significância adotado (5%). 
+</div>
+
+## Dados por UF
+
+```{r, echo=FALSE, warning=FALSE}
+
+kable(ind_temas_saude%>%
+  group_by(UF) %>%
+  summarise(Regiao = first(Regiao),
+    indicador = round((sum(Saude_bucal) / sum(POP_CADASTRADA_IBGE))*100000,2),
+    media = round(mean(ind_saude_bucal, na.rm = TRUE),2),
+    mediana = round(median(ind_saude_bucal, na.rm = TRUE),2),
+    desvio_padrao = round(sd(ind_saude_bucal, na.rm = TRUE),2),
+    minimo = round(min(ind_saude_bucal, na.rm = TRUE),2),
+    maximo = round(max(ind_saude_bucal, na.rm = TRUE),2),
+    pvalor_shapiro = ifelse(sum(!is.na(ind_saude_bucal)) >= 3,
+      round(tryCatch(shapiro.test(ind_saude_bucal)$p.value, error = function(e) NA), 5),NA),
+    Numerador = sum(Saude_bucal),
+    Denominador = sum(POP_CADASTRADA_IBGE),
+    n_municip = n())%>%
+  arrange(Regiao, UF)) %>%
+  kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover", "condensed"), font_size = 10)%>%
+  row_spec(0, bold = TRUE, background = "#f2f2f2") %>%
+  footnote(general = "*A coluna indicador foi calculada pela divisão do total de praticas adotadas (por UF, Regiao ou país) pela coluna de total de população cadastrada no IBGE.")%>%
+    scroll_box(width = "100%", height = "500px")
+```
+
+## Dados por Regiao
+
+```{r, echo=FALSE, warning=FALSE}
+
+kable(ind_temas_saude%>%
+  group_by(Regiao) %>%
+  summarise(indicador = round((sum(Saude_bucal) / sum(POP_CADASTRADA_IBGE))*100000,2),
+    media = round(mean(ind_saude_bucal, na.rm = TRUE),2),
+    mediana = round(median(ind_saude_bucal, na.rm = TRUE),2),
+    desvio_padrao = round(sd(ind_saude_bucal, na.rm = TRUE),2),
+    minimo = round(min(ind_saude_bucal, na.rm = TRUE),2),
+    maximo = round(max(ind_saude_bucal, na.rm = TRUE),2),
+    pvalor_shapiro = ifelse(sum(!is.na(ind_saude_bucal)) >= 3,
+      round(tryCatch(shapiro.test(ind_saude_bucal)$p.value, error = function(e) NA), 5),NA),
+    Numerador = sum(Saude_bucal),
+    Denominador = sum(POP_CADASTRADA_IBGE),
+    n_municip = n())%>%
+  arrange(Regiao)) %>%
+  kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover", "condensed"), font_size = 10)%>%
+  row_spec(0, bold = TRUE, background = "#f2f2f2") %>%
+  footnote(general = "*A coluna indicador foi calculada pela divisão do total de praticas adotadas (por UF, Regiao ou país) pela coluna de total de população cadastrada no IBGE.")
+
+```
+
+## Dados Nacionais
+
+```{r, echo=FALSE, warning=FALSE}
+ind_temas_saude %>%
+  summarise(
+    Pais = 'Brasil',
+    Indicador = round((sum(Saude_bucal) / sum(POP_CADASTRADA_IBGE)) * 100000, 2),
+    Media = round(mean(ind_saude_bucal, na.rm = TRUE), 2),
+    Mediana = round(median(ind_saude_bucal, na.rm = TRUE), 2),
+    Desvio_padrao = round(sd(ind_saude_bucal, na.rm = TRUE), 2),
+    Min = round(min(ind_saude_bucal, na.rm = TRUE), 2),
+    Max = round(max(ind_saude_bucal, na.rm = TRUE), 2),
+    Pvalor_shapiro = ifelse(
+      sum(!is.na(ind_saude_bucal)) >= 3,
+      round(tryCatch(shapiro.test(ind_saude_bucal)$p.value, error = function(e) NA), 5),
+      NA
+    ),
+    Numerador = sum(Saude_bucal),
+    Denominador = sum(POP_CADASTRADA_IBGE),
+    n_municip = n()
+  ) %>%
+  kable(format = "html") %>%
+  kable_styling(
+    full_width = FALSE,
+    bootstrap_options = c("striped", "hover", "condensed"),
+    font_size = 10
+  ) %>%
+  row_spec(0, bold = TRUE, background = "#f2f2f2") %>%
+  footnote(
+    general = "*A coluna indicador foi calculada pela divisão do total de práticas adotadas (por UF, Regiao ou país) pela população cadastrada segundo o IBGE."
+  )
+
+```
+
+## Gráficos
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.width=12, fig.height=4}
+ggplot(ind_temas_saude,
+       aes(x = ind_saude_bucal, fill = Regiao)) +
+  geom_histogram(alpha = 0.5, bins = 40, position = "identity") +
+  labs(x = "Qtd. de Atividades coletivas de saúde bucal por 100 mil habitantes",
+     y = "Número de municípios") +
+  theme_minimal()+
+  theme(
+    legend.position = "bottom",
+    legend.box = "horizontal",
+    legend.title = element_blank()
+    )
+```
+
+```{r, echo=FALSE, fig.width=8, fig.height=4}
+ggplot(ind_temas_saude, aes(y = ind_saude_bucal, fill = Regiao)) +
+geom_boxplot() +
+labs(
+  title = "Indicador de Qtd. de ativ. coletivas de Saúde Bucal - Por Regiões", 
+  subtitle = "Ano: 2023", 
+  caption = "Fonte: Ministério da Saúde",
+  y=""
+) +
+theme_bw() +
+theme(
+  plot.title = element_text(size = 12, face = "bold"),
+  plot.subtitle = element_text(size = 10),
+  legend.position = "bottom",
+  legend.title = element_blank()
+
+)
+```
+
+```{r, warning=FALSE, message=FALSE, echo = FALSE, fig.height= 6, fig.width=12}
+ggplot(
+  ind_temas_saude %>% 
+    arrange(desc(ind_saude_bucal)) %>% 
+    slice_head(n = 10),
+  aes(x = reorder(Municipio_UF, ind_saude_bucal), y = ind_saude_bucal)
+) +
+  geom_col(fill = "#33CC33") +
+  coord_flip() +
+scale_y_continuous(labels = label_number(big.mark = ".", decimal.mark = ",")) +
+  labs(
+    title = "Top 10 Municípios - Qtd. de ativ. coletivas de saúde Bucal",
+    subtitle = "Ano: 2023",
+    x = "Município",
+    y = "Indicador",
+    caption = "Fonte: Ministério da Saúde - Números para 100.000 habitantes"
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    plot.title = element_text(face = "bold"),
+    plot.subtitle = element_text(size = 12),
+    axis.title.y = element_blank()
+  )
+```
+
+# 5.2 Indicadores de saúde mental {.tabset}
+
+## Dados por UF 
+
+```{r, echo=FALSE, warning=FALSE}
+
+kable(ind_temas_saude%>%
+  group_by(UF) %>%
+  summarise(Regiao = first(Regiao),
+    Indicador = round((sum(Saude_mental) / sum(POP_CADASTRADA_IBGE))*100000,2),
+    Media = round(mean(ind_Saude_mental, na.rm = TRUE),2),
+    Mediana = round(median(ind_Saude_mental, na.rm = TRUE),2),
+    Desvio_pad = round(sd(ind_Saude_mental, na.rm = TRUE),2),
+    Minimo = round(min(ind_Saude_mental, na.rm = TRUE),2),
+    Maximo = round(max(ind_Saude_mental, na.rm = TRUE),2),
+    Pvalor_shapiro = ifelse(sum(!is.na(ind_Saude_mental)) >= 3,
+      round(tryCatch(shapiro.test(ind_Saude_mental)$p.value, error = function(e) NA), 5),NA),
+    Numerador = sum(Saude_mental),
+    Denominador = sum(POP_CADASTRADA_IBGE),
+    n_municip = n())%>%
+  arrange(Regiao, UF)) %>%
+  kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover", "condensed"), font_size = 10)%>%
+  row_spec(0, bold = TRUE, background = "#f2f2f2") %>%
+  footnote(general = "*A coluna indicador foi calculada pela divisão do total de praticas adotadas (por UF, Regiao ou país) pela coluna de total de população cadastrada no IBGE.") %>%
+    scroll_box(width = "100%", height = "500px")
+
+
+```
+
+## Dados por Regiao
+
+```{r, echo=FALSE, warning=FALSE}
+
+kable(
+  ind_temas_saude %>%
+    group_by(Regiao) %>%
+    summarise(
+      Indicador = round((sum(Saude_mental) / sum(POP_CADASTRADA_IBGE)) * 100000, 2),
+      Media = round(mean(ind_Saude_mental, na.rm = TRUE), 2),
+      Mediana = round(median(ind_Saude_mental, na.rm = TRUE), 2),
+      Desvio_pad = round(sd(ind_Saude_mental, na.rm = TRUE), 2),
+      Min = round(min(ind_Saude_mental, na.rm = TRUE), 2),
+      Max = round(max(ind_Saude_mental, na.rm = TRUE), 2),
+      Pvalor_shapiro = ifelse(
+        sum(!is.na(ind_Saude_mental)) >= 3,
+        round(tryCatch(shapiro.test(ind_Saude_mental)$p.value, error = function(e) NA), 5),
+        NA
+      ),
+      Numerador = sum(Saude_mental),
+      Denominador = sum(POP_CADASTRADA_IBGE),
+      n_municip = n())%>%
+      arrange(Regiao)
+) %>%
+  kable_styling(
+    full_width = FALSE,
+    bootstrap_options = c("striped", "hover", "condensed"),
+    font_size = 10
+  ) %>%
+  row_spec(0, bold = TRUE, background = "#f2f2f2") %>%
+  footnote(general = "*A coluna indicador foi calculada pela divisão do total de práticas adotadas (por UF, Regiao ou país) pela coluna de população cadastrada segundo o IBGE.")
+
+```
+
+## Dados Nacionais
+
+```{r, echo=FALSE, warning=FALSE}
+ind_temas_saude %>%
+  summarise(
+    Pais = 'Brasil',
+    Indicador = round((sum(Saude_mental) / sum(POP_CADASTRADA_IBGE)) * 100000, 2),
+    Media = round(mean(ind_saude_bucal, na.rm = TRUE), 2),
+    Mediana = round(median(ind_saude_bucal, na.rm = TRUE), 2),
+    Desvio_pad = round(sd(ind_saude_bucal, na.rm = TRUE), 2),
+    Minimo = round(min(ind_Saude_mental, na.rm = TRUE), 2),
+    Maximo = round(max(ind_Saude_mental, na.rm = TRUE), 2),
+    Pvalor_shapiro = ifelse(
+      sum(!is.na(ind_Saude_mental)) >= 3,
+      round(tryCatch(shapiro.test(ind_Saude_mental)$p.value, error = function(e) NA), 5),
+      NA
+    ),
+    Numerador = sum(Saude_mental),
+    Denominador = sum(POP_CADASTRADA_IBGE),
+    num_municip = n()
+  ) %>%
+  kable(
+    format = "html"
+  ) %>%
+  kable_styling(
+    full_width = FALSE,
+    bootstrap_options = c("striped", "hover", "condensed"),
+    font_size = 10
+  ) %>%
+  row_spec(0, bold = TRUE, background = "#f2f2f2") %>%
+  footnote(
+    general = "*A coluna indicador foi calculada pela divisão do total de práticas adotadas (por UF, Regiao ou país) pela população cadastrada segundo o IBGE."
+  )
+
+```
+
+## Gráficos
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.width=8, fig.height=4}
+ggplot(ind_temas_saude,
+       aes(x = ind_Saude_mental, fill = Regiao)) +
+  geom_histogram(alpha = 0.5, bins = 40, position = "identity") +
+  labs(x = "Qtd. de ativ. coletivas práticas saúde mental por 100 mil habitantes",
+     y = "Número de municípios") +
+  theme_minimal()+
+  theme(
+    legend.position = "bottom",
+    legend.box = "horizontal",
+    legend.title = element_blank()
+    )
+```
+
+```{r, echo=FALSE, fig.width=6, fig.height=4}
+ggplot(ind_temas_saude, aes(y = ind_Saude_mental, fill = Regiao)) +
+geom_boxplot() +
+labs(
+  title = "Indicador de Qtd. de ativ. coletivas de Saúde mental - Por Regiões", 
+  subtitle = "Ano: 2023", 
+  caption = "Fonte: Ministério da Saúde",
+  y=""
+) +
+theme_bw() +
+theme(
+  plot.title = element_text(size = 12, face = "bold"),
+  plot.subtitle = element_text(size = 10),
+  legend.position = "bottom",
+  legend.title = element_blank()
+
+)
+```
+
+```{r, warning=FALSE, message=FALSE, echo=FALSE, fig.height= 6, fig.width=12}
+ggplot(
+  ind_temas_saude %>% 
+    arrange(desc(ind_Saude_mental)) %>% 
+    slice_head(n = 10),
+  aes(x = reorder(Municipio_UF, ind_Saude_mental), y = ind_Saude_mental)
+) +
+  geom_col(fill = "#33CC33") +
+  coord_flip() +
+scale_y_continuous(labels = label_number(big.mark = ".", decimal.mark = ",")) +
+  labs(
+    title = "Top 10 Municípios - Qtd. de ativ. coletivas Saúde Mental",
+    subtitle = "Ano: 2023",
+    x = "Município",
+    y = "Indicador",
+    caption = "Fonte: Ministério da Saúde - Números para 100.000 habitantes"
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    plot.title = element_text(face = "bold"),
+    plot.subtitle = element_text(size = 12),
+    axis.title.y = element_blank()
+  )
+```
+
+# 5.3 Indicadores de Qtd. de ativ. coletivas Alimentação saudável {.tabset}
+
+## Dados por UF 
+
+```{r, echo=FALSE, warning=FALSE}
+
+kable(ind_temas_saude%>%
+  group_by(UF) %>%
+  summarise(Regiao = first(Regiao),
+    Indicador = round((sum(Aliment_saudav) / sum(POP_CADASTRADA_IBGE))*100000,2),
+    Media = round(mean(ind_Aliment_saudav, na.rm = TRUE),2),
+    Mediana = round(median(ind_Aliment_saudav, na.rm = TRUE),2),
+    Desvio_pad = round(sd(ind_Aliment_saudav, na.rm = TRUE),2),
+    Minimo = round(min(ind_Aliment_saudav, na.rm = TRUE),2),
+    Maximo = round(max(ind_Aliment_saudav, na.rm = TRUE),2),
+    Pvalor_shapiro = ifelse(sum(!is.na(ind_Aliment_saudav)) >= 3,
+      round(tryCatch(shapiro.test(ind_Aliment_saudav)$p.value, error = function(e) NA), 5),NA),
+    Numerador = sum(Aliment_saudav),
+    Denominador = sum(POP_CADASTRADA_IBGE),
+    num_municip = n())%>%
+  arrange(Regiao, UF)) %>%
+  kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover", "condensed"), font_size = 10)%>%
+  row_spec(0, bold = TRUE, background = "#f2f2f2") %>%
+  footnote(general = "*A coluna indicador foi calculada pela divisão do total de praticas adotadas (por UF, Regiao ou país) pela coluna de total de população cadastrada no IBGE.") %>%
+    scroll_box(width = "100%", height = "500px")
+
+
+```
+
+## Dados por Região
+
+```{r, echo=FALSE, warning=FALSE}
+
+kable(
+  ind_temas_saude %>%
+    group_by(Regiao) %>%
+    summarise(
+      Indicador = round((sum(Aliment_saudav) / sum(POP_CADASTRADA_IBGE)) * 100000, 2),
+      Media = round(mean(ind_Aliment_saudav, na.rm = TRUE), 2),
+      Mediana = round(median(ind_Aliment_saudav, na.rm = TRUE), 2),
+      Desvio_pad = round(sd(ind_Aliment_saudav, na.rm = TRUE), 2),
+      Min = round(min(ind_Aliment_saudav, na.rm = TRUE), 2),
+      Max = round(max(ind_Aliment_saudav, na.rm = TRUE), 2),
+      Pvalor_shapiro = ifelse(
+        sum(!is.na(ind_Aliment_saudav)) >= 3,
+        round(tryCatch(shapiro.test(ind_Aliment_saudav)$p.value, error = function(e) NA), 5),
+        NA
+      ),
+      Numerador = sum(Aliment_saudav),
+      Denominador = sum(POP_CADASTRADA_IBGE),
+      num_municip = n()
+      ) %>%
+    arrange(Regiao)
+) %>%
+  kable_styling(
+    full_width = FALSE,
+    bootstrap_options = c("striped", "hover", "condensed"),
+    font_size = 10
+  ) %>%
+  row_spec(0, bold = TRUE, background = "#f2f2f2") %>%
+  footnote(general = "*A coluna indicador foi calculada pela divisão do total de práticas adotadas (por UF, Regiao ou país) pela coluna de população cadastrada segundo o IBGE.")
+
+```
+
+## Dados Nacionais
+
+```{r, echo=FALSE, warning=FALSE}
+ind_temas_saude %>%
+  summarise(
+    Pais = 'Brasil',
+    Indicador = round((sum(Aliment_saudav) / sum(POP_CADASTRADA_IBGE)) * 100000, 2),
+    Media = round(mean(ind_Aliment_saudav, na.rm = TRUE), 2),
+    Mediana = round(median(ind_Aliment_saudav, na.rm = TRUE), 2),
+    Desvio_pad = round(sd(ind_Aliment_saudav, na.rm = TRUE), 2),
+    Min = round(min(ind_Aliment_saudav, na.rm = TRUE), 2),
+    Max = round(max(ind_Aliment_saudav, na.rm = TRUE), 2),
+    Pvalor_shapiro = ifelse(
+      sum(!is.na(ind_Aliment_saudav)) >= 3,
+      round(tryCatch(shapiro.test(ind_Aliment_saudav)$p.value, error = function(e) NA), 5),
+      NA
+    ),
+    Numerador = sum(Aliment_saudav),
+    Denominador = sum(POP_CADASTRADA_IBGE),
+    num_municip = n()
+  ) %>%
+  kable(
+    format = "html"
+  ) %>%
+  kable_styling(
+    full_width = FALSE,
+    bootstrap_options = c("striped", "hover", "condensed"),
+    font_size = 10
+  ) %>%
+  row_spec(0, bold = TRUE, background = "#f2f2f2") %>%
+  footnote(
+    general = "*A coluna indicador foi calculada pela divisão do total de práticas adotadas (por UF, Regiao ou país) pela população cadastrada segundo o IBGE."
+  )
+
+```
+
+## Gráficos
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.width=8, fig.height=4}
+ggplot(ind_temas_saude,
+       aes(x = ind_Aliment_saudav, fill = Regiao)) +
+  geom_histogram(alpha = 0.5, bins = 40, position = "identity") +
+  labs(x = "Qtd. de ativ. coletivas Alimentação saudável por 100 mil habitantes",
+     y = "Número de municípios") +
+  theme_minimal()+
+  theme(
+    legend.position = "bottom",
+    legend.box = "horizontal",
+    legend.title = element_blank()
+    )
+```
+
+```{r, echo=FALSE, fig.width=6, fig.height=4}
+ggplot(ind_temas_saude, aes(y = ind_Aliment_saudav, fill = Regiao)) +
+geom_boxplot() +
+labs(
+  title = "Indicaor de ativ. coletivas Alimentação saudável - Por Regiões", 
+  subtitle = "Ano: 2023", 
+  caption = "Fonte: Ministério da Saúde",
+  y=""
+) +
+theme_bw() +
+theme(
+  plot.title = element_text(size = 12, face = "bold"),
+  plot.subtitle = element_text(size = 10),
+  legend.position = "bottom",
+  legend.title = element_blank()
+
+)
+```
+
+```{r, warning=FALSE, message=FALSE, echo = FALSE, fig.height= 6, fig.width=12}
+ggplot(
+  ind_temas_saude %>% 
+    arrange(desc(ind_Aliment_saudav)) %>% 
+    slice_head(n = 10),
+  aes(x = reorder(Municipio_UF, ind_Aliment_saudav), y = ind_Aliment_saudav)
+) +
+  geom_col(fill = "#33CC33") +
+  coord_flip() +
+  scale_y_continuous(labels = label_number(big.mark = ".", decimal.mark = ",")) +
+  labs(
+    title = "Top 10 Municípios - Qtd. Atividades coletivas de Alimentação saudável",
+    subtitle = "Ano: 2023",
+    x = "Município",
+    y = "Indicador",
+    caption = "Fonte: Ministério da Saúde - Números para 100.000 habitantes"
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    plot.title = element_text(face = "bold"),
+    plot.subtitle = element_text(size = 12),
+    axis.title.y = element_blank()
+  )
+```
+
+
+# 5.4 Indicadores de quantitativo de atividades coletivas de saúde sexual e reprodutiva (SSR) {.tabset}
+
+## Dados por UF 
+
+```{r, echo=FALSE, warning=FALSE}
+
+kable(ind_temas_saude%>%
+  group_by(UF) %>%
+  summarise(Regiao = first(Regiao),
+    Indicador = round((sum(Saude_reprodut) / sum(POP_CADASTRADA_IBGE))*100000,2),
+    Media = round(mean(ind_Saude_reprodut, na.rm = TRUE),2),
+    Mediana = round(median(ind_Saude_reprodut, na.rm = TRUE),2),
+    Desvio_pad = round(sd(ind_Saude_reprodut, na.rm = TRUE),2),
+    Min = round(min(ind_Saude_reprodut, na.rm = TRUE),2),
+    Max = round(max(ind_Saude_reprodut, na.rm = TRUE),2),
+    Pvalor_shapiro = ifelse(sum(!is.na(ind_Saude_reprodut)) >= 3,
+      round(tryCatch(shapiro.test(ind_Saude_reprodut)$p.value, error = function(e) NA), 5),NA),
+    Numerador = sum(Saude_reprodut),
+    Denominador = sum(POP_CADASTRADA_IBGE),
+    num_municip = n())%>%
+  arrange(Regiao, UF)) %>%
+  kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover", "condensed"), font_size = 10)%>%
+  row_spec(0, bold = TRUE, background = "#f2f2f2") %>%
+  footnote(general = "*A coluna indicador foi calculada pela divisão do total de praticas adotadas (por UF, Regiao ou país) pela coluna de total de população cadastrada no IBGE.") %>%
+    scroll_box(width = "100%", height = "500px")
+
+
+```
+
+## Dados por Regiao
+
+```{r, echo=FALSE, warning=FALSE}
+
+kable(
+  ind_temas_saude %>%
+    group_by(Regiao) %>%
+    summarise(
+      Indicador = round((sum(Saude_reprodut) / sum(POP_CADASTRADA_IBGE)) * 100000, 2),
+      Media = round(mean(ind_Saude_reprodut, na.rm = TRUE), 2),
+      Mediana = round(median(ind_Saude_reprodut, na.rm = TRUE), 2),
+      Desvio_pad = round(sd(ind_Saude_reprodut, na.rm = TRUE), 2),
+      Min = round(min(ind_Saude_reprodut, na.rm = TRUE), 2),
+      Max = round(max(ind_Saude_reprodut, na.rm = TRUE), 2),
+      Pvalor_shapiro = ifelse(
+        sum(!is.na(ind_Saude_reprodut)) >= 3,
+        round(tryCatch(shapiro.test(ind_Saude_reprodut)$p.value, error = function(e) NA), 5),
+        NA
+      ),
+      Numerador = sum(Saude_reprodut),
+      Denominador = sum(POP_CADASTRADA_IBGE),
+      num_municip = n()
+    ) %>%
+    arrange(Regiao)
+) %>%
+  kable_styling(
+    full_width = FALSE,
+    bootstrap_options = c("striped", "hover", "condensed"),
+    font_size = 10
+  ) %>%
+  row_spec(0, bold = TRUE, background = "#f2f2f2") %>%
+  footnote(general = "*A coluna indicador foi calculada pela divisão do total de práticas adotadas (por UF, Regiao ou país) pela coluna de população cadastrada segundo o IBGE.")
+
+```
+
+## Dados Nacionais
+
+```{r, echo=FALSE, warning=FALSE}
+ind_temas_saude %>%
+  summarise(
+    Pais = 'Brasil',
+    Indicador = round((sum(Saude_reprodut) / sum(POP_CADASTRADA_IBGE)) * 100000, 2),
+    Media = round(mean(ind_Saude_reprodut, na.rm = TRUE), 2),
+    Mediana = round(median(ind_Saude_reprodut, na.rm = TRUE), 2),
+    Desvio_pad = round(sd(ind_Saude_reprodut, na.rm = TRUE), 2),
+    Min = round(min(ind_Saude_reprodut, na.rm = TRUE), 2),
+    Max = round(max(ind_Saude_reprodut, na.rm = TRUE), 2),
+    pvalor_shapiro = ifelse(
+      sum(!is.na(ind_Saude_reprodut)) >= 3,
+      round(tryCatch(shapiro.test(ind_Saude_reprodut)$p.value, error = function(e) NA), 5),
+      NA
+    ),
+    Numerador = sum(Saude_reprodut),
+    Denominador = sum(POP_CADASTRADA_IBGE),
+    num_municip = n()
+  ) %>%
+  kable(
+    format = "html"
+  ) %>%
+  kable_styling(
+    full_width = FALSE,
+    bootstrap_options = c("striped", "hover", "condensed"),
+    font_size = 10
+  ) %>%
+  row_spec(0, bold = TRUE, background = "#f2f2f2") %>%
+  footnote(
+    general = "*A coluna indicador foi calculada pela divisão do total de práticas adotadas (por UF, Regiao ou país) pela população cadastrada segundo o IBGE."
+  )
+
+```
+
+## Gráficos
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.width=8, fig.height=4}
+ggplot(ind_temas_saude,
+       aes(x = ind_Saude_reprodut, fill = Regiao)) +
+  geom_histogram(alpha = 0.5, bins = 40, position = "identity") +
+  labs(x = "Indicador de Quant. de Atividades Coletivas SSR por 100 mil habitantes",
+     y = "Número de municípios") +
+  theme_minimal()+
+  theme(
+    legend.position = "bottom",
+    legend.box = "horizontal",
+    legend.title = element_blank()
+    )
+```
+
+```{r, echo=FALSE, fig.width=6, fig.height=4}
+ggplot(ind_temas_saude, aes(y = ind_Saude_reprodut, fill = Regiao)) +
+geom_boxplot() +
+labs(
+  title = "Indicador Quant. de Atividades Coletivas SSR - Por Regiões", 
+  subtitle = "Ano: 2023", 
+  caption = "Fonte: Ministério da Saúde",
+  y = ""
+) +
+theme_bw() +
+theme(
+  plot.title = element_text(size = 12, face = "bold"),
+  plot.subtitle = element_text(size = 10),
+  legend.position = "bottom",
+  legend.title = element_blank()
+
+)
+```
+
+```{r, warning=FALSE, message=FALSE, echo = FALSE, fig.height= 6, fig.width=12}
+ggplot(
+  ind_temas_saude %>% 
+    arrange(desc(ind_Saude_reprodut)) %>% 
+    slice_head(n = 10),
+  aes(x = reorder(Municipio_UF, ind_Saude_reprodut), y = ind_Saude_reprodut)
+) +
+  geom_col(fill = "#33CC33") +
+  coord_flip() +
+  scale_y_continuous(labels = label_number(big.mark = ".", decimal.mark = ",")) +
+  labs(
+    title = "Top 10 Municípios - Indicador Qtd. atividades coletivas SSR",
+    subtitle = "Ano: 2023",
+    x = "Município",
+    y = "Indicador",
+    caption = "Fonte: Ministério da Saúde - Números para 100.000 habitantes"
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    plot.title = element_text(face = "bold"),
+    plot.subtitle = element_text(size = 12),
+    axis.title.y = element_blank()
+  )
+```
+
+# 5.5 Indicadores de práticas autocuidado {.tabset}
+
+## Dados por UF 
+
+```{r, echo=FALSE, warning=FALSE}
+
+kable(ind_temas_saude%>%
+  group_by(UF) %>%
+  summarise(Regiao = first(Regiao),
+    Indicador = round((sum(auto_cuid_doenc_cronic) / sum(POP_CADASTRADA_IBGE))*100000,2),
+    Media = round(mean(ind_auto_cuid_doenc_cronic, na.rm = TRUE),2),
+    Mediana = round(median(ind_auto_cuid_doenc_cronic, na.rm = TRUE),2),
+    Desvio_pad = round(sd(ind_auto_cuid_doenc_cronic, na.rm = TRUE),2),
+    Min = round(min(ind_auto_cuid_doenc_cronic, na.rm = TRUE),2),
+    Max = round(max(ind_auto_cuid_doenc_cronic, na.rm = TRUE),2),
+    Pvalor_shapiro = ifelse(sum(!is.na(ind_auto_cuid_doenc_cronic)) >= 3,
+      round(tryCatch(shapiro.test(ind_auto_cuid_doenc_cronic)$p.value, error = function(e) NA), 5),NA),
+    Numerador = sum(auto_cuid_doenc_cronic),
+    Denominador = sum(POP_CADASTRADA_IBGE),
+    num_municip = n())%>%
+  arrange(Regiao, UF)) %>%
+  kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover", "condensed"), font_size = 10)%>%
+  row_spec(0, bold = TRUE, background = "#f2f2f2") %>%
+  footnote(general = "*A coluna indicador foi calculada pela divisão do total de praticas adotadas (por UF, Regiao ou país) pela coluna de total de população cadastrada no IBGE.") %>%
+    scroll_box(width = "100%", height = "500px")
+
+
+```
+
+## Dados por Regiao
+
+```{r, echo=FALSE, warning=FALSE}
+
+kable(
+  ind_temas_saude %>%
+    group_by(Regiao) %>%
+    summarise(
+      Indicador = round((sum(auto_cuid_doenc_cronic) / sum(POP_CADASTRADA_IBGE)) * 100000, 2),
+      Media = round(mean(ind_auto_cuid_doenc_cronic, na.rm = TRUE), 2),
+      Mediana = round(median(ind_auto_cuid_doenc_cronic, na.rm = TRUE), 2),
+      Desvio_padrao = round(sd(ind_auto_cuid_doenc_cronic, na.rm = TRUE), 2),
+      Minimo = round(min(ind_auto_cuid_doenc_cronic, na.rm = TRUE), 2),
+      Maximo = round(max(ind_auto_cuid_doenc_cronic, na.rm = TRUE), 2),
+      Pvalor_shapiro = ifelse(
+        sum(!is.na(ind_Saude_reprodut)) >= 3,
+        round(tryCatch(shapiro.test(ind_auto_cuid_doenc_cronic)$p.value, error = function(e) NA), 5),
+        NA
+      ),
+      Numerador = sum(auto_cuid_doenc_cronic),
+      Denominador = sum(POP_CADASTRADA_IBGE),
+      num_municip = n()
+    ) %>%
+    arrange(Regiao)
+) %>%
+  kable_styling(
+    full_width = FALSE,
+    bootstrap_options = c("striped", "hover", "condensed"),
+    font_size = 10
+  ) %>%
+  row_spec(0, bold = TRUE, background = "#f2f2f2") %>%
+  footnote(general = "*A coluna indicador foi calculada pela divisão do total de práticas adotadas (por UF, Regiao ou país) pela coluna de população cadastrada segundo o IBGE.")
+
+```
+
+## Dados Nacionais
+
+```{r, echo=FALSE, warning=FALSE}
+ind_temas_saude %>%
+  summarise(
+    Pais = 'Brasil',
+    Indicador = round((sum(Saude_reprodut) / sum(POP_CADASTRADA_IBGE)) * 100000, 2),
+    Media = round(mean(ind_Saude_reprodut, na.rm = TRUE), 2),
+    Mediana = round(median(ind_Saude_reprodut, na.rm = TRUE), 2),
+    Desvio_pad = round(sd(ind_Saude_reprodut, na.rm = TRUE), 2),
+    Min = round(min(ind_Saude_reprodut, na.rm = TRUE), 2),
+    Max = round(max(ind_Saude_reprodut, na.rm = TRUE), 2),
+    Pvalor_shapiro = ifelse(
+      sum(!is.na(ind_Saude_reprodut)) >= 3,
+      round(tryCatch(shapiro.test(ind_Saude_reprodut)$p.value, error = function(e) NA), 5),
+      NA
+    ),
+    Numerador = sum(Saude_reprodut),
+    Denominador = sum(POP_CADASTRADA_IBGE),
+    num_municip = n()
+  ) %>%
+  kable(
+    format = "html"
+  ) %>%
+  kable_styling(
+    full_width = FALSE,
+    bootstrap_options = c("striped", "hover", "condensed"),
+    font_size = 10
+  ) %>%
+  row_spec(0, bold = TRUE, background = "#f2f2f2") %>%
+  footnote(
+    general = "*A coluna indicador foi calculada pela divisão do total de práticas adotadas (por UF, Regiao ou país) pela população cadastrada segundo o IBGE."
+  )
+
+```
+
+## Gráficos
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.width=12, fig.height=4}
+ggplot(ind_temas_saude,
+       aes(x = ind_Saude_reprodut, fill = Regiao)) +
+  geom_histogram(alpha = 0.5, bins = 40, position = "identity") +
+  labs(x = "Indicador de Quantitativo atividades coletivas SSR 100 mil habitantes",
+     y = "Número de municípios") +
+  theme_minimal()+
+  theme(
+    legend.position = "bottom",
+    legend.box = "horizontal",
+    legend.title = element_blank()
+    )
+```
+
+```{r, echo=FALSE, fig.width=6, fig.height=4}
+ggplot(ind_temas_saude, aes(y = ind_Saude_reprodut, fill = Regiao)) +
+geom_boxplot() +
+labs(
+  title = "Indicador Quantitativo ativ. coletivas SSR - Por Regiões", 
+  subtitle = "Ano: 2023", 
+  caption = "Fonte: Ministério da Saúde",
+  y=""
+) +
+theme_bw() +
+theme(
+  plot.title = element_text(size = 12, face = "bold"),
+  plot.subtitle = element_text(size = 10),
+  legend.position = "bottom",
+  legend.title = element_blank()
+
+)
+```
+
+```{r, warning=FALSE, message=FALSE, echo = FALSE, fig.height= 6, fig.width=12}
+ggplot(
+  ind_temas_saude %>% 
+    arrange(desc(ind_auto_cuid_doenc_cronic)) %>% 
+    slice_head(n = 10),
+  aes(x = reorder(Municipio_UF, ind_auto_cuid_doenc_cronic), y = ind_auto_cuid_doenc_cronic)
+) +
+  geom_col(fill = "#33CC33") +
+  coord_flip() +
+  scale_y_continuous(labels = label_number(big.mark = ".", decimal.mark = ",")) +
+  labs(
+    title = "Top 10 Municípios - Promoção a saúde: Autocuidado doenças crônicas",
+    subtitle = "Ano: 2023",
+    x = "Município",
+    y = "Indicador",
+    caption = "Fonte: Ministério da Saúde - Números para 100.000 habitantes"
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    plot.title = element_text(face = "bold"),
+    plot.subtitle = element_text(size = 12),
+    axis.title.y = element_blank()
+  )
+```
+
+# 5.6 Indicadores de atividades coletivas de Antropometria {.tabset}
+
+## Dados por UF 
+
+```{r, echo=FALSE, warning=FALSE}
+
+kable(ind_praticas_saude%>%
+  group_by(UF) %>%
+  summarise(Regiao = first(Regiao),
+    Indicador = round((sum(Antropometria) / sum(POP_CADASTRADA_IBGE))*100000,2),
+    Media = round(mean(ind_Antropometria, na.rm = TRUE),2),
+    Mediana = round(median(ind_Antropometria, na.rm = TRUE),2),
+    Desvio_pad = round(sd(ind_Antropometria, na.rm = TRUE),2),
+    Min = round(min(ind_Antropometria, na.rm = TRUE),2),
+    Max = round(max(ind_Antropometria, na.rm = TRUE),2),
+    Pvalor_shapiro = ifelse(sum(!is.na(ind_Antropometria)) >= 3,
+      round(tryCatch(shapiro.test(ind_Antropometria)$p.value, error = function(e) NA), 5),NA),
+    Numerador = sum(Antropometria),
+    Denominador = sum(POP_CADASTRADA_IBGE),
+    num_municip = n())%>%
+  arrange(Regiao, UF)) %>%
+  kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover", "condensed"), font_size = 10)%>%
+  row_spec(0, bold = TRUE, background = "#f2f2f2") %>%
+  footnote(general = "*A coluna indicador foi calculada pela divisão do total de praticas adotadas (por UF, Regiao ou país) pela coluna de total de população cadastrada no IBGE.") %>%
+    scroll_box(width = "100%", height = "500px")
+
+```
+
+## Dados por Regiao
+
+```{r, echo=FALSE, warning=FALSE}
+
+kable(
+  ind_praticas_saude %>%
+    group_by(Regiao) %>%
+    summarise(
+      indicador = round((sum(Antropometria) / sum(POP_CADASTRADA_IBGE)) * 100000, 2),
+      Media = round(mean(ind_Antropometria, na.rm = TRUE), 2),
+      Mediana = round(median(ind_Antropometria, na.rm = TRUE), 2),
+      Desvio_pad = round(sd(ind_Antropometria, na.rm = TRUE), 2),
+      Minimo = round(min(ind_Antropometria, na.rm = TRUE), 2),
+      Maximo = round(max(ind_Antropometria, na.rm = TRUE), 2),
+      Pvalor_shapiro = ifelse(
+        sum(!is.na(ind_Antropometria)) >= 3,
+        round(tryCatch(shapiro.test(ind_Antropometria)$p.value, error = function(e) NA), 5),
+        NA
+      ),
+      Numerador = sum(Antropometria),
+      Denominador = sum(POP_CADASTRADA_IBGE),
+      num_municip = n()
+    ) %>%
+    arrange(Regiao)
+) %>%
+  kable_styling(
+    full_width = FALSE,
+    bootstrap_options = c("striped", "hover", "condensed"),
+    font_size = 10
+  ) %>%
+  row_spec(0, bold = TRUE, background = "#f2f2f2") %>%
+  footnote(general = "*A coluna indicador foi calculada pela divisão do total de práticas adotadas (por UF, Regiao ou país) pela coluna de população cadastrada segundo o IBGE.")
+
+```
+
+## Dados Nacionais
+
+```{r, echo=FALSE, warning=FALSE}
+ind_praticas_saude %>%
+  summarise(
+    Pais = 'Brasil',
+    Indicador = round((sum(Antropometria) / sum(POP_CADASTRADA_IBGE)) * 100000, 2),
+    Media = round(mean(ind_Antropometria, na.rm = TRUE), 2),
+    Mediana = round(median(ind_Antropometria, na.rm = TRUE), 2),
+    Desvio_pad = round(sd(ind_Antropometria, na.rm = TRUE), 2),
+    Min = round(min(ind_Antropometria, na.rm = TRUE), 2),
+    Max = round(max(ind_Antropometria, na.rm = TRUE), 2),
+    Pvalor_shapiro = ifelse(
+      sum(!is.na(ind_Antropometria)) >= 3,
+      round(tryCatch(shapiro.test(ind_Antropometria)$p.value, error = function(e) NA), 5),
+      NA
+    ),
+    Numerador = sum(Antropometria),
+    Denominador = sum(POP_CADASTRADA_IBGE),
+    num_municip = n()
+  ) %>%
+  kable(
+    format = "html"
+  ) %>%
+  kable_styling(
+    full_width = FALSE,
+    bootstrap_options = c("striped", "hover", "condensed"),
+    font_size = 10
+  ) %>%
+  row_spec(0, bold = TRUE, background = "#f2f2f2") %>%
+  footnote(
+    general = "*A coluna indicador foi calculada pela divisão do total de práticas adotadas (por UF, Regiao ou país) pela população cadastrada segundo o IBGE."
+  )
+
+```
+
+## Gráficos
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.width=12, fig.height=4}
+ggplot(ind_praticas_saude,
+       aes(x = ind_Antropometria, fill = Regiao)) +
+  geom_histogram(alpha = 0.5, bins = 40, position = "identity") +
+  labs(x = "Indicador de quantidade atividades coletivas de Antropometria",
+     y = "Número de municípios") +
+  theme_minimal()+
+  theme(
+    legend.position = "bottom",
+    legend.box = "horizontal",
+    legend.title = element_blank()
+    )
+```
+
+```{r, echo=FALSE, fig.width=6, fig.height=4}
+ggplot(ind_praticas_saude, aes(y = ind_Antropometria, fill = Regiao)) +
+geom_boxplot() +
+labs(
+  title = "Indicador de atividades coletivas de Antropometria - Por Regiões", 
+  subtitle = "Ano: 2023", 
+  caption = "Fonte: Ministério da Saúde",
+  y=""
+) +
+theme_bw() +
+theme(
+  plot.title = element_text(size = 12, face = "bold"),
+  plot.subtitle = element_text(size = 10),
+  legend.position = "bottom",
+  legend.title = element_blank()
+
+)
+```
+
+
+```{r, warning=FALSE, message=FALSE, echo = FALSE, fig.height= 6, fig.width=12}
+ggplot(
+  ind_praticas_saude %>% 
+    arrange(desc(ind_Antropometria)) %>% 
+    slice_head(n = 10),
+  aes(x = reorder(Municipio_UF, ind_Antropometria), y = ind_Antropometria)
+) +
+  geom_col(fill = "#33CC33") +
+  coord_flip() +
+  scale_y_continuous(labels = label_number(big.mark = ".", decimal.mark = ",")) +
+  labs(
+    title = "Top 10 Municípios - Indicador de qtd atividades coletivas de Antropometria",
+    subtitle = "Ano: 2023",
+    x = "Município",
+    y = "Indicador",
+    caption = "Fonte: Ministério da Saúde - Números para 100.000 habitantes"
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    plot.title = element_text(face = "bold"),
+    plot.subtitle = element_text(size = 12),
+    axis.title.y = element_blank()
+  )
+
+```
+
+
+# 5.7 Indicadores de Práticas de atividades corporais {.tabset}
+
+## Dados por UF 
+
+```{r, echo=FALSE, warning=FALSE}
+
+kable(ind_praticas_saude%>%
+  group_by(UF) %>%
+  summarise(Regiao = first(Regiao),
+    Indicador = round((sum(Praticas_atividades_corporais) / sum(POP_CADASTRADA_IBGE))*100000,2),
+    Media = round(mean(Praticas_atividades_corporais, na.rm = TRUE),2),
+    Mediana = round(median(Praticas_atividades_corporais, na.rm = TRUE),2),
+    Desvio_pad = round(sd(Praticas_atividades_corporais, na.rm = TRUE),2),
+    Min = round(min(Praticas_atividades_corporais, na.rm = TRUE),2),
+    Max = round(max(Praticas_atividades_corporais, na.rm = TRUE),2),
+    Pvalor_shapiro = ifelse(sum(!is.na(Praticas_atividades_corporais)) >= 3,
+      round(tryCatch(shapiro.test(Praticas_atividades_corporais)$p.value, error = function(e) NA), 5),NA),
+    Numerador = sum(Praticas_atividades_corporais),
+    Denominador = sum(POP_CADASTRADA_IBGE),
+    num_municip = n())%>%
+  arrange(Regiao, UF)) %>%
+  kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover", "condensed"), font_size = 10)%>%
+  row_spec(0, bold = TRUE, background = "#f2f2f2") %>%
+  footnote(general = "*A coluna indicador foi calculada pela divisão do total de praticas adotadas (por UF, Regiao ou país) pela coluna de total de população cadastrada no IBGE.") %>%
+    scroll_box(width = "100%", height = "500px")
+
+```
+
+## Dados por Regiao
+
+```{r, echo=FALSE, warning=FALSE}
+
+kable(
+  ind_praticas_saude %>%
+    group_by(Regiao) %>%
+    summarise(
+      indicador = round((sum(Praticas_atividades_corporais) / sum(POP_CADASTRADA_IBGE)) * 100000, 2),
+      Media = round(mean(ind_Praticas_atividades_corporais, na.rm = TRUE), 2),
+      Mediana = round(median(ind_Praticas_atividades_corporais, na.rm = TRUE), 2),
+      Desvio_pad = round(sd(ind_Praticas_atividades_corporais, na.rm = TRUE), 2),
+      Minimo = round(min(ind_Praticas_atividades_corporais, na.rm = TRUE), 2),
+      Maximo = round(max(ind_Praticas_atividades_corporais, na.rm = TRUE), 2),
+      Pvalor_shapiro = ifelse(
+        sum(!is.na(ind_Praticas_atividades_corporais)) >= 3,
+        round(tryCatch(shapiro.test(ind_Praticas_atividades_corporais)$p.value, error = function(e) NA), 5),
+        NA
+      ),
+      Numerador = sum(ind_Praticas_atividades_corporais),
+      Denominador = sum(POP_CADASTRADA_IBGE),
+      num_municip = n()
+    ) %>%
+    arrange(Regiao)
+) %>%
+  kable_styling(
+    full_width = FALSE,
+    bootstrap_options = c("striped", "hover", "condensed"),
+    font_size = 10
+  ) %>%
+  row_spec(0, bold = TRUE, background = "#f2f2f2") %>%
+  footnote(general = "*A coluna indicador foi calculada pela divisão do total de práticas adotadas (por UF, Regiao ou país) pela coluna de população cadastrada segundo o IBGE.")
+
+```
+
+## Dados Nacionais
+
+```{r, echo=FALSE, warning=FALSE}
+ind_praticas_saude %>%
+  summarise(
+    Pais = 'Brasil',
+    Indicador = round((sum(ind_Praticas_atividades_corporais) / sum(POP_CADASTRADA_IBGE)) * 100000, 2),
+    Media = round(mean(ind_Praticas_atividades_corporais, na.rm = TRUE), 2),
+    Mediana = round(median(ind_Praticas_atividades_corporais, na.rm = TRUE), 2),
+    Desvio_pad = round(sd(ind_Praticas_atividades_corporais, na.rm = TRUE), 2),
+    Min = round(min(ind_Praticas_atividades_corporais, na.rm = TRUE), 2),
+    Max = round(max(ind_Praticas_atividades_corporais, na.rm = TRUE), 2),
+    Pvalor_shapiro = ifelse(
+      sum(!is.na(ind_Praticas_atividades_corporais)) >= 3,
+      round(tryCatch(shapiro.test(ind_Praticas_atividades_corporais)$p.value, error = function(e) NA), 5),
+      NA
+    ),
+    Numerador = sum(ind_Praticas_atividades_corporais),
+    Denominador = sum(POP_CADASTRADA_IBGE),
+    num_municip = n()
+  ) %>%
+  kable(
+    format = "html"
+  ) %>%
+  kable_styling(
+    full_width = FALSE,
+    bootstrap_options = c("striped", "hover", "condensed"),
+    font_size = 10
+  ) %>%
+  row_spec(0, bold = TRUE, background = "#f2f2f2") %>%
+  footnote(
+    general = "*A coluna indicador foi calculada pela divisão do total de práticas adotadas (por UF, Regiao ou país) pela população cadastrada segundo o IBGE."
+  )
+
+```
+
+## Gráficos
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.width = 12, fig.height=4}
+ggplot(ind_praticas_saude,
+       aes(x = ind_Praticas_atividades_corporais, fill = Regiao)) +
+  geom_histogram(alpha = 0.5, bins = 40, position = "identity") +
+  labs(x = "Indice atividades coletivas de atividades corporais",
+     y = "Número de municípios") +
+  theme_minimal()+
+  theme(
+    legend.position = "bottom",
+    legend.box = "horizontal",
+    legend.title = element_blank()
+    )
+```
+
+```{r, echo=FALSE, fig.width=6, fig.height=4}
+ggplot(ind_praticas_saude, aes(y = ind_Praticas_atividades_corporais, fill = Regiao)) +
+geom_boxplot() +
+labs(
+  title = "Ind. de qtd. de ativ coletiv. de pratica de ativ corporais. -  Regiões", 
+  subtitle = "Ano: 2023", 
+  caption = "Fonte: Ministério da Saúde"
+) +
+theme_bw() +
+theme(
+  plot.title = element_text(size = 12, face = "bold"),
+  plot.subtitle = element_text(size = 10),
+  legend.position = "bottom",
+  legend.title = element_blank()
+
+)
+```
+
+```{r, warning=FALSE, message=FALSE, echo = FALSE, fig.height= 6, fig.width=12}
+ggplot(
+  ind_praticas_saude %>% 
+    arrange(desc(ind_Praticas_atividades_corporais)) %>% 
+    slice_head(n = 10),
+  aes(x = reorder(Municipio_UF, ind_Praticas_atividades_corporais), y = ind_Praticas_atividades_corporais)
+) +
+  geom_col(fill = "#33CC33") +
+  coord_flip() +
+  scale_y_continuous(labels = label_number(big.mark = ".", decimal.mark = ",")) +
+  labs(
+    title = "Top 10 Municípios - Qtd. ativ. colet. práticas corporais",
+    subtitle = "Ano: 2023",
+    x = "Município",
+    y = "Indicador",
+    caption = "Fonte: Ministério da Saúde - Números para 100.000 habitantes"
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    plot.title = element_text(face = "bold"),
+    plot.subtitle = element_text(size = 12),
+    axis.title.y = element_blank()
+  )
+
+```
+
+# 5.8 Indicadores atividades coletivas de verificação de saúde Vacinal {.tabset}
+
+## Dados por UF 
+
+```{r, echo=FALSE, warning=FALSE}
+
+kable(ind_praticas_saude%>%
+  group_by(UF) %>%
+  summarise(Regiao = first(Regiao),
+    Indicador = round((sum(Verific_sit_vacina) / sum(POP_CADASTRADA_IBGE))*100000,2),
+    Media = round(mean(ind_Verific_sit_vacina, na.rm = TRUE),2),
+    Mediana = round(median(ind_Verific_sit_vacina, na.rm = TRUE),2),
+    Desvio_pad = round(sd(ind_Verific_sit_vacina, na.rm = TRUE),2),
+    Minimo = round(min(ind_Verific_sit_vacina, na.rm = TRUE),2),
+    Maximo = round(max(ind_Verific_sit_vacina, na.rm = TRUE),2),
+    Pvalor_shapiro = ifelse(sum(!is.na(ind_Verific_sit_vacina)) >= 3,
+      round(tryCatch(shapiro.test(ind_Verific_sit_vacina)$p.value, error = function(e) NA), 5),NA),
+    Numerador = sum(Verific_sit_vacina),
+    Denominador = sum(POP_CADASTRADA_IBGE),
+    num_municip = n())%>%
+  arrange(Regiao, UF)) %>%
+  kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover", "condensed"), font_size = 10)%>%
+  row_spec(0, bold = TRUE, background = "#f2f2f2") %>%
+  footnote(general = "*A coluna indicador foi calculada pela divisão do total de praticas adotadas (por UF, Regiao ou país) pela coluna de total de população cadastrada no IBGE.") %>%
+    scroll_box(width = "100%", height = "500px")
+
+```
+
+## Dados por Regiao
+
+```{r, echo=FALSE, warning=FALSE}
+
+kable(
+  ind_praticas_saude %>%
+    group_by(Regiao) %>%
+    summarise(
+      Indicador = round((sum(Verific_sit_vacina) / sum(POP_CADASTRADA_IBGE)) * 100000, 2),
+      Media = round(mean(Verific_sit_vacina, na.rm = TRUE), 2),
+      Mediana = round(median(ind_Verific_sit_vacina, na.rm = TRUE), 2),
+      Desvio_padrao = round(sd(ind_Verific_sit_vacina, na.rm = TRUE), 2),
+      Minimo = round(min(ind_Verific_sit_vacina, na.rm = TRUE), 2),
+      Maximo = round(max(ind_Verific_sit_vacina, na.rm = TRUE), 2),
+      Pvalor_shapiro = ifelse(
+        sum(!is.na(ind_Verific_sit_vacina)) >= 3,
+        round(tryCatch(shapiro.test(ind_Verific_sit_vacina)$p.value, error = function(e) NA), 5),
+        NA
+      ),
+      numerador = sum(Verific_sit_vacina),
+      Denominador = sum(POP_CADASTRADA_IBGE),
+      num_municip = n()
+    ) %>%
+    arrange(Regiao)
+) %>%
+  kable_styling(
+    full_width = FALSE,
+    bootstrap_options = c("striped", "hover", "condensed"),
+    font_size = 10
+  ) %>%
+  row_spec(0, bold = TRUE, background = "#f2f2f2") %>%
+  footnote(general = "*A coluna indicador foi calculada pela divisão do total de práticas adotadas (por UF, Regiao ou país) pela coluna de população cadastrada segundo o IBGE.")
+
+```
+
+## Dados Nacionais
+
+```{r, echo=FALSE, warning=FALSE}
+ind_praticas_saude %>%
+  summarise(
+    Pais = 'Brasil',
+    Indicador = round((sum(Verific_sit_vacina) / sum(POP_CADASTRADA_IBGE)) * 100000, 2),
+    Media = round(mean(ind_Verific_sit_vacina, na.rm = TRUE), 2),
+    Mediana = round(median(ind_Verific_sit_vacina, na.rm = TRUE), 2),
+    Desvio_padrao = round(sd(ind_Verific_sit_vacina, na.rm = TRUE), 2),
+    Minimo = round(min(ind_Verific_sit_vacina, na.rm = TRUE), 2),
+    Maximo = round(max(ind_Verific_sit_vacina, na.rm = TRUE), 2),
+    Pvalor_shapiro = ifelse(
+      sum(!is.na(ind_Verific_sit_vacina)) >= 3,
+      round(tryCatch(shapiro.test(ind_Verific_sit_vacina)$p.value, error = function(e) NA), 5),
+      NA
+    ),
+    Numerador = sum(Verific_sit_vacina), 
+    Denominador = sum (POP_CADASTRADA_IBGE),
+    n_municip = n()
+  ) %>%
+  kable(
+    format = "html"
+  ) %>%
+  kable_styling(
+    full_width = FALSE,
+    bootstrap_options = c("striped", "hover", "condensed"),
+    font_size = 10
+  ) %>%
+  row_spec(0, bold = TRUE, background = "#f2f2f2") %>%
+  footnote(
+    general = "*A coluna indicador foi calculada pela divisão do total de práticas adotadas (por UF, Regiao ou país) pela população cadastrada segundo o IBGE."
+  )
+
+```
+
+## Gráficos
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.width=12, fig.height=4}
+ggplot(ind_praticas_saude,
+       aes(x = ind_Verific_sit_vacina, fill = Regiao)) +
+  geom_histogram(alpha = 0.5, bins = 40, position = "identity") +
+  labs(x = "Indicador qtd. ativ. coletiva - verificação situação Vacinal",
+     y = "Número de municípios") +
+  theme_minimal()+
+  theme(
+    legend.position = "bottom",
+    legend.box = "horizontal",
+    legend.title = element_blank()
+    )
+```
+
+```{r, echo=FALSE, fig.width=6, fig.height=4}
+ggplot(ind_praticas_saude, aes(y = ind_Verific_sit_vacina, fill = Regiao)) +
+geom_boxplot() +
+labs(
+  title = "Indicador qtd. ativ. coletiva - verificação situação Vacinal", 
+  subtitle = "Ano: 2023", 
+  caption = "Fonte: Ministério da Saúde"
+) +
+theme_bw() +
+theme(
+  plot.title = element_text(size = 12, face = "bold"),
+  plot.subtitle = element_text(size = 10),
+  legend.position = "bottom",
+  legend.title = element_blank()
+
+)
+```
+
+
+```{r, warning=FALSE, message=FALSE, echo = FALSE, fig.height= 6, fig.width=12}
+ggplot(
+  ind_praticas_saude %>% 
+    arrange(desc(ind_Verific_sit_vacina)) %>% 
+    slice_head(n = 10),
+  aes(x = reorder(Municipio_UF, ind_Verific_sit_vacina), y = ind_Verific_sit_vacina)
+) +
+  geom_col(fill = "#33CC33") +
+  coord_flip() +
+  scale_y_continuous(labels = label_number(big.mark = ".", decimal.mark = ",")) +
+  labs(
+    title = "Top 10 Municípios - Ind. qtd. ativ. coletiv. verific. sit. vacinal",
+    subtitle = "Ano: 2023",
+    x = "Município",
+    y = "Indicador",
+    caption = "Fonte: Ministério da Saúde - Números para 100.000 habitantes"
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    plot.title = element_text(face = "bold"),
+    plot.subtitle = element_text(size = 12),
+    axis.title.y = element_blank()
+  )
+
+```
+
+
+# 5.9 Indicador de adesão ao Programa Saúde na Escola (PSE) {.tabset}
+
+## Dados por UF 
+
+```{r, echo=FALSE, warning=FALSE}
+
+kable(
+  ind_adesão_escolas %>%
+    group_by(UF) %>%
+    summarise(
+      Regiao = first(Regiao),
+      Indicador = round(sum(Educação, na.rm = TRUE) / sum(QTD_escolas, na.rm = TRUE), 2),
+      Media = round(mean(ind_Educação, na.rm = TRUE), 2),
+      Mediana = round(median(ind_Educação, na.rm = TRUE), 2),
+      Desvio_pad = round(sd(ind_Educação, na.rm = TRUE), 2),
+      Min = round(min(ind_Educação, na.rm = TRUE), 2),
+      Max = round(max(ind_Educação, na.rm = TRUE), 2),
+      Pvalor_shapiro = ifelse(
+        sum(!is.na(ind_Educação)) >= 3,
+        round(tryCatch(shapiro.test(ind_Educação)$p.value, error = function(e) NA), 5),
+        NA
+      ),
+      Numerador = sum(Educação),
+      Denominador = sum(QTD_escolas)
+    ) %>%
+    arrange(Regiao, UF)
+) %>%
+  kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover", "condensed"), font_size = 10) %>%
+  row_spec(0, bold = TRUE, background = "#f2f2f2") %>%
+  footnote(general = "*A coluna indicador foi calculada pela divisão do total de práticas adotadas (por UF, Regiao ou país) pela coluna de total de população cadastrada no IBGE.") %>%
+    scroll_box(width = "100%", height = "500px")
+
+
+```
+
+## Dados por Regiao
+
+```{r, echo=FALSE, warning=FALSE}
+
+kable(
+  ind_adesão_escolas %>%
+    group_by(Regiao) %>%
+    summarise(
+      Indicador = round(sum(Educação, na.rm = TRUE) / sum(QTD_escolas, na.rm = TRUE), 2),
+      Media = round(mean(ind_Educação, na.rm = TRUE), 2),
+      Mediana = round(median(ind_Educação, na.rm = TRUE), 2),
+      Desvio_pad = round(sd(ind_Educação, na.rm = TRUE), 2),
+      Min = round(min(ind_Educação, na.rm = TRUE), 2),
+      Max = round(max(ind_Educação, na.rm = TRUE), 2),
+      Pvalor_shapiro = ifelse(
+        sum(!is.na(ind_Educação)) >= 3,
+        round(tryCatch(shapiro.test(ind_Educação)$p.value, error = function(e) NA), 5),
+        NA
+      ),
+      Numerador = sum(Educação),
+      Denominador = sum(QTD_escolas)
+    ) %>%
+    arrange(Regiao)
+) %>%
+  kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover", "condensed"), font_size = 10) %>%
+  row_spec(0, bold = TRUE, background = "#f2f2f2") %>%
+  footnote(general = "*A coluna indicador foi calculada pela divisão do total de práticas adotadas (por UF, Regiao ou país) pela coluna de total de população cadastrada no IBGE.")
+
+```
+
+## Dados Nacionais
+
+```{r, echo=FALSE, warning=FALSE}
+
+kable(
+  ind_adesão_escolas %>%
+    summarise(
+      País = 'Brasil', 
+      Indicador = round(sum(Educação, na.rm = TRUE) / sum(QTD_escolas, na.rm = TRUE), 2),
+      Media = round(mean(ind_Educação, na.rm = TRUE), 2),
+      Mediana = round(median(ind_Educação, na.rm = TRUE), 2),
+      Desvio_pad = round(sd(ind_Educação, na.rm = TRUE), 2),
+      Min = round(min(ind_Educação, na.rm = TRUE), 2),
+      Max = round(max(ind_Educação, na.rm = TRUE), 2),
+      Pvalor_shapiro = ifelse(
+        sum(!is.na(ind_Educação)) >= 3,
+        round(tryCatch(shapiro.test(ind_Educação)$p.value, error = function(e) NA), 5),
+        NA
+      ),
+      Numerador = sum(Educação, na.rm = TRUE),
+      Denominador = sum(QTD_escolas, na.rm = TRUE)
+    )
+) %>%
+  kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover", "condensed"), font_size = 10) %>%
+  row_spec(0, bold = TRUE, background = "#f2f2f2") %>%
+  footnote(general = "*A coluna indicador foi calculada pela divisão do total de práticas adotadas (por UF, Regiao ou país) pela coluna de total de população cadastrada no IBGE.")
+
+```
+
+## Gráficos
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.width=8, fig.height=4}
+ggplot(ind_adesão_escolas,
+       aes(x = ind_Educação, fill = Regiao)) +
+  geom_histogram(alpha = 0.5, bins = 40, position = "identity") +
+  labs(x = "Indicador adesão ao programa de saude nas escolas (PSE)",
+     y = "Número de municípios") +
+  theme_minimal()+
+  theme(
+    legend.position = "bottom",
+    legend.box = "horizontal",
+    legend.title = element_blank()
+    )
+```
+
+```{r, echo=FALSE, fig.width=6, fig.height=4}
+ggplot(ind_adesão_escolas, aes(y = ind_Educação, fill = Regiao)) +
+geom_boxplot() +
+labs(
+  title = "Indicador Práticas de saúde nas escolas - Por Regiões", 
+  subtitle = "Ano: 2023", 
+  caption = "Fonte: Ministério da Saúde"
+) +
+theme_bw() +
+theme(
+  plot.title = element_text(size = 12, face = "bold"),
+  plot.subtitle = element_text(size = 10),
+  legend.position = "bottom",
+  legend.title = element_blank()
+
+)
+```
+
+```{r, warning=FALSE, message=FALSE, echo = FALSE, fig.height= 6, fig.width=12}
+ggplot(
+  ind_adesão_escolas %>% 
+    arrange(desc(ind_Educação)) %>% 
+    slice_head(n = 10),
+  aes(x = reorder(Municipio_UF, ind_Educação), y = ind_Educação)
+) +
+  geom_col(fill = "#33CC33") +
+  coord_flip() +
+  scale_y_continuous(labels = comma)+
+  labs(
+    title = "Top 10 Municípios - Promoção a saúde: adesão ao Prog. de saúde nas escolas - PSE",
+    subtitle = "Ano: 2023",
+    x = "Município",
+    y = "Indicador",
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    plot.title = element_text(face = "bold"),
+    plot.subtitle = element_text(size = 12),
+    axis.title.y = element_blank()
+  )
+
+```
+
+
+
+# 5.10 Indicadores quantidades de atividades coletivas nas escolas {.tabset}
+
+## Dados por UF
+
+```{r, echo=FALSE, warning=FALSE}
+
+kable(
+  ind_adesão_escolas %>%
+    group_by(UF) %>%
+    summarise(
+      Regiao = first(Regiao),
+      Indicador = round(sum(Saúde, na.rm = TRUE) / sum(QTD_escolas, na.rm = TRUE), 2),
+      Media = round(mean(ind_Saúde, na.rm = TRUE), 2),
+      Mediana = round(median(ind_Saúde, na.rm = TRUE), 2),
+      Desvio_pad = round(sd(ind_Saúde, na.rm = TRUE), 2),
+      Min = round(min(ind_Saúde, na.rm = TRUE), 2),
+      Max = round(max(ind_Saúde, na.rm = TRUE), 2),
+      Pvalor_shapiro = ifelse(
+        sum(!is.na(ind_Saúde)) >= 3,
+        round(tryCatch(shapiro.test(ind_Saúde)$p.value, error = function(e) NA), 5),
+        NA
+      ), 
+      Numerador = sum(Saúde),
+      Denominador = sum(QTD_escolas)
+    ) %>%
+    arrange(Regiao, UF)
+) %>%
+  kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover", "condensed"), font_size = 10) %>%
+  row_spec(0, bold = TRUE, background = "#f2f2f2") %>%
+  footnote(general = "*A coluna indicador foi calculada pela divisão do total de práticas adotadas (por UF, Regiao ou país) pela coluna de total de população cadastrada no IBGE.") %>%
+    scroll_box(width = "100%", height = "500px")
+
+
+```
+
+## Dados por Regiao
+
+```{r, echo=FALSE, warning=FALSE}
+
+kable(
+  ind_adesão_escolas %>%
+    group_by(Regiao) %>%
+    summarise(
+      Indicador = round(sum(Saúde, na.rm = TRUE) / sum(QTD_escolas, na.rm = TRUE), 2),
+      Media = round(mean(ind_Saúde, na.rm = TRUE), 2),
+      Mediana = round(median(ind_Saúde, na.rm = TRUE), 2),
+      Desvio_pad = round(sd(ind_Saúde, na.rm = TRUE), 2),
+      Min = round(min(ind_Saúde, na.rm = TRUE), 2),
+      Max = round(max(ind_Saúde, na.rm = TRUE), 2),
+      Pvalor_shapiro = ifelse(
+        sum(!is.na(ind_Saúde)) >= 3,
+        round(tryCatch(shapiro.test(ind_Saúde)$p.value, error = function(e) NA), 5),
+        NA
+      ), 
+      Numerador = sum(Saúde),
+      Denominador = sum(QTD_escolas)
+    ) %>%
+    arrange(Regiao)
+) %>%
+  kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover", "condensed"), font_size = 10) %>%
+  row_spec(0, bold = TRUE, background = "#f2f2f2") %>%
+  footnote(general = "*A coluna indicador foi calculada pela divisão do total de práticas adotadas (por UF, Regiao ou país) pela coluna de total de população cadastrada no IBGE.")
+
+```
+
+## Dados Nacionais
+
+```{r, echo=FALSE, warning=FALSE}
+
+kable(
+  ind_adesão_escolas %>%
+    summarise(País = 'Brasil', 
+      Indicador = round(sum(Saúde, na.rm = TRUE) / sum(QTD_escolas, na.rm = TRUE), 2),
+      Media = round(mean(ind_Saúde, na.rm = TRUE), 2),
+      Mediana = round(median(ind_Saúde, na.rm = TRUE), 2),
+      Desvio_pad = round(sd(ind_Saúde, na.rm = TRUE), 2),
+      Min = round(min(ind_Saúde, na.rm = TRUE), 2),
+      Max = round(max(ind_Saúde, na.rm = TRUE), 2),
+      Pvalor_shapiro = ifelse(
+        sum(!is.na(ind_Saúde)) >= 3,
+        round(tryCatch(shapiro.test(ind_Saúde)$p.value, error = function(e) NA), 5),
+        NA
+      ), 
+      Numerador = sum(Saúde),
+      Denominador = sum(QTD_escolas))) %>%
+  kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover", "condensed"), font_size = 10) %>%
+  row_spec(0, bold = TRUE, background = "#f2f2f2") %>%
+  footnote(general = "*A coluna indicador foi calculada pela divisão do total de práticas adotadas (por UF, Regiao ou país) pela coluna de total de população cadastrada no IBGE.")
+
+```
+
+## Gráficos
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.width=8, fig.height=4}
+ggplot(ind_adesão_escolas,
+       aes(x = ind_Saúde, fill = Regiao)) +
+  geom_histogram(alpha = 0.5, bins = 40, position = "identity") +
+  labs(x = "Indicador Quantidade de atividades coletivas nas escolas (PSE)",
+     y = "Número de municípios") +
+  theme_minimal()+
+  theme(
+    legend.position = "bottom",
+    legend.box = "horizontal",
+    legend.title = element_blank()
+    )
+```
+
+```{r, echo=FALSE, fig.width=6, fig.height=4}
+ggplot(ind_adesão_escolas, aes(y = ind_Saúde, fill = Regiao)) +
+geom_boxplot() +
+labs(
+  title = "Indicador de Qtd de ativ. coletivas nas escolas (PSE) - Regiões", 
+  subtitle = "Ano: 2023", 
+  caption = "Fonte: Ministério da Saúde",
+  y=""
+) +
+theme_bw() +
+theme(
+  plot.title = element_text(size = 12, face = "bold"),
+  plot.subtitle = element_text(size = 10),
+  legend.position = "bottom",
+  legend.title = element_blank()
+
+)
+```
+
+
+```{r, warning=FALSE, message=FALSE, echo = FALSE, fig.height= 6, fig.width=12}
+ggplot(
+  ind_adesão_escolas %>% 
+    arrange(desc(ind_Saúde)) %>% 
+    slice_head(n = 10),
+  aes(x = reorder(Municipio_UF, ind_Saúde), y = ind_Saúde)
+) +
+  geom_col(fill = "#33CC33") +
+  coord_flip() +
+  scale_y_continuous(labels = comma)+
+  labs(
+    title = "Top 10 Municípios - Ind. Qtd. atividades coletivas nas escolas",
+    subtitle = "Ano: 2023",
+    x = "Município",
+    y = "Indicador",
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    plot.title = element_text(face = "bold"),
+    plot.subtitle = element_text(size = 12),
+    axis.title.y = element_blank()
+  )
+
+```
+
+
+# 5.11 Indicadores Bolsa Família {.tabset}
+
+<div style="text-align: justify; text-indent: 2em;">
+Os dados evidenciam uma baixa dispersão (coeficiente de variação máximo de 18% por UF) e constatou-se uma forte concentração percentuais de cobertura em torno da média (83%), indicando que a maioria dos municípios consegue atingir patamares elevados de cobertura. No entanto, apesar da homogeneidade de dados constatada, verificou-se a presença de outliers na série.
+</div>
+
+<div style="text-align: justify; text-indent: 2em;">
+Em relação aos percentuais de cobertura no âmbito regional, verifica-se que os estados da Regiao nordeste apresentaram os melhores resultados. No entanto, apesar dos patamares elevados de cobertura, os resultados identificados na Regiao Norte (estados de Amapá e Roraima) indicam a necessidade de aprimoramento em seus processos para uma evolução em seus percentuais.
+</div>
+
+<div style="text-align: justify; text-indent: 2em;">
+Na instância estadual, constata-se que os resultados apresentados na Regiao Sudeste apresentaram maior amplitude (mínimo de 22% e o máximo de 100%), refletindo assim em uma maior volatilidade (desvio padrão de 13% para a Regiao), indicando uma maior desigualdade nos processos de acompanhamento dos beneficiários. 
+</div>
+
+<div style="text-align: justify; text-indent: 2em;">
+No que diz respeito a premissa de normalidade da série, devido a característica da taxa percentual adotada (com valores entre 0 e 1 e com forte concentração assimétrica em valores próximos a 1), os testes estatísticos adotados por Regiao e as características do histograma indicam a não normalidade da série quando avalia-se os dados de forma global.
+</div>
+
+<div style="text-align: justify; text-indent: 2em;">
+No entanto, avaliando de forma individualizada, verifica-se que para os estados do Acre, Amazonas, Amapá e Pará, constata-se não se rejeita a hipótese de normalidade, indicando a necessidade de uma avaliação mais específica para estes estados ou para a Regiao norte como um todo, conforme pode ser verificado na tabela abaixo:
+</div>
+
+## Dados por UF
+
+```{r, echo=FALSE, warning=FALSE}
+Bolsa_familia_2023 %>%
+  group_by(UF_SIGLA) %>%
+  summarise(
+    media = percent(mean(perc_cob_ben_acomp, na.rm = TRUE), accuracy = 0.1),
+    mediana = percent(median(perc_cob_ben_acomp, na.rm = TRUE), accuracy = 0.1),
+    sd = percent(sd(perc_cob_ben_acomp, na.rm = TRUE), accuracy = 0.1),
+    min = percent(min(perc_cob_ben_acomp, na.rm = TRUE), accuracy = 0.1),
+    max = percent(max(perc_cob_ben_acomp, na.rm = TRUE), accuracy = 0.1),
+    pvalor_shapiro = ifelse(
+      sum(!is.na(perc_cob_ben_acomp)) >= 3,
+      round(tryCatch(shapiro.test(perc_cob_ben_acomp)$p.value, error = function(e) NA), 5),
+      NA
+    ),
+    n_municipios = n()
+  ) %>%
+  kable(format = "html") %>%
+  kable_styling(
+    full_width = FALSE,
+    bootstrap_options = c("striped", "hover", "condensed"),
+    font_size = 10
+  ) %>%
+  row_spec(0, bold = TRUE, background = "#f2f2f2") %>%
+    scroll_box(width = "100%", height = "500px")
+
+```
+
+## Dados por Regiao
+
+```{r, echo=FALSE, warning=FALSE}
+Bolsa_familia_2023 %>%
+  group_by(Regiao) %>%
+  summarise(
+    media = percent(mean(perc_cob_ben_acomp, na.rm = TRUE), accuracy = 0.1),
+    mediana = percent(median(perc_cob_ben_acomp, na.rm = TRUE), accuracy = 0.1),
+    sd = percent(sd(perc_cob_ben_acomp, na.rm = TRUE), accuracy = 0.1),
+    min = percent(min(perc_cob_ben_acomp, na.rm = TRUE), accuracy = 0.1),
+    max = percent(max(perc_cob_ben_acomp, na.rm = TRUE), accuracy = 0.1),
+    pvalor_shapiro = ifelse(
+      sum(!is.na(perc_cob_ben_acomp)) >= 3,
+      round(tryCatch(shapiro.test(perc_cob_ben_acomp)$p.value, error = function(e) NA), 5),
+      NA
+    ),
+    n_municipios = n()
+  ) %>%
+  kable(format = "html") %>%
+  kable_styling(
+    full_width = FALSE,
+    bootstrap_options = c("striped", "hover", "condensed"),
+    font_size = 10
+  ) %>%
+  row_spec(0, bold = TRUE, background = "#f2f2f2")
+```
+
+## Dados Nacionais
+
+```{r, echo=FALSE, warning=FALSE}
+Bolsa_familia_2023 %>%
+  summarise(País = 'Brasil',
+    media = percent(mean(perc_cob_ben_acomp, na.rm = TRUE), accuracy = 0.1),
+    mediana = percent(median(perc_cob_ben_acomp, na.rm = TRUE), accuracy = 0.1),
+    sd = percent(sd(perc_cob_ben_acomp, na.rm = TRUE), accuracy = 0.1),
+    min = percent(min(perc_cob_ben_acomp, na.rm = TRUE), accuracy = 0.1),
+    max = percent(max(perc_cob_ben_acomp, na.rm = TRUE), accuracy = 0.1),
+    pvalor_shapiro = ifelse(
+      sum(!is.na(perc_cob_ben_acomp)) >= 3,
+      round(tryCatch(shapiro.test(perc_cob_ben_acomp)$p.value, error = function(e) NA), 5),
+      NA
+    ),
+    n_municipios = n()
+  ) %>%
+  kable(format = "html") %>%
+  kable_styling(
+    full_width = FALSE,
+    bootstrap_options = c("striped", "hover", "condensed"),
+    font_size = 10
+  ) %>%
+  row_spec(0, bold = TRUE, background = "#f2f2f2")
+```
+
+## Gráficos
+
+```{r, echo=FALSE, fig.width=6, fig.height=4}
+
+ggplot(Bolsa_familia_2023, 
+    aes(x = Regiao, 
+       y = perc_cob_ben_acomp, 
+       fill = Regiao)) +
+    geom_boxplot(
+    alpha = 0.7,                # Transparência
+    width = 0.6,                # Largura dos boxes
+    outlier.shape = 21,         # Formato dos outliers
+    outlier.color = "black",     # Cor dos outliers
+    outlier.fill = "red",        # Preenchimento dos outliers
+    outlier.size = 2            # Tamanho dos outliers
+    ) +
+    scale_y_continuous(
+    labels = label_percent(scale = 100),  # Formato percentual
+    limits = c(0, 1)                     # Limites de 0% a 100%
+    ) +
+    labs(
+    y = "% - Cobertura e Acompanhamento",
+    x = ""
+    ) +
+    scale_fill_brewer(palette = "Set2") +  
+    theme_minimal() +
+    theme(
+    legend.position = "none",             
+    plot.title = element_text(hjust = 0.5, face = "bold"),
+    plot.subtitle = element_text(hjust = 0.5),
+    axis.text.x = element_text(angle = 0, hjust = 0.5)
+    )
+
+```
+
+```{r, warning=FALSE, echo=FALSE, fig.width=6, fig.height=4}
+
+ggplot(Bolsa_familia_2023, 
+      aes(x = perc_cob_ben_acomp, fill = Regiao)) +
+      geom_histogram(
+      aes(y = after_stat(count)),  # Contagem de municípios (não densidade)
+      position = "identity",      # Empilha as barras (ou use "dodge" para lado a lado)
+      alpha = 0.7,                # Transparência para sobreposição
+      binwidth = 0.05,            # Largura dos intervalos (ajuste conforme necessário)
+      color = "white",            # Cor da borda das barras
+      size = 0.3                  # Espessura da borda
+      ) +
+      scale_x_continuous(
+      labels = label_percent(scale = 100),  # Converte para percentual
+      limits = c(0, 1)                   # Garante que o eixo x vá de 0% a 100%
+      ) +
+      labs(
+      x = "Percentual de Cobertura/Acompanhamento",
+      y = "Número de Municípios",
+      ) +
+      theme_minimal() +
+      theme(
+      legend.position = "bottom",
+      legend.box = "horizontal",
+      legend.title = element_blank(),
+      plot.title = element_text(hjust = 0.5, face = "bold"),
+      plot.subtitle = element_text(hjust = 0.5)
+      )
+
+```
+
+```{r, warning=FALSE, message=FALSE, echo = FALSE, fig.height= 8, fig.width=12}
+
+media_brasil <- mean(Bolsa_familia_2023$perc_cob_ben_acomp, na.rm = TRUE)
+
+Bolsa_familia_2023 %>%
+  group_by(UF_SIGLA) %>%
+  summarise(media_perc = mean(perc_cob_ben_acomp, na.rm = TRUE)) %>%
+  ggplot(aes(x = reorder(UF_SIGLA, media_perc), y = media_perc)) +
+  geom_col(fill = "#33CC33") +
+  geom_hline(yintercept = mean(Bolsa_familia_2023$perc_cob_ben_acomp, na.rm = TRUE), 
+             linetype = "dashed", color = "red", size = 1) +
+  annotate("text", x = 0.8, y = media_brasil + 0.015, 
+           label = paste0("Média Brasil: ", round(media_brasil*100, 0), "%"), 
+           color = "red", hjust = 0, size = 4) +
+  coord_flip() +
+  scale_y_continuous(labels = label_percent(scale = 100), limits = c(0, 1)) +
+  labs(
+    title = "Média de acompanhamento de beneficiários BFA por UF",
+    subtitle = "Ano: 2023",
+    x = "",
+    y = "Percentual médio",
+    caption = "Fonte: Ministério da Saúde"
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    plot.title = element_text(face = "bold"),
+    plot.subtitle = element_text(size = 12)
+  )
+
+```
+
+# 5.12 Indicadores socioecônomicos {.tabset}
+
+## IVS
+
+```{r, echo=FALSE, warning=FALSE, fig.width=12, fig.height=8}
+
+dados_IVS %>%
+  arrange(value) %>%
+  mutate(nome = factor(UF_SIGLA, levels = UF_SIGLA)) %>%
+  ggplot(aes(x = nome, y = value, fill = value)) +
+  geom_bar(stat = "identity") +
+  geom_text(aes(label = sprintf("%.2f", value)), hjust = -0.1, size = 3) +
+  coord_flip() +
+  scale_fill_gradient(low = "purple", high = "yellow") +
+  labs(
+    title = "Índice de Vulnerabilidade Social por Estado - 2022",
+    x = NULL,
+    y = "IVS"
+  ) +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5, face = "bold"),
+        legend.position = "none")
+
+```
+
+## IDMH
+
+```{r, echo=FALSE, warning=FALSE}
+
+dados_IDHM %>%
+  arrange(value) %>%
+  mutate(nome = factor(UF_SIGLA, levels = UF_SIGLA)) %>%
+  ggplot(aes(x = nome, y = value, fill = value)) +
+  geom_bar(stat = "identity") +
+  geom_text(aes(label = sprintf("%.2f", value)), hjust = -0.1, size = 3) +
+  coord_flip() +
+  scale_fill_gradient(low = "purple", high = "yellow") +
+  labs(
+    title = "IDMH por estado - 2021",
+    x = NULL,
+    y = "IDMH"
+  ) +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5, face = "bold"),
+        legend.position = "none")
+
+```
+
+## GINI
+
+```{r, echo=FALSE, warning=FALSE}
+
+dados_GINI %>%
+  arrange(value) %>%
+  mutate(nome = factor(UF_SIGLA, levels = UF_SIGLA)) %>%
+  ggplot(aes(x = nome, y = value, fill = value)) +
+  geom_bar(stat = "identity") +
+  geom_text(aes(label = sprintf("%.2f", value)), hjust = -0.1, size = 3) +
+  coord_flip() +
+  scale_fill_gradient(low = "purple", high = "yellow") +
+  labs(
+    title = "Indice GINI por estado - 2022",
+    x = NULL,
+    y = "Índice de GINI"
+  ) +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5, face = "bold"),
+        legend.position = "none")
+
+```
+
+## PIB Estadual
+
+```{r, echo=FALSE, warning=FALSE, fig.width=15}
+dados_PIB %>%
+  arrange(value)%>%
+  mutate(nome = factor(UF_SIGLA, levels = UF_SIGLA)) %>%
+  ggplot(aes(x = nome, y = value/1000000, fill = value/1000000)) +
+  geom_bar(stat = "identity") +
+  geom_text(aes(label = sprintf("R$ %.0f bi", value/1000000)), hjust = -0.1, size = 3) +
+  coord_flip() +
+  scale_y_continuous(breaks = c(0, 1000, 2000, 3000, 4000),
+                     labels = sprintf("%d bi", c(0, 1000, 2000, 3000, 4000)))+
+  scale_fill_gradient(low = "purple", high = "yellow") +
+  labs(
+    title = "PIB por estado - 2021",
+    x = "",
+    y = ""
+  ) +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5, face = "bold"),
+        legend.position = "none",
+        plot.margin = unit(c(0.01, 0.01, 0.01, 0.01), "cm"))
+```
+
+## PIB Percapita por UF
+
+```{r, echo=FALSE, warning=FALSE, fig.width=15}
+dados_PIB_EST_PC %>%
+  arrange(value)%>%
+  ggplot(aes(x = reorder(UF_SIGLA, value), y = value, fill = value)) +
+  geom_bar(stat = "identity") +
+  geom_text(aes(label = scales::label_number(big.mark = ".", prefix = "R$ ")(value)),
+            hjust = -0.1, size = 3) +
+  coord_flip() +
+  scale_y_continuous(breaks = c(0, 20000, 40000,60000, 80000, 100000),
+                     labels = sprintf("%d R$", c(0, 20000, 40000, 60000, 80000, 100000)))+
+  scale_fill_gradient(low = "purple", high = "yellow") +
+  labs(
+    title = "PIB per capita por UF - 2023",
+    x = "",
+    y = ""
+  ) +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5, face = "bold"),
+        legend.position = "none",
+        plot.margin = unit(c(0.01, 0.01, 0.01, 0.01), "cm"))
+```
+
+
+## PIB Per capita municipal
+
+```{r, echo=FALSE, warning=FALSE, fig.width=15}
+
+ggplot(
+  pop_cad_2023 %>%
+    arrange(desc(PIB_PER_CAPITA)) %>%
+    slice_head(n = 10),
+  aes(x = reorder(Municipio_UFS, PIB_PER_CAPITA/1000), y = PIB_PER_CAPITA/1000)
+) +
+  geom_col(fill = "#33CC33") +
+  geom_text(aes(label = paste0("R$ ", format(round(PIB_PER_CAPITA/1000), big.mark = "."), " mil")),
+            hjust = -0.1, size = 3) +
+  coord_flip() +
+  labs(
+    title = "PIB per capita (anual) por Município - 2021",
+    x = "",
+    y = ""
+  ) +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(hjust = 0.5, face = "bold"),
+    legend.position = "none",
+    plot.margin = unit(c(0.5, 0.5, 0.5, 0.5), "cm")
+  )
+```
+
+## Box-plot PIB Per capita municipal por UF
+
+```{r, echo=FALSE, warning=FALSE, fig.width=10, fig.height=15}
+ggplot(
+  pop_cad_2023,
+  aes(y = reorder(SIGLA_UF, PIB_PER_CAPITA, FUN = median), x = PIB_PER_CAPITA)
+) +
+  geom_boxplot(fill = "#3399FF", outlier.color = "red", outlier.shape = 1) +
+  scale_x_continuous(labels = scales::label_number(prefix = "R$ ", suffix = " mil")) +
+  labs(
+    title = "Distribuição do PIB per capita por Unidade Federativa (2021)",
+    x = "",
+    y = ""
+  ) +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(hjust = 0.5, face = "bold"),
+    axis.text.x = element_text(angle = 45, hjust = 1)
+  )
+
+```
+
+
+
+# 5.13 Relacionamento dos indicadores de temas de saúde e socioeconômicos {.tabset}
+
+```{r, echo=FALSE, warning=FALSE}
+
+## Tratamentos de dados
+
+dados_IVS <- dados_IVS %>%
+  rename("IVS" = "value")
+
+dados_IDHM <- dados_IDHM %>%
+  rename("IDHM" = "value")
+
+dados_GINI <- dados_GINI %>%
+  rename("GINI" = "value")
+
+dados_PIB <- dados_PIB %>%
+  rename("PIB" = "value")
+
+dados_PIB_EST_PC <- dados_PIB_EST_PC %>%
+  rename("PIB_EST_PC" = "value")
+
+Base_dados_socioeconomicos <- dados_GINI %>%
+  inner_join(dados_IVS,  by = c("UF_SIGLA", "tcode")) %>%
+  inner_join(dados_IDHM, by = c("UF_SIGLA", "tcode")) %>%
+  inner_join(dados_PIB,  by = c("UF_SIGLA", "tcode")) %>%
+  inner_join(dados_PIB_EST_PC,  by = c("UF_SIGLA", "tcode"))
+
+UF_ind_temas_saude <- ind_temas_saude %>%
+  group_by(UF_SIGLA) %>%
+  summarise(
+    Regiao = first(Regiao),
+    UF = first(UF),
+    Indicador_saude_bucal = sum(Saude_bucal, na.rm = TRUE) / sum(POP_CADASTRADA_IBGE, na.rm = TRUE) * 100000,
+    Indicador_Aliment_saudav = sum(Aliment_saudav, na.rm = TRUE) / sum(POP_CADASTRADA_IBGE, na.rm = TRUE) * 100000,
+    Indicador_saude_mental = sum(Saude_mental, na.rm = TRUE) / sum(POP_CADASTRADA_IBGE, na.rm = TRUE) * 100000,
+    Indicador_saude_reprodut = sum(Saude_reprodut, na.rm = TRUE) / sum(POP_CADASTRADA_IBGE, na.rm = TRUE) * 100000,
+    Indicador_auto_cuidad = sum(auto_cuid_doenc_cronic, na.rm = TRUE) / sum(POP_CADASTRADA_IBGE, na.rm = TRUE) * 100000
+  ) %>%
+  select(UF_SIGLA, UF,Regiao, Indicador_saude_bucal, Indicador_Aliment_saudav, 
+         Indicador_saude_mental, Indicador_saude_reprodut, Indicador_auto_cuidad)
+
+UF_ind_temas_saude <- UF_ind_temas_saude %>%
+  inner_join(Base_dados_socioeconomicos, UF_ind_temas_saude, by = "UF_SIGLA")
+
+correl_Indicador_saude_bucal_IDHM = round(cor(UF_ind_temas_saude$Indicador_saude_bucal, UF_ind_temas_saude$IDHM, method = "spearman"),2)
+correl_Indicador_saude_bucal_GINI = round(cor(UF_ind_temas_saude$Indicador_saude_bucal, UF_ind_temas_saude$GINI, method = "spearman"),2)
+correl_Indicador_saude_bucal_IVS = round(cor(UF_ind_temas_saude$Indicador_saude_bucal, UF_ind_temas_saude$IVS, method = "spearman"),2)
+correl_Indicador_saude_bucal_PIB = round(cor(UF_ind_temas_saude$Indicador_saude_bucal, UF_ind_temas_saude$PIB, method = "spearman"),2)
+correl_Indicador_saude_bucal_PIB_EST_PC = round(cor(UF_ind_temas_saude$Indicador_saude_bucal, UF_ind_temas_saude$PIB_EST_PC, method = "spearman"),2)
+
+correl_Indicador_Aliment_saudav_IDHM = round(cor(UF_ind_temas_saude$Indicador_Aliment_saudav, UF_ind_temas_saude$IDHM, method = "spearman"),2)
+correl_Indicador_Aliment_saudav_GINI = round(cor(UF_ind_temas_saude$Indicador_Aliment_saudav, UF_ind_temas_saude$GINI, method = "spearman"),2)
+correl_Indicador_Aliment_saudav_IVS = round(cor(UF_ind_temas_saude$Indicador_Aliment_saudav, UF_ind_temas_saude$IVS, method = "spearman"),2)
+correl_Indicador_Aliment_saudav_PIB = round(cor(UF_ind_temas_saude$Indicador_Aliment_saudav, UF_ind_temas_saude$PIB, method = "spearman"),2)
+
+correl_Indicador_Aliment_saudav_PIB_EST_PC = round(cor(UF_ind_temas_saude$Indicador_Aliment_saudav, UF_ind_temas_saude$PIB_EST_PC, method = "spearman"),2)
+
+correl_Indicador_saude_mental_IDHM = round(cor(UF_ind_temas_saude$Indicador_saude_mental, UF_ind_temas_saude$IDHM, method = "spearman"),2)
+correl_Indicador_saude_mental_GINI = round(cor(UF_ind_temas_saude$Indicador_saude_mental, UF_ind_temas_saude$GINI, method = "spearman"),2)
+correl_Indicador_saude_mental_IVS = round(cor(UF_ind_temas_saude$Indicador_saude_mental, UF_ind_temas_saude$IVS, method = "spearman"),2)
+correl_Indicador_saude_mental_PIB = round(cor(UF_ind_temas_saude$Indicador_saude_mental, UF_ind_temas_saude$PIB, method = "spearman"),2)
+correl_Indicador_saude_mental_PIB_EST_PC = round(cor(UF_ind_temas_saude$Indicador_saude_mental, UF_ind_temas_saude$PIB_EST_PC, method = "spearman"),2)
+
+correl_Indicador_saude_reprodut_IDHM = round(cor(UF_ind_temas_saude$Indicador_saude_reprodut, UF_ind_temas_saude$IDHM, method = "spearman"),2)
+correl_Indicador_saude_reprodut_GINI = round(cor(UF_ind_temas_saude$Indicador_saude_reprodut, UF_ind_temas_saude$GINI, method = "spearman"),2)
+correl_Indicador_saude_reprodut_IVS = round(cor(UF_ind_temas_saude$Indicador_saude_reprodut, UF_ind_temas_saude$IVS, method = "spearman"),2)
+correl_Indicador_saude_reprodut_PIB = round(cor(UF_ind_temas_saude$Indicador_saude_reprodut, UF_ind_temas_saude$PIB, method = "spearman"),2)
+
+correl_Indicador_saude_reprodut_PIB_EST_PC = round(cor(UF_ind_temas_saude$Indicador_saude_reprodut, UF_ind_temas_saude$PIB_EST_PC, method = "spearman"),2)
+
+correl_Indicador_auto_cuidad_IDHM = round(cor(UF_ind_temas_saude$Indicador_auto_cuidad, UF_ind_temas_saude$IDHM, method = "spearman"),2)
+correl_Indicador_auto_cuidad_GINI = round(cor(UF_ind_temas_saude$Indicador_auto_cuidad, UF_ind_temas_saude$GINI, method = "spearman"),2)
+correl_Indicador_auto_cuidad_IVS = round(cor(UF_ind_temas_saude$Indicador_auto_cuidad, UF_ind_temas_saude$IVS, method = "spearman"),2)
+correl_Indicador_auto_cuidad_PIB = round(cor(UF_ind_temas_saude$Indicador_auto_cuidad, UF_ind_temas_saude$PIB, method = "spearman"),2)
+
+correl_Indicador_auto_cuidad_PIB_EST_PC = round(cor(UF_ind_temas_saude$Indicador_auto_cuidad, UF_ind_temas_saude$PIB_EST_PC, method = "spearman"),2)
+
+```
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4, fig.width=12}
+
+vars_saude <- c("Indicador_saude_bucal", "Indicador_Aliment_saudav",
+                "Indicador_saude_mental", "Indicador_saude_reprodut",
+                "Indicador_auto_cuidad")
+
+vars_socioeco <- c("IDHM", "GINI", "IVS", "PIB", "PIB_EST_PC")
+
+correl_temas_saude <- expand_grid(Indicador = vars_saude, Socioeco = vars_socioeco) %>%
+  mutate(Correlacao = map2_dbl(Indicador, Socioeco, ~
+    round(cor(UF_ind_temas_saude[[.x]], UF_ind_temas_saude[[.y]], use = "complete.obs", method = "spearman"), 2)
+  ))
+
+ggplot(correl_temas_saude, aes(x = Socioeco, y = Indicador, fill = Correlacao)) +
+  geom_tile(color = "white") +
+  geom_text(aes(label = Correlacao), color = "black", size = 4) +
+  scale_fill_gradient2(
+    low = "blue",      # Cor para correlações negativas
+    mid = "white",     # Cor neutra para correlação zero
+    high = "red",      # Cor para correlações positivas
+    midpoint = 0,      # Centro da escala
+    limits = c(-1, 1), # Limite fixo para todas as correlações
+    name = "Correlação"
+  ) +
+  theme_minimal() +
+  labs(
+    title = "Correlação Indicadores de Saúde e Variavel econômicas",
+    x = "",
+    y = ""
+  ) +
+  theme(plot.title = element_text(hjust = 0.5),
+        legend.position = "none")
+
+```
+
+# 5.14 Relacionamento dos indicadores de temas de saude e socioeconômicos {.tabset}
+
+## Saúde Bucal X IDHM
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4, fig.width=12}
+
+ggplot(UF_ind_temas_saude, aes(x = Indicador_saude_bucal, y = IDHM)) +
+  geom_point(color = "darkblue", size = 3) +
+  geom_smooth(method = "lm", se = FALSE, color = "red", linetype = "dashed") +
+  annotate("text", x = Inf, y = -Inf, 
+           label = paste0("Correlação: ", round(correl_Indicador_saude_bucal_IDHM,2)),
+           hjust = 1.1, vjust = -1.1, size = 4, fontface = "italic", color = "black") +
+  labs(
+    title = "Relação entre Indicador qtd. ativ. coletiv. de Saúde Bucal e IDHM",
+    x = "Indicador qtd. ativ. coletiv. de Saúde Bucal (por 100 mil habitantes)",
+    y = "IDHM"
+  ) +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+## Saúde Bucal X Indice de GINI
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4, fig.width=12}
+
+ggplot(UF_ind_temas_saude, aes(x = Indicador_saude_bucal, y = GINI)) +
+  geom_point(color = "darkblue", size = 3) +
+  geom_smooth(method = "lm", se = FALSE, color = "red", linetype = "dashed") +
+  annotate("text", x = Inf, y = -Inf, 
+           label = paste0("Correlação: ", round(correl_Indicador_saude_bucal_GINI,2)),
+           hjust = 1.1, vjust = -1.1, size = 4, fontface = "italic", color = "black") +
+  labs(
+    title = "Relação entre Indicador qtd. ativ. coletiv. de Saude Bucal e GINI",
+    x = "Indicador de Saúde Bucal (por 100 mil habitantes)",
+    y = "GINI"
+  ) +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+## Saúde Bucal X PIB
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4, fig.width=12}
+
+ggplot(UF_ind_temas_saude, aes(x = Indicador_saude_bucal, y = PIB/1000000)) +
+  geom_point(color = "darkblue", size = 3) +
+  geom_smooth(method = "lm", se = FALSE, color = "red", linetype = "dashed") +
+  annotate("text", x = Inf, y = -Inf, 
+           label = paste0("Correlação: ", round(correl_Indicador_saude_bucal_PIB,2)),
+           hjust = 1.1, vjust = -1.1, size = 4, fontface = "italic", color = "black") +
+  labs(
+    title = "Relação entre Indicador qtd. ativ. coletiv. de Saude Bucal e PIB",
+    x = "Indicador de Saúde Bucal (por 100 mil habitantes)",
+    y = "PIB (em bilhões de reais)"
+  ) +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+## Saúde Bucal X PIB Per Capita
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4, fig.width=12}
+
+ggplot(UF_ind_temas_saude, aes(x = Indicador_saude_bucal, y = PIB_EST_PC)) +
+  geom_point(color = "darkblue", size = 3) +
+  geom_smooth(method = "lm", se = FALSE, color = "red", linetype = "dashed") +
+  annotate("text", x = Inf, y = -Inf, 
+           label = paste0("Correlação: ", round(correl_Indicador_saude_bucal_PIB_EST_PC,2)),
+           hjust = 1.1, vjust = -1.1, size = 4, fontface = "italic", color = "black") +
+  labs(
+    title = "Relação Indicador qtd. ativ. coletiv. de Saude Bucal e PIB estadual Per capita",
+    x = "Indicador de Saúde Bucal (por 100 mil habitantes)",
+    y = "PIB Per Capita"
+  ) +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+
+## Saúde Bucal X IVS
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4, fig.width=12}
+
+ggplot(UF_ind_temas_saude, aes(x = Indicador_saude_bucal, y = IVS)) +
+  geom_point(color = "darkblue", size = 3) +
+  geom_smooth(method = "lm", se = FALSE, color = "red", linetype = "dashed") +
+  annotate("text", x = Inf, y = -Inf, 
+           label = paste0("Correlação: ", round(correl_Indicador_saude_bucal_IVS,2)),
+           hjust = 1.1, vjust = -1.1, size = 4, fontface = "italic", color = "black") +
+  labs(
+    title = "Relação entre Indicador qtd. ativ. coletiv. de Saude Bucal e IVS",
+    x = "Indicador de Saúde Bucal (por 100 mil habitantes)",
+    y = "IVS"
+  ) +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+
+# 5.15 Indicadores de alimentação saudável e socioeconômicos {.tabset}
+
+## Alimentação saudável X IDHM
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4, fig.width=12}
+
+ggplot(UF_ind_temas_saude, aes(x = Indicador_Aliment_saudav, y = IDHM)) +
+  geom_point(color = "darkblue", size = 3) +
+  geom_smooth(method = "lm", se = FALSE, color = "red", linetype = "dashed") +
+  annotate("text", x = Inf, y = -Inf, 
+           label = paste0("Correlação: ", round(correl_Indicador_Aliment_saudav_IDHM,2)),
+           hjust = 1.1, vjust = -1.1, size = 4, fontface = "italic", color = "black") +
+  labs(
+    title = "Relação entre Indicador qtd. ativ. coletiv. de Alimentação saudável e IDHM",
+    x = "Indicador de Alimentação saudável (por 100 mil habitantes)",
+    y = "IDHM"
+  ) +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+## Alimentação saudável X Indice de GINI
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4, fig.width=12}
+
+ggplot(UF_ind_temas_saude, aes(x = Indicador_Aliment_saudav, y = GINI)) +
+  geom_point(color = "darkblue", size = 3) +
+  geom_smooth(method = "lm", se = FALSE, color = "red", linetype = "dashed") +
+  annotate("text", x = Inf, y = -Inf, 
+           label = paste0("Correlação: ", round(correl_Indicador_Aliment_saudav_GINI,2)),
+           hjust = 1.1, vjust = -1.1, size = 4, fontface = "italic", color = "black") +
+  labs(
+    title = "Relação entre Indicador qtd. ativ. coletiv. de Alimentação saudável e GINI",
+    x = "Indicador de Alimentação saudável (por 100 mil habitantes)",
+    y = "GINI"
+  ) +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+## Alimentação saudável X PIB
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4, fig.width=12}
+
+ggplot(UF_ind_temas_saude, aes(x = Indicador_Aliment_saudav, y = PIB/1000000)) +
+  geom_point(color = "darkblue", size = 3) +
+  geom_smooth(method = "lm", se = FALSE, color = "red", linetype = "dashed") +
+  annotate("text", x = Inf, y = -Inf, 
+           label = paste0("Correlação: ", round(correl_Indicador_Aliment_saudav_PIB,2)),
+           hjust = 1.1, vjust = -1.1, size = 4, fontface = "italic", color = "black") +
+  labs(
+    title = "Relação entre Indicador de qtd. ativ. coletiv. Alimentação saudável e PIB",
+    x = "Indicador de Alimentação Saudável (por 100 mil habitantes)",
+    y = "PIB (em bilhões de reais)"
+  ) +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+## Alimentação Saudável X PIB per Capita
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4, fig.width=12}
+
+ggplot(UF_ind_temas_saude, aes(x = Indicador_Aliment_saudav, y = PIB_EST_PC)) +
+  geom_point(color = "darkblue", size = 3) +
+  geom_smooth(method = "lm", se = FALSE, color = "red", linetype = "dashed") +
+  annotate("text", x = Inf, y = -Inf, 
+           label = paste0("Correlação: ", round(correl_Indicador_Aliment_saudav_PIB_EST_PC,2)),
+           hjust = 1.1, vjust = -1.1, size = 4, fontface = "italic", color = "black") +
+  labs(
+    title = "Relação entre Indicador qtd. ativ. coletiv. de Alimentação saudável e PIB per capita",
+    x = "Indicador de Alimentação Saudável (por 100 mil habitantes)",
+    y = "PIB Per Capita"
+  ) +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+## Alimentação saudável X IVS
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4, fig.width=12}
+
+ggplot(UF_ind_temas_saude, aes(x = Indicador_Aliment_saudav, y = IVS)) +
+  geom_point(color = "darkblue", size = 3) +
+  geom_smooth(method = "lm", se = FALSE, color = "red", linetype = "dashed") +
+  annotate("text", x = Inf, y = -Inf, 
+           label = paste0("Correlação: ", round(correl_Indicador_Aliment_saudav_IVS,2)),
+           hjust = 1.1, vjust = -1.1, size = 4, fontface = "italic", color = "black") +
+  labs(
+    title = "Relação entre Indicador qtd. ativ. coletiv. de Alimentação saudável e IVS",
+    x = "Indicador de Alimentação saudável (por 100 mil habitantes)",
+    y = "IVS"
+  ) +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+# 5.16 Indicadores de Saude Mental e socioeconômicos {.tabset}
+
+## Saude Mental X IDHM
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4, fig.width=12}
+
+ggplot(UF_ind_temas_saude, aes(x = Indicador_saude_mental, y = IDHM)) +
+  geom_point(color = "darkblue", size = 3) +
+  geom_smooth(method = "lm", se = FALSE, color = "red", linetype = "dashed") +
+  annotate("text", x = Inf, y = -Inf, 
+           label = paste0("Correlação: ", round(correl_Indicador_saude_mental_IDHM,2)),
+           hjust = 1.1, vjust = -1.1, size = 4, fontface = "italic", color = "black") +
+  labs(
+    title = "Relação entre Indicador qtd. ativ. coletiv. de Saúde mental e IDHM",
+    x = "Indicador de Saúde mental (por 100 mil habitantes)",
+    y = "IDHM"
+  ) +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+## Saúde mental X GINI
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4, fig.width=12}
+
+ggplot(UF_ind_temas_saude, aes(x = Indicador_saude_mental, y = GINI)) +
+  geom_point(color = "darkblue", size = 3) +
+  geom_smooth(method = "lm", se = FALSE, color = "red", linetype = "dashed") +
+  annotate("text", x = Inf, y = -Inf, 
+           label = paste0("Correlação: ", round(correl_Indicador_saude_mental_GINI,2)),
+           hjust = 1.1, vjust = -1.1, size = 4, fontface = "italic", color = "black") +
+  labs(
+    title = "Relação entre Indicador qtd. ativ. coletiv. de Saúde Mental e GINI",
+    x = "Indicador de Saúde mental (por 100 mil habitantes)",
+    y = "GINI"
+  ) +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+## Saúde Mental X PIB
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4, fig.width=12}
+
+ggplot(UF_ind_temas_saude, aes(x = Indicador_saude_mental, y = PIB/1000000)) +
+  geom_point(color = "darkblue", size = 3) +
+  geom_smooth(method = "lm", se = FALSE, color = "red", linetype = "dashed") +
+  annotate("text", x = Inf, y = -Inf, 
+           label = paste0("Correlação: ", round(correl_Indicador_saude_mental_PIB,2)),
+           hjust = 1.1, vjust = -1.1, size = 4, fontface = "italic", color = "black") +
+  labs(
+    title = "Relação entre Indicador qtd. ativ. coletiv. de Saúde mental e PIB",
+    x = "Indicador de saúde mental (por 100 mil habitantes)",
+    y = "PIB (em bilhões de reais)"
+  ) +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+## Saúde Mental X PIB Per Capita
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4, fig.width=12}
+
+ggplot(UF_ind_temas_saude, aes(x = Indicador_saude_mental, y = PIB_EST_PC)) +
+  geom_point(color = "darkblue", size = 3) +
+  geom_smooth(method = "lm", se = FALSE, color = "red", linetype = "dashed") +
+  annotate("text", x = Inf, y = -Inf, 
+           label = paste0("Correlação: ", round(correl_Indicador_saude_mental_PIB_EST_PC,2)),
+           hjust = 1.1, vjust = -1.1, size = 4, fontface = "italic", color = "black") +
+  labs(
+    title = "Relação entre Indicador qtd. ativ. coletiv. de Saúde mental e PIB per capita",
+    x = "Indicador de saúde mental (por 100 mil habitantes)",
+    y = "PIB Per Capita"
+  ) +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+
+## Saúde Mental X IVS
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4, fig.width=12}
+
+ggplot(UF_ind_temas_saude, aes(x = Indicador_saude_mental, y = IVS)) +
+  geom_point(color = "darkblue", size = 3) +
+  geom_smooth(method = "lm", se = FALSE, color = "red", linetype = "dashed") +
+  annotate("text", x = Inf, y = -Inf, 
+           label = paste0("Correlação: ", round(correl_Indicador_saude_mental_IVS,2)),
+           hjust = 1.1, vjust = -1.1, size = 4, fontface = "italic", color = "black") +
+  labs(
+    title = "Relação entre Indicador qtd. ativ. coletiv. de Saúde ental e IVS",
+    x = "Indicador de Saude Mental (por 100 mil habitantes)",
+    y = "IVS"
+  ) +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+# 5.17 Indicadores de Saude Reprodutiva e socioeconômicos {.tabset}
+
+## Saúde Reprodutiva X IDHM
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4, fig.width=12}
+
+ggplot(UF_ind_temas_saude, aes(x = Indicador_saude_reprodut, y = IDHM)) +
+  geom_point(color = "darkblue", size = 3) +
+  geom_smooth(method = "lm", se = FALSE, color = "red", linetype = "dashed") +
+  annotate("text", x = Inf, y = -Inf, 
+           label = paste0("Correlação: ", round(correl_Indicador_saude_reprodut_IDHM,2)),
+           hjust = 1.1, vjust = -1.1, size = 4, fontface = "italic", color = "black") +
+  labs(
+    title = "Relação entre Indicador qtd. ativ. coletiv. de Saúde reprodutiva e IDHM",
+    x = "Indicador de Saúde reprodutiva (por 100 mil habitantes)",
+    y = "IDHM"
+  ) +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+## Saúde reprodutiva X GINI
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4, fig.width=12}
+
+ggplot(UF_ind_temas_saude, aes(x = Indicador_saude_reprodut, y = GINI)) +
+  geom_point(color = "darkblue", size = 3) +
+  geom_smooth(method = "lm", se = FALSE, color = "red", linetype = "dashed") +
+  annotate("text", x = Inf, y = -Inf, 
+           label = paste0("Correlação: ", round(correl_Indicador_saude_reprodut_GINI,2)),
+           hjust = 1.1, vjust = -1.1, size = 4, fontface = "italic", color = "black") +
+  labs(
+    title = "Relação entre Indicador qtd. ativ. coletiv. de Saúde Reprodutiva e GINI",
+    x = "Indicador de Saúde reprodutiva (por 100 mil habitantes)",
+    y = "GINI"
+  ) +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+## Saúde reprodutiva X PIB
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4, fig.width=12}
+
+ggplot(UF_ind_temas_saude, aes(x = Indicador_saude_reprodut, y = PIB/1000000)) +
+  geom_point(color = "darkblue", size = 3) +
+  geom_smooth(method = "lm", se = FALSE, color = "red", linetype = "dashed") +
+  annotate("text", x = Inf, y = -Inf, 
+           label = paste0("Correlação: ", round(correl_Indicador_saude_reprodut_PIB,2)),
+           hjust = 1.1, vjust = -1.1, size = 4, fontface = "italic", color = "black") +
+  labs(
+    title = "Relação entre Indicador qtd. ativ. coletiv. de Saúde Reprodutiva e PIB",
+    x = "Indicador de saúde Reprodutiva (por 100 mil habitantes)",
+    y = "PIB (em bilhões de reais)"
+  ) +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+## Saúde reprodutiva X PIB Per Capita
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4, fig.width=12}
+
+ggplot(UF_ind_temas_saude, aes(x = Indicador_saude_reprodut, y = PIB_EST_PC)) +
+  geom_point(color = "darkblue", size = 3) +
+  geom_smooth(method = "lm", se = FALSE, color = "red", linetype = "dashed") +
+  annotate("text", x = Inf, y = -Inf, 
+           label = paste0("Correlação: ", round(correl_Indicador_saude_reprodut_PIB_EST_PC,2)),
+           hjust = 1.1, vjust = -1.1, size = 4, fontface = "italic", color = "black") +
+  labs(
+    title = "Relação entre Indicador qtd. ativ. coletiv. de Saúde Reprodutiva e PIB per Capita",
+    x = "Indicador de saúde Reprodutiva (por 100 mil habitantes)",
+    y = "PIB Per Capita"
+  ) +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+## Saúde Reprodutiva X IVS
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4, fig.width=12}
+
+ggplot(UF_ind_temas_saude, aes(x = Indicador_saude_reprodut, y = IVS)) +
+  geom_point(color = "darkblue", size = 3) +
+  geom_smooth(method = "lm", se = FALSE, color = "red", linetype = "dashed") +
+  annotate("text", x = Inf, y = -Inf, 
+           label = paste0("Correlação: ", round(correl_Indicador_saude_reprodut_IVS,2)),
+           hjust = 1.1, vjust = -1.1, size = 4, fontface = "italic", color = "black") +
+  labs(
+    title = "Relação entre Indicador qtd. ativ. coletiv. de Saúde Reprodutiva e IVS",
+    x = "Indicador de Saude Reprodutiva (por 100 mil habitantes)",
+    y = "IVS"
+  ) +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+# 5.18 Indicadores de auto cuidado e socioeconômicos {.tabset}
+
+## Auto cuidado X IDHM
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4, fig.width=12}
+
+ggplot(UF_ind_temas_saude, aes(x = Indicador_auto_cuidad, y = IDHM)) +
+  geom_point(color = "darkblue", size = 3) +
+  geom_smooth(method = "lm", se = FALSE, color = "red", linetype = "dashed") +
+  annotate("text", x = Inf, y = -Inf, 
+           label = paste0("Correlação: ", round(correl_Indicador_auto_cuidad_IDHM,2)),
+           hjust = 1.1, vjust = -1.1, size = 4, fontface = "italic", color = "black") +
+  labs(
+    title = "Relação entre Indicador qtd. ativ. coletiv. de auto cuidado e IDHM",
+    x = "Indicador de auto cuidado (por 100 mil habitantes)",
+    y = "IDHM"
+  ) +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+## Saúde reprodutiva X GINI
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4, fig.width=12}
+
+ggplot(UF_ind_temas_saude, aes(x = Indicador_auto_cuidad, y = GINI)) +
+  geom_point(color = "darkblue", size = 3) +
+  geom_smooth(method = "lm", se = FALSE, color = "red", linetype = "dashed") +
+  annotate("text", x = Inf, y = -Inf, 
+           label = paste0("Correlação: ", round(correl_Indicador_auto_cuidad_GINI,2)),
+           hjust = 1.1, vjust = -1.1, size = 4, fontface = "italic", color = "black") +
+  labs(
+    title = "Relação entre Indicador qtd. ativ. coletiv. de auto cuidado e GINI",
+    x = "Indicador de auto cuidado reprodutiva (por 100 mil habitantes)",
+    y = "GINI"
+  ) +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+## Saúde reprodutiva X PIB
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4, fig.width=12}
+
+ggplot(UF_ind_temas_saude, aes(x = Indicador_auto_cuidad, y = PIB/1000000)) +
+  geom_point(color = "darkblue", size = 3) +
+  geom_smooth(method = "lm", se = FALSE, color = "red", linetype = "dashed") +
+  annotate("text", x = Inf, y = -Inf, 
+           label = paste0("Correlação: ", round(correl_Indicador_auto_cuidad_PIB,2)),
+           hjust = 1.1, vjust = -1.1, size = 4, fontface = "italic", color = "black") +
+  labs(
+    title = "Relação entre Indicador qtd. ativ. coletiv. de auto cuidado e PIB",
+    x = "Indicador de auto cuidado (por 100 mil habitantes)",
+    y = "PIB (em bilhões de reais)"
+  ) +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+## Saúde reprodutiva X PIB Per Capita
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4, fig.width=12}
+
+ggplot(UF_ind_temas_saude, aes(x = Indicador_auto_cuidad, y = PIB_EST_PC)) +
+  geom_point(color = "darkblue", size = 3) +
+  geom_smooth(method = "lm", se = FALSE, color = "red", linetype = "dashed") +
+  annotate("text", x = Inf, y = -Inf, 
+           label = paste0("Correlação: ", round(correl_Indicador_auto_cuidad_PIB_EST_PC,2)),
+           hjust = 1.1, vjust = -1.1, size = 4, fontface = "italic", color = "black") +
+  labs(
+    title = "Relação entre Indicador qtd. ativ. coletiv. de auto cuidado e PIB",
+    x = "Indicador de auto cuidado (por 100 mil habitantes)",
+    y = "PIB Per Capita"
+  ) +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+## Saúde Reprodutiva X IVS
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4, fig.width=12}
+
+ggplot(UF_ind_temas_saude, aes(x = Indicador_auto_cuidad, y = IVS)) +
+  geom_point(color = "darkblue", size = 3) +
+  geom_smooth(method = "lm", se = FALSE, color = "red", linetype = "dashed") +
+  annotate("text", x = Inf, y = -Inf, 
+           label = paste0("Correlação: ", round(correl_Indicador_auto_cuidad_IVS,2)),
+           hjust = 1.1, vjust = -1.1, size = 4, fontface = "italic", color = "black") +
+  labs(
+    title = "Relação entre Indicador qtd. ativ. coletiv. de auto cuidado e IVS",
+    x = "Indicador de auto cuidado (por 100 mil habitantes)",
+    y = "IVS"
+  ) +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+# 5.19 Indicadores de Antropometria socioeconômicos
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+UF_ind_praticas_saude <- ind_praticas_saude %>%
+  group_by(UF_SIGLA) %>%
+  summarise(
+    Regiao = first(Regiao),
+    UF = first(UF),
+    Indicador_Antropometria = sum(Antropometria, na.rm = TRUE) / sum(POP_CADASTRADA_IBGE, na.rm = TRUE) * 100000,
+    Ind_Prat_ativ_corp = sum(Praticas_atividades_corporais, na.rm = TRUE) / sum(POP_CADASTRADA_IBGE, na.rm = TRUE) * 100000,
+    Ind_verif_vacina = sum(Verific_sit_vacina, na.rm = TRUE) / sum(POP_CADASTRADA_IBGE, na.rm = TRUE) * 100000) %>%
+  select(UF_SIGLA, UF, Regiao, Indicador_Antropometria, Ind_Prat_ativ_corp, Ind_verif_vacina)
+
+UF_ind_praticas_saude <- UF_ind_praticas_saude %>%
+  inner_join(Base_dados_socioeconomicos, UF_ind_praticas_saude, by = "UF_SIGLA")
+
+correl_Indicador_Antropometria_IDHM = round(cor(UF_ind_praticas_saude$Indicador_Antropometria, UF_ind_praticas_saude$IDHM, method = "spearman"),2)
+correl_Indicador_Antropometria_GINI = round(cor(UF_ind_praticas_saude$Indicador_Antropometria, UF_ind_praticas_saude$GINI, method = "spearman"),2)
+correl_Indicador_Antropometria_IVS = round(cor(UF_ind_praticas_saude$Indicador_Antropometria, UF_ind_praticas_saude$IVS, method = "spearman"),2)
+correl_Indicador_Antropometria_PIB = round(cor(UF_ind_praticas_saude$Indicador_Antropometria, UF_ind_praticas_saude$PIB, method = "spearman"),2)
+correl_Indicador_Antropometria_PIB_EST_PC = round(cor(UF_ind_praticas_saude$Indicador_Antropometria, UF_ind_praticas_saude$PIB_EST_PC, method = "spearman"),2)
+
+correl_Ind_Prat_ativ_corp_IDHM = round(cor(UF_ind_praticas_saude$Ind_Prat_ativ_corp, UF_ind_praticas_saude$IDHM, method = "spearman"),2)
+
+correl_Ind_Prat_ativ_corp_GINI = round(cor(UF_ind_praticas_saude$Ind_Prat_ativ_corp, UF_ind_praticas_saude$GINI, method = "spearman"),2)
+
+correl_Ind_Prat_ativ_corp_IVS = round(cor(UF_ind_praticas_saude$Ind_Prat_ativ_corp, UF_ind_praticas_saude$IVS, method = "spearman"),2)
+
+correl_Ind_Prat_ativ_corp_PIB = round(cor(UF_ind_praticas_saude$Ind_Prat_ativ_corp, UF_ind_praticas_saude$PIB, method = "spearman"),2)
+
+correl_Ind_Prat_ativ_corp_PIB_EST_PC = round(cor(UF_ind_praticas_saude$Ind_Prat_ativ_corp, UF_ind_praticas_saude$PIB_EST_PC, method = "spearman"),2)
+
+correl_Ind_verif_vacina_IDHM = round(cor(UF_ind_praticas_saude$Ind_verif_vacina, UF_ind_praticas_saude$IDHM, method = "spearman"),2)
+
+correl_Ind_verif_vacina_GINI = round(cor(UF_ind_praticas_saude$Ind_verif_vacina, UF_ind_praticas_saude$GINI, method = "spearman"),2)
+
+correl_Ind_verif_vacina_IVS = round(cor(UF_ind_praticas_saude$Ind_verif_vacina, UF_ind_praticas_saude$IVS, method = "spearman"),2)
+
+correl_Ind_verif_vacina_PIB = round(cor(UF_ind_praticas_saude$Ind_verif_vacina, UF_ind_praticas_saude$PIB, method = "spearman"),2)
+
+correl_Ind_verif_vacina_PIB_EST_PC = round(cor(UF_ind_praticas_saude$Ind_verif_vacina, UF_ind_praticas_saude$PIB_EST_PC, method = "spearman"),2)
+
+```
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4, fig.width=12}
+options(encoding = "UTF-8")
+
+vars_saude <- c("Indicador_Antropometria", "Ind_Prat_ativ_corp", "Ind_verif_vacina")
+
+vars_socioeco <- c("IDHM", "GINI", "IVS", "PIB", "PIB_EST_PC")
+
+correl_praticas_saude <- expand_grid(Indicador = vars_saude, Socioeco = vars_socioeco) %>%
+  mutate(Correlacao = map2_dbl(Indicador, Socioeco, ~
+    round(cor(UF_ind_praticas_saude[[.x]], UF_ind_praticas_saude[[.y]], method = "spearman", use = "complete.obs"), 2)
+  ))
+
+ggplot(correl_praticas_saude, aes(x = Socioeco, y = Indicador, fill = Correlacao)) +
+  geom_tile(color = "white") + 
+  geom_text(aes(label = Correlacao), color = "black", size = 4) +
+  scale_fill_gradient2(
+    low = "blue", mid = "white", high = "red",
+    midpoint = 0, limits = c(-1, 1),
+    name = "Correlação"
+  ) +
+  theme_minimal() +
+  labs(
+    title = "Correlacao: Indicadores de Saúde vs. Variaveis Socioeconômicas",
+    x = "", y = ""
+  ) +
+  theme(
+    plot.title = element_text(hjust = 0.5),
+    legend.position = "none"
+  )
+
+```
+
+# 5.20 Indicadores de pratica de atividade corporal socioeconômicos {.tabset}
+
+## Prática corporal X IDHM
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4, fig.width=12}
+
+ggplot(UF_ind_praticas_saude, aes(x = Ind_Prat_ativ_corp, y = IDHM)) +
+  geom_point(color = "darkblue", size = 3) +
+  geom_smooth(method = "lm", se = FALSE, color = "red", linetype = "dashed") +
+  annotate("text", x = Inf, y = -Inf, 
+           label = paste0("Correlação: ", round(correl_Ind_Prat_ativ_corp_IDHM,2)),
+           hjust = 1.1, vjust = -1.1, size = 4, fontface = "italic", color = "black") +
+  labs(
+    title = "Relação entre Indicador qtd. ativ. coletiv. de Prática corporal e IDHM",
+    x = "Indicador (por 100 mil habitantes)",
+    y = "IDHM"
+  ) +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+## Prática corporal X GINI
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4, fig.width=12}
+
+ggplot(UF_ind_praticas_saude, aes(x = Ind_Prat_ativ_corp, y = GINI)) +
+  geom_point(color = "darkblue", size = 3) +
+  geom_smooth(method = "lm", se = FALSE, color = "red", linetype = "dashed") +
+  annotate("text", x = Inf, y = -Inf, 
+           label = paste0("Correlação: ", round(correl_Ind_Prat_ativ_corp_GINI,2)),
+           hjust = 1.1, vjust = -1.1, size = 4, fontface = "italic", color = "black") +
+  labs(
+    title = "Relação entre Indicador qtd. ativ. coletiv. de Pratica corporal e GINI",
+    x = "Indicador",
+    y = "GINI"
+  ) +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+## Prática corporal X PIB
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4, fig.width=12}
+
+ggplot(UF_ind_praticas_saude, aes(x = Ind_Prat_ativ_corp, y = PIB/1000000)) +
+  geom_point(color = "darkblue", size = 3) +
+  geom_smooth(method = "lm", se = FALSE, color = "red", linetype = "dashed") +
+  annotate("text", x = Inf, y = -Inf, 
+           label = paste0("Correlação: ", round(correl_Ind_Prat_ativ_corp_PIB,2)),
+           hjust = 1.1, vjust = -1.1, size = 4, fontface = "italic", color = "black") +
+  labs(
+    title = "Relação entre qtd. ativ. coletiv. atividade corporal e PIB",
+    x = "Indicador",
+    y = "PIB (em bilhões de reais)"
+  ) +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+## Prática corporal X PIB per Capita
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4, fig.width=12}
+
+ggplot(UF_ind_praticas_saude, aes(x = Ind_Prat_ativ_corp, y = PIB_EST_PC)) +
+  geom_point(color = "darkblue", size = 3) +
+  geom_smooth(method = "lm", se = FALSE, color = "red", linetype = "dashed") +
+  annotate("text", x = Inf, y = -Inf, 
+           label = paste0("Correlação: ", round(correl_Ind_Prat_ativ_corp_PIB_EST_PC,2)),
+           hjust = 1.1, vjust = -1.1, size = 4, fontface = "italic", color = "black") +
+  labs(
+    title = "Relação entre Indicador de qtd. ativ. coletiv. e PIB Per Capita",
+    x = "Indicador",
+    y = "PIB per Capita"
+  ) +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+
+
+## Prática corporal X IVS
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4, fig.width=12}
+
+ggplot(UF_ind_praticas_saude, aes(x = Ind_Prat_ativ_corp, y = IVS)) +
+  geom_point(color = "darkblue", size = 3) +
+  geom_smooth(method = "lm", se = FALSE, color = "red", linetype = "dashed") +
+  annotate("text", x = Inf, y = -Inf, 
+           label = paste0("Correlação: ", round(correl_Ind_Prat_ativ_corp_IVS,2)),
+           hjust = 1.1, vjust = -1.1, size = 4, fontface = "italic", color = "black") +
+  labs(
+    title = "Relação entre Indicador de qtd. ativ. coletiv. de prática corporal e IVS",
+    x = "Indicador",
+    y = "IVS"
+  ) +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+# 5.21 Indicadores Verificação vacinal e socioeconômicos {.tabset}
+
+## Verificação vacinal X IDHM
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4, fig.width=12}
+
+ggplot(UF_ind_praticas_saude, aes(x = Ind_verif_vacina, y = IDHM)) +
+  geom_point(color = "darkblue", size = 3) +
+  geom_smooth(method = "lm", se = FALSE, color = "red", linetype = "dashed") +
+  annotate("text", x = Inf, y = -Inf, 
+           label = paste0("Correlação: ", round(correl_Ind_verif_vacina_IDHM,2)),
+           hjust = 1.1, vjust = -1.1, size = 4, fontface = "italic", color = "black") +
+  labs(
+    title = "Relação entre Indicador de qtd. ativ. coletiv. de Verificação vacinal e IDHM",
+    x = "Indicador",
+    y = "IDHM"
+  ) +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+## Verificação vacinal X GINI
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4, fig.width=12}
+
+ggplot(UF_ind_praticas_saude, aes(x = Ind_verif_vacina, y = GINI)) +
+  geom_point(color = "darkblue", size = 3) +
+  geom_smooth(method = "lm", se = FALSE, color = "red", linetype = "dashed") +
+  annotate("text", x = Inf, y = -Inf, 
+           label = paste0("Correlação: ", round(correl_Ind_verif_vacina_GINI,2)),
+           hjust = 1.1, vjust = -1.1, size = 4, fontface = "italic", color = "black") +
+  labs(
+    title = "Relação entre Indicador de qtd. ativ. coletiv. de Verificação vacinal e GINI",
+    x = "Indicador",
+    y = "GINI"
+  ) +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+## Verificação Vacinal X PIB
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4, fig.width=12}
+
+ggplot(UF_ind_praticas_saude, aes(x = Ind_verif_vacina, y = PIB/1000000)) +
+  geom_point(color = "darkblue", size = 3) +
+  geom_smooth(method = "lm", se = FALSE, color = "red", linetype = "dashed") +
+  annotate("text", x = Inf, y = -Inf, 
+           label = paste0("Correlação: ", round(correl_Ind_verif_vacina_PIB,2)),
+           hjust = 1.1, vjust = -1.1, size = 4, fontface = "italic", color = "black") +
+  labs(
+    title = "Relação entre Indicador de qtd. ativ. coletiv. Verificação vacinal e PIB",
+    x = "Indicador",
+    y = "PIB (em bilhões de reais)"
+  ) +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+## Verificação Vacinal X PIB per capita
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4, fig.width=12}
+
+ggplot(UF_ind_praticas_saude, aes(x = Ind_verif_vacina, y = PIB_EST_PC)) +
+  geom_point(color = "darkblue", size = 3) +
+  geom_smooth(method = "lm", se = FALSE, color = "red", linetype = "dashed") +
+  annotate("text", x = Inf, y = -Inf, 
+           label = paste0("Correlação: ", round(correl_Ind_verif_vacina_PIB_EST_PC,2)),
+           hjust = 1.1, vjust = -1.1, size = 4, fontface = "italic", color = "black") +
+  labs(
+    title = "Relação entre Indicador de qtd. ativ. coletiv. Verificação vacinal e PIB per capita",
+    x = "Indicador",
+    y = "PIB per capita"
+  ) +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+
+
+## Verificação Vacinal X IVS
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4, fig.width=12}
+
+ggplot(UF_ind_praticas_saude, aes(x = Ind_verif_vacina, y = IVS)) +
+  geom_point(color = "darkblue", size = 3) +
+  geom_smooth(method = "lm", se = FALSE, color = "red", linetype = "dashed") +
+  annotate("text", x = Inf, y = -Inf, 
+           label = paste0("Correlação: ", round(correl_Ind_verif_vacina_IVS,2)),
+           hjust = 1.1, vjust = -1.1, size = 4, fontface = "italic", color = "black") +
+  labs(
+    title = "Relação entre Indicador de qtd. ativ. coletiv. de Verificação vacinal e IVS",
+    x = "Indicador",
+    y = "IVS"
+  ) +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+# 5.22 Indicadores de Antropometria e socioeconômicos {.tabset}
+
+## Antropometria X IDHM
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4, fig.width=12}
+
+ggplot(UF_ind_praticas_saude, aes(x = Indicador_Antropometria, y = IDHM)) +
+  geom_point(color = "darkblue", size = 3) +
+  geom_smooth(method = "lm", se = FALSE, color = "red", linetype = "dashed") +
+  annotate("text", x = Inf, y = -Inf, 
+           label = paste0("Correlação: ", round(correl_Indicador_Antropometria_IDHM,2)),
+           hjust = 1.1, vjust = -1.1, size = 4, fontface = "italic", color = "black") +
+  labs(
+    title = "Relação entre Indicador de qtd. ativ. coletiv. de Antropometria e IDHM",
+    x = "Indicador",
+    y = "IDHM"
+  ) +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+## Antropometria X GINI
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4, fig.width=12}
+
+ggplot(UF_ind_praticas_saude, aes(x = Indicador_Antropometria, y = GINI)) +
+  geom_point(color = "darkblue", size = 3) +
+  geom_smooth(method = "lm", se = FALSE, color = "red", linetype = "dashed") +
+  annotate("text", x = Inf, y = -Inf, 
+           label = paste0("Correlação: ", round(correl_Indicador_Antropometria_GINI,2)),
+           hjust = 1.1, vjust = -1.1, size = 4, fontface = "italic", color = "black") +
+  labs(
+    title = "Relação entre Indicador de qtd. ativ. coletiv. de Antropometria e GINI",
+    x = "Indicador",
+    y = "GINI"
+  ) +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+## Antropometria X PIB
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4, fig.width=12}
+
+ggplot(UF_ind_praticas_saude, aes(x = Indicador_Antropometria, y = PIB/1000000)) +
+  geom_point(color = "darkblue", size = 3) +
+  geom_smooth(method = "lm", se = FALSE, color = "red", linetype = "dashed") +
+  annotate("text", x = Inf, y = -Inf, 
+           label = paste0("Correlação: ", round(correl_Indicador_Antropometria_PIB,2)),
+           hjust = 1.1, vjust = -1.1, size = 4, fontface = "italic", color = "black") +
+  labs(
+    title = "Relação entre Indicador de qtd. ativ. coletiv. Antropometria e PIB",
+    x = "Indicador",
+    y = "PIB (em bilhões de reais)"
+  ) +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+## Antropometria X PIB per capita
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4, fig.width=12}
+
+ggplot(UF_ind_praticas_saude, aes(x = Indicador_Antropometria, y = PIB_EST_PC)) +
+  geom_point(color = "darkblue", size = 3) +
+  geom_smooth(method = "lm", se = FALSE, color = "red", linetype = "dashed") +
+  annotate("text", x = Inf, y = -Inf, 
+           label = paste0("Correlação: ", round(correl_Indicador_Antropometria_PIB_EST_PC,2)),
+           hjust = 1.1, vjust = -1.1, size = 4, fontface = "italic", color = "black") +
+  labs(
+    title = "Relação entre Indicador de qtd. ativ. coletiv. Antropometria e PIB per capita",
+    x = "Indicador",
+    y = "PIB per capita"
+  ) +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+## Antropometria X IVS
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4, fig.width=12}
+
+ggplot(UF_ind_praticas_saude, aes(x = Indicador_Antropometria, y = IVS)) +
+  geom_point(color = "darkblue", size = 3) +
+  geom_smooth(method = "lm", se = FALSE, color = "red", linetype = "dashed") +
+  annotate("text", x = Inf, y = -Inf, 
+           label = paste0("Correlação: ", round(correl_Indicador_Antropometria_IVS,2)),
+           hjust = 1.1, vjust = -1.1, size = 4, fontface = "italic", color = "black") +
+  labs(
+    title = "Relação entre Indicador de qtd. ativ. coletiv. de Antropometria e IVS",
+    x = "Indicador",
+    y = "IVS"
+  ) +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+
+# 5.22 Indicadores de adesão de praticas de saúde nas escolas
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+
+UF_ind_adesao_escolas <- ind_adesão_escolas %>%
+  group_by(UF_SIGLA) %>%
+  summarise(
+    Regiao = first(Regiao),
+    UF = first(UF),
+    Indicador_Educacao = sum(Educação, na.rm = TRUE) / sum(QTD_escolas, na.rm = TRUE),
+    Indicador_Saude = sum(Saúde, na.rm = TRUE) / sum(QTD_escolas, na.rm = TRUE)
+  ) %>%
+  select(UF_SIGLA, Regiao, Indicador_Educacao, Indicador_Saude)
+
+UF_ind_adesao_escolas <- UF_ind_adesao_escolas %>%
+  inner_join(Base_dados_socioeconomicos, UF_ind_adesao_escolas, by = "UF_SIGLA")
+
+UF_ind_Bolsa_Familia <- Bolsa_familia_2023 %>%
+  group_by(UF_SIGLA) %>%
+  summarise(
+    Regiao = first(Regiao),
+    Indicador_Bolsa_Familia = mean(perc_cob_ben_acomp, na.rm = TRUE))%>%
+  select(UF_SIGLA, Regiao, Indicador_Bolsa_Familia)
+
+UF_ind_Bolsa_Familia <- UF_ind_Bolsa_Familia %>%
+  inner_join(Base_dados_socioeconomicos, UF_ind_Bolsa_Familia, by = "UF_SIGLA")
+
+correl_Indicador_Educacao_IDHM = round(cor(UF_ind_adesao_escolas$Indicador_Educacao, UF_ind_adesao_escolas$IDHM, method = "spearman"),2)
+correl_Indicador_Educacao_GINI = round(cor(UF_ind_adesao_escolas$Indicador_Educacao, UF_ind_adesao_escolas$GINI, method = "spearman"),2)
+correl_Indicador_Educacao_IVS = round(cor(UF_ind_adesao_escolas$Indicador_Educacao, UF_ind_adesao_escolas$IVS, method = "spearman"),2)
+correl_Indicador_Educacao_PIB = round(cor(UF_ind_adesao_escolas$Indicador_Educacao, UF_ind_adesao_escolas$PIB, method = "spearman"),2)
+correl_Indicador_Educacao_PIB_EST_PC = round(cor(UF_ind_adesao_escolas$Indicador_Educacao, UF_ind_adesao_escolas$PIB_EST_PC, method = "spearman"),2)
+
+correl_Indicador_Saude_IDHM = round(cor(UF_ind_adesao_escolas$Indicador_Saude, UF_ind_adesao_escolas$IDHM, method = "spearman"),2)
+correl_Indicador_Saude_GINI = round(cor(UF_ind_adesao_escolas$Indicador_Saude, UF_ind_adesao_escolas$GINI, method = "spearman"),2)
+correl_Indicador_Saude_IVS = round(cor(UF_ind_adesao_escolas$Indicador_Saude, UF_ind_adesao_escolas$IVS, method = "spearman"),2)
+correl_Indicador_Saude_PIB = round(cor(UF_ind_adesao_escolas$Indicador_Saude, UF_ind_adesao_escolas$PIB, method = "spearman"),2)
+correl_Indicador_Saude_PIB_EST_PC = round(cor(UF_ind_adesao_escolas$Indicador_Saude, UF_ind_adesao_escolas$PIB_EST_PC, method = "spearman"),2)
+
+correl_Indicador_Bolsa_Familia_IDHM = round(cor(UF_ind_Bolsa_Familia$Indicador_Bolsa_Familia, UF_ind_Bolsa_Familia$IDHM, method = "spearman"),2)
+correl_Indicador_Bolsa_Familia_GINI = round(cor(UF_ind_Bolsa_Familia$Indicador_Bolsa_Familia, UF_ind_Bolsa_Familia$GINI, method = "spearman"),2)
+correl_Indicador_Bolsa_Familia_IVS = round(cor(UF_ind_Bolsa_Familia$Indicador_Bolsa_Familia, UF_ind_Bolsa_Familia$IVS, method = "spearman"),2)
+correl_Indicador_Bolsa_Familia_PIB = round(cor(UF_ind_Bolsa_Familia$Indicador_Bolsa_Familia, UF_ind_Bolsa_Familia$PIB, method = "spearman"),2)
+
+correl_Indicador_Bolsa_Familia_PIB_EST_PC = round(cor(UF_ind_Bolsa_Familia$Indicador_Bolsa_Familia, UF_ind_Bolsa_Familia$PIB_EST_PC, method = "spearman"),2)
+
+```
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4, fig.width=6}
+
+vars_saude <- c("Indicador_Educacao", "Indicador_Saude")
+
+vars_socioeco <- c("IDHM", "GINI", "IVS", "PIB", "PIB_EST_PC")
+
+correl_adesao_escolas <- expand_grid(Indicador = vars_saude, Socioeco = vars_socioeco) %>%
+  mutate(Correlacao = map2_dbl(Indicador, Socioeco, ~
+    round(cor(UF_ind_adesao_escolas[[.x]], UF_ind_adesao_escolas[[.y]], method = "spearman", use = "complete.obs"), 2)
+  ))
+
+ggplot(correl_adesao_escolas, aes(x = Socioeco, y = Indicador, fill = Correlacao)) +
+  geom_tile(color = "white") + 
+  geom_text(aes(label = Correlacao), color = "black", size = 4) +
+  scale_fill_gradient2(
+    low = "blue", mid = "white", high = "red",
+    midpoint = 0, limits = c(-1, 1),
+    name = "Correlação"
+  ) +
+  theme_minimal() +
+  labs(
+    title = "Correlacão: Adesao escolas vs. Variaveis Socioeconômicas",
+    x = "", y = ""
+  ) +
+  theme(
+    plot.title = element_text(hjust = 0.5),
+    legend.position = "none"
+  )
+
+```
+
+
+# 5.25 Indicadores de educação de saude nas escolas e socioeconômicos {.tabset}
+
+## Saúde nas escolas X IDHM
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4, fig.width=12}
+
+ggplot(UF_ind_adesao_escolas, aes(x = Indicador_Educacao, y = IDHM)) +
+  geom_point(color = "darkblue", size = 3) +
+  geom_smooth(method = "lm", se = FALSE, color = "red", linetype = "dashed") +
+  annotate("text", x = Inf, y = -Inf, 
+           label = paste0("Correlação: ", round(correl_Indicador_Educacao_IDHM,2)),
+           hjust = 1.1, vjust = -1.1, size = 4, fontface = "italic", color = "black") +
+  labs(
+    title = "Relação entre Indicador adesão PSE e IDHM",
+    x = "Indicador",
+    y = "IDHM"
+  ) +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+## Saúde nas escolas X GINI
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4, fig.width=12}
+
+ggplot(UF_ind_adesao_escolas, aes(x = Indicador_Educacao, y = GINI)) +
+  geom_point(color = "darkblue", size = 3) +
+  geom_smooth(method = "lm", se = FALSE, color = "red", linetype = "dashed") +
+  annotate("text", x = Inf, y = -Inf, 
+           label = paste0("Correlação: ", round(correl_Indicador_Educacao_GINI,2)),
+           hjust = 1.1, vjust = -1.1, size = 4, fontface = "italic", color = "black") +
+  labs(
+    title = "Relação entre Indicador adesão PSE e GINI",
+    x = "Indicador",
+    y = "GINI"
+  ) +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+## Saúde nas escolas X PIB
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4, fig.width=12}
+
+ggplot(UF_ind_adesao_escolas, aes(x = Indicador_Educacao, y = PIB/1000000)) +
+  geom_point(color = "darkblue", size = 3) +
+  geom_smooth(method = "lm", se = FALSE, color = "red", linetype = "dashed") +
+  annotate("text", x = Inf, y = -Inf, 
+           label = paste0("Correlação: ", round(correl_Indicador_Educacao_PIB,2)),
+           hjust = 1.1, vjust = -1.1, size = 4, fontface = "italic", color = "black") +
+  labs(
+    title = "Relação entre Indicador adesão PSE e GINI",
+    x = "Indicador",
+    y = "PIB (em bilhões de reais)"
+  ) +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+## Saúde nas escolas X PIB per Capita
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4, fig.width=12}
+
+ggplot(UF_ind_adesao_escolas, aes(x = Indicador_Educacao, y = PIB_EST_PC)) +
+  geom_point(color = "darkblue", size = 3) +
+  geom_smooth(method = "lm", se = FALSE, color = "red", linetype = "dashed") +
+  annotate("text", x = Inf, y = -Inf, 
+           label = paste0("Correlação: ", round(correl_Indicador_Educacao_PIB_EST_PC,2)),
+           hjust = 1.1, vjust = -1.1, size = 4, fontface = "italic", color = "black") +
+  labs(
+    title = "Relação entre Indicador adesão PSE e PIB per Capita",
+    x = "Indicador",
+    y = "PIB per Capita"
+  ) +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+
+
+## Saúde nas escolas X IVS
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4, fig.width=12}
+
+ggplot(UF_ind_adesao_escolas, aes(x = Indicador_Educacao, y = IVS)) +
+  geom_point(color = "darkblue", size = 3) +
+  geom_smooth(method = "lm", se = FALSE, color = "red", linetype = "dashed") +
+  annotate("text", x = Inf, y = -Inf, 
+           label = paste0("Correlação: ", round(correl_Indicador_Educacao_IVS,2)),
+           hjust = 1.1, vjust = -1.1, size = 4, fontface = "italic", color = "black") +
+  labs(
+    title = "Relação entre Indicador adesão PSE e PIB per capita",
+    x = "Indicador",
+    y = "IVS"
+  ) +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+
+# 5.23 Indicadores de Saúde nas escolas socioeconômicos {.tabset}
+
+## Práticas Saúde nas escolas X IDHM
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4, fig.width=12}
+
+ggplot(UF_ind_adesao_escolas, aes(x = Indicador_Saude, y = IDHM)) +
+  geom_point(color = "darkblue", size = 3) +
+  geom_smooth(method = "lm", se = FALSE, color = "red", linetype = "dashed") +
+  annotate("text", x = Inf, y = -Inf, 
+           label = paste0("Correlação: ", round(correl_Indicador_Saude_IDHM,2)),
+           hjust = 1.1, vjust = -1.1, size = 4, fontface = "italic", color = "black") +
+  labs(
+    title = "Relação entre Indicador qtd. ativ coletivas de saúde nas escolas e IDHM",
+    x = "Indicador",
+    y = "IDHM"
+  ) +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+## Práticas Saúde nas escolas X GINI
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4, fig.width=12}
+
+ggplot(UF_ind_adesao_escolas, aes(x = Indicador_Saude, y = GINI)) +
+  geom_point(color = "darkblue", size = 3) +
+  geom_smooth(method = "lm", se = FALSE, color = "red", linetype = "dashed") +
+  annotate("text", x = Inf, y = -Inf, 
+           label = paste0("Correlação: ", round(correl_Indicador_Saude_GINI,2)),
+           hjust = 1.1, vjust = -1.1, size = 4, fontface = "italic", color = "black") +
+  labs(
+    title = "Relação entre Indicador qtd. ativ coletivas de saúde nas escolas e GINI",
+    x = "Indicador",
+    y = "GINI"
+  ) +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+## Práticas Saúde nas escolas X PIB
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4, fig.width=12}
+
+ggplot(UF_ind_adesao_escolas, aes(x = Indicador_Saude, y = PIB/1000000)) +
+  geom_point(color = "darkblue", size = 3) +
+  geom_smooth(method = "lm", se = FALSE, color = "red", linetype = "dashed") +
+  annotate("text", x = Inf, y = -Inf, 
+           label = paste0("Correlação: ", round(correl_Indicador_Saude_PIB,2)),
+           hjust = 1.1, vjust = -1.1, size = 4, fontface = "italic", color = "black") +
+  labs(
+    title = "Relação entre Indicador qtd. ativ coletivas de saúde nas escolas e PIB",
+    x = "Indicador",
+    y = "PIB (em bilhões de reais)"
+  ) +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+## Práticas Saúde nas escolas X PIB per capita
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4, fig.width=12}
+
+ggplot(UF_ind_adesao_escolas, aes(x = Indicador_Saude, y = PIB_EST_PC)) +
+  geom_point(color = "darkblue", size = 3) +
+  geom_smooth(method = "lm", se = FALSE, color = "red", linetype = "dashed") +
+  annotate("text", x = Inf, y = -Inf, 
+           label = paste0("Correlação: ", round(correl_Indicador_Saude_PIB_EST_PC,2)),
+           hjust = 1.1, vjust = -1.1, size = 4, fontface = "italic", color = "black") +
+  labs(
+    title = "Relação entre Indicador qtd. ativ coletivas de saúde nas escolas e PIB per capita",
+    x = "Indicador",
+    y = "PIB per capita"
+  ) +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+
+## Práticas Saúde nas escolas X IVS
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4, fig.width=12}
+
+ggplot(UF_ind_adesao_escolas, aes(x = Indicador_Saude, y = IVS)) +
+  geom_point(color = "darkblue", size = 3) +
+  geom_smooth(method = "lm", se = FALSE, color = "red", linetype = "dashed") +
+  annotate("text", x = Inf, y = -Inf, 
+           label = paste0("Correlação: ", round(correl_Indicador_Saude_IVS,2)),
+           hjust = 1.1, vjust = -1.1, size = 4, fontface = "italic", color = "black") +
+  labs(
+    title = "Relação entre Indicador qtd. ativ coletivas de saúde nas escolas e GINI",
+    x = "Indicador",
+    y = "IVS"
+  ) +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+# 5.24 Relação percentual de cobertura acompanhados BF socioeconômicos
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.height=2, fig.width=6}
+
+vars_saude <- c("Indicador_Bolsa_Familia")
+
+vars_socioeco <- c("IDHM", "GINI", "IVS", "PIB", "PIB_EST_PC")
+
+correl_Bolsa_Familia <- expand_grid(Indicador = vars_saude, Socioeco = vars_socioeco) %>%
+  mutate(Correlacao = map2_dbl(Indicador, Socioeco, ~
+    round(cor(UF_ind_Bolsa_Familia[[.x]], UF_ind_Bolsa_Familia[[.y]], method = "spearman", use = "complete.obs"), 2)
+  ))
+
+ggplot(correl_Bolsa_Familia, aes(x = Socioeco, y = Indicador, fill = Correlacao)) +
+  geom_tile(color = "white") + 
+  geom_text(aes(label = Correlacao), color = "black", size = 4) +
+  scale_fill_gradient2(
+    low = "blue", mid = "white", high = "red",
+    midpoint = 0, limits = c(-1, 1),
+    name = "Correlação"
+  ) +
+  theme_minimal() +
+  labs(
+    title = "Correlacao: Percentual cobertura BF vs. Variaveis Socioeconômicas",
+    x = "", y = ""
+  ) +
+  theme(
+    plot.title = element_text(hjust = 0.5),
+    legend.position = "none"
+  )
+
+```
+
+
+# 5.26 Relação Indicadores cobertura BFA e socioeconômicos {.tabset}
+
+## Cobertura BFA X IDHM
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4, fig.width=12}
+
+ggplot(UF_ind_Bolsa_Familia, aes(x = Indicador_Bolsa_Familia, y = IDHM)) +
+  geom_point(color = "darkblue", size = 3) +
+  geom_smooth(method = "lm", se = FALSE, color = "red", linetype = "dashed") +
+  annotate("text", x = Inf, y = -Inf, 
+           label = paste0("Correlação: ", round(correl_Indicador_Bolsa_Familia_IDHM,2)),
+           hjust = 1.1, vjust = -1.1, size = 4, fontface = "italic", color = "black") +
+  labs(
+    title = "Relação entre Indicador cobertura BF nas escolas e IDHM",
+    x = "Indicador",
+    y = "IDHM"
+  ) +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+## Cobertura BFA X GINI
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4, fig.width=12}
+
+ggplot(UF_ind_Bolsa_Familia, aes(x = Indicador_Bolsa_Familia, y = GINI)) +
+  geom_point(color = "darkblue", size = 3) +
+  geom_smooth(method = "lm", se = FALSE, color = "red", linetype = "dashed") +
+  annotate("text", x = Inf, y = -Inf, 
+           label = paste0("Correlação: ", round(correl_Indicador_Bolsa_Familia_GINI,2)),
+           hjust = 1.1, vjust = -1.1, size = 4, fontface = "italic", color = "black") +
+  labs(
+    title = "Relação entre Indicador cobertura BF nas escolas e GINI",
+    x = "Indicador",
+    y = "GINI"
+  ) +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+## Cobertura BFA X PIB
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4, fig.width=12}
+
+ggplot(UF_ind_Bolsa_Familia, aes(x = Indicador_Bolsa_Familia, y = PIB/1000000)) +
+  geom_point(color = "darkblue", size = 3) +
+  geom_smooth(method = "lm", se = FALSE, color = "red", linetype = "dashed") +
+  annotate("text", x = Inf, y = -Inf, 
+           label = paste0("Correlação: ", round(correl_Indicador_Bolsa_Familia_PIB,2)),
+           hjust = 1.1, vjust = -1.1, size = 4, fontface = "italic", color = "black") +
+  labs(
+    title = "Relação entre Indicador cobertura BF nas escolas e PIB",
+    x = "Indicador",
+    y = "PIB (em bilhões de reais)"
+  ) +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+## Cobertura BFA X PIB per Capita
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4, fig.width=12}
+
+ggplot(UF_ind_Bolsa_Familia, aes(x = Indicador_Bolsa_Familia, y = PIB_EST_PC)) +
+  geom_point(color = "darkblue", size = 3) +
+  geom_smooth(method = "lm", se = FALSE, color = "red", linetype = "dashed") +
+  annotate("text", x = Inf, y = -Inf, 
+           label = paste0("Correlação: ", round(correl_Indicador_Bolsa_Familia_PIB_EST_PC,2)),
+           hjust = 1.1, vjust = -1.1, size = 4, fontface = "italic", color = "black") +
+  labs(
+    title = "Relação entre Indicador cobertura BF nas escolas e PIB Per Capita",
+    x = "Indicador",
+    y = "PIB per Capita"
+  ) +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+
+## Cobertura BFA X IVS
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, fig.height=4, fig.width=12}
+
+ggplot(UF_ind_Bolsa_Familia, aes(x = Indicador_Bolsa_Familia, y = IVS)) +
+  geom_point(color = "darkblue", size = 3) +
+  geom_smooth(method = "lm", se = FALSE, color = "red", linetype = "dashed") +
+  annotate("text", x = Inf, y = -Inf, 
+           label = paste0("Correlação: ", round(correl_Indicador_Bolsa_Familia_IVS,2)),
+           hjust = 1.1, vjust = -1.1, size = 4, fontface = "italic", color = "black") +
+  labs(
+    title = "Relação entre Indicador cobertura BF nas escolas e IVS",
+    x = "Indicador",
+    y = "IVS"
+  ) +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5))
+
+```
+
+# 6 Referências Bibliográficas
+
+- VIEIRA, Sonia. Bioestatística: Tópicos avançados. 4ª edição. Rio de Janeiro: Elsevier, 2018.
+
+- Heidmann, Ivonete T.S. Buss, Almeida, Maria Cecília Puntel de. Boehs, Astrid Eggert. HEIDMANN, Ivonete T.S.; BUSS, Almeida, Maria Cecília Puntel de; BOEHS, Astrid Eggert; WOSNY, Antonio de Miranda; MONTICELLI, Marisa. Promoção à saúde: Trajetória histórica de suas concepções. Texto Contexto Enferm, v. 15, n. 2, p. 352-358, 2006.
+
+- BUSS, Paulo Marchiori; HARTZ, Zulmira Maria de Araújo; PINTO, Luiz Felipe; ROCHA, Cristianne Maria Famer. Promoção da saúde e qualidade de vida: uma perspectiva histórica ao longo dos últimos 40 anos (1980-2020). Ciência & Saúde Coletiva, v. 25, n. 12, p. 4723-4735, 2020.
+
+- Pinheiro ES, Alcântara CS, Sobral TC, Silva SS, Lima JS, Carvalho DO, et al. Promoção à saúde
+em serviço de diabetes e hipertensão. REVISA. 2023; 12(Esp1): 671-80.
