@@ -1,15 +1,16 @@
 ---
-title: "Grupo II - Avaliação de indicadores de práticas de saúde em relação a variáveis socioeconômicas"
+title: "Grupo II - Avaliação de indicadores de práticas de saúde em relação a variáveis
+  socioeconômicas"
 output:
+  pdf_document:
+    toc: true
   html_document:
-    toc: yes
+    toc: true
     toc_float:
-      collapsed: yes
-      smooth_scroll: no
+      collapsed: true
+      smooth_scroll: false
       css: estilo.css
-
-encoding: UTF-8
-    
+encoding: "UTF-8"
 ---
 
 <style>
@@ -143,7 +144,7 @@ Por fim, sobre a variável de percentual de cobertura de beneficiários acompanh
 ```{r, warning=FALSE, message=FALSE, echo = FALSE}
 library(openxlsx)
 library(kableExtra)
-library(xlsx)
+library(readxl)
 library(tidyverse)
 library(ggplot2)
 library(sf)
@@ -157,22 +158,40 @@ library(ipeadatar)
 
 options(scipen = 99999)
 
-setwd('C:/Users/helio/OneDrive/Documents/UNB/LAB_EST_I')
 ```
 
 ```{r, echo=FALSE}
-pop_cad_2023 <- read.xlsx("C:/Users/helio/OneDrive/Documents/UNB/LAB_EST_I/DadosAtividadesePop/grupos 1 e 2 População Cadastrada/pop_cadastrada_2023_v2.xlsx", sheetName = 'BRASIL')
+pop_cad_2023<- read_excel("DadosAtividadesePop/grupos 1 e 2 População Cadastrada/pop_cadastrada_2023.xls")
 
-pse_2023 <- read.xlsx('C:/Users/helio/OneDrive/Documents/UNB/LAB_EST_I/DadosAtividadesePop/Saúde na Escola/Produção do PSE/producao_pse_2023.xlsx', sheetName = 'Dados', startRow = 10, endRow = 5370)
 
-prom_saude_2023 <- read.xlsx('C:/Users/helio/OneDrive/Documents/UNB/LAB_EST_I/DadosAtividadesePop/grupo 2 Práticas para a Saúde/praticas2023.xlsx', sheetName = 'Dados', startRow = 12, endRow = 5372)
+pse_2023 <- read_excel("DadosAtividadesePop/Saúde na Escola/Produção do PSE/producao_pse_2023.xlsx", 
+                                skip = 8, n_max = 5360)
 
-temas_saude_2023 <- read.xlsx('C:/Users/helio/OneDrive/Documents/UNB/LAB_EST_I/DadosAtividadesePop/grupo 1 Temas para a Saúde/temas2023.xlsx', sheetName = 'Dados', startRow = 12, endRow = 5442)
 
-escolas_adesao_2023_2024 <- read_excel("C:/Users/helio/OneDrive/Documents/UNB/LAB_EST_I/DadosAtividadesePop/Saúde na Escola/Escolas com Adesão - Denominador/escolas_adesao_2023_2024.xlsx", sheet = "ADESÕES", skip = 5)
+prom_saude_2023 <- read_excel("DadosAtividadesePop/grupo 2 Práticas para a Saúde/praticas2023.xlsx", 
+                           skip = 10, n_max = 5240)
 
-Bolsa_familia_2023 <- read.xlsx('C:/Users/helio/OneDrive/Documents/UNB/LAB_EST_I/DadosAtividadesePop/Bolsa Família/Bfa_Consolidado-geral-22023-porMunicipio.xlsx', sheetName = 'Bfa_Consolidado-geral-22023-por', startRow = 8, endRow = 5578)
+temas_saude_2023 <- read_excel("DadosAtividadesePop/grupo 1 Temas para a Saúde/temas2023.xlsx", 
+                        skip = 10)
 
+escolas_adesao_2023_2024 <- read_excel("DadosAtividadesePop/Saúde na Escola/Escolas com Adesão - Denominador/escolas_adesao_2023_2024.xlsx", 
+                                       skip = 4)
+
+library(rvest)
+library(dplyr)
+library(janitor)
+
+caminho <- "DadosAtividadesePop/Bolsa Família/Bfa_Consolidado-geral-22023-porMunicipio.xls"
+
+dados_brutos <- read_html(caminho, encoding = "ISO-8859-1") |>
+  html_element("table") |>            # primeira (e única) tabela da página
+  html_table(fill = TRUE)
+
+bolsa_familia_2023 <- dados_brutos |>
+  clean_names() |>                     # nomes em snake_case
+  mutate(across(where(is.character),
+                ~ readr::parse_number(.x, locale = readr::locale(decimal_mark = ",")),
+                .names = "num_{.col}"))
 ```
 
 ```{r, echo=FALSE}
@@ -251,7 +270,7 @@ IVS <- ipeadata("AVS_IVS", language = "br") %>% filter(date == max(date))
 GINI <- ipeadata("PNADCA_GINIUF", language = "br") %>% filter(date == max(date))
 IDHM <- ipeadata("IDHM", language = "br") %>% filter(date == '2021-01-01')
 PIB <- ipeadata("PIBPMCE", language = "br") %>% filter(date == max(date))
-PIB_EST_PC <- read_excel('C:/Users/helio/OneDrive/Documents/UNB/LAB_EST_I/UF_Renda_Per_Capita.xlsx')
+PIB_EST_PC <- read_excel('UF_Renda_Per_Capita.xlsx')
 ```
 
 ```{r, echo=FALSE}
@@ -297,32 +316,17 @@ dados_PIB_EST_PC  <- tratamento(PIB_EST_PC)
 ```{r, echo=FALSE}
 ### Tratamento de dados ###
 
-prom_saude_2023 <- prom_saude_2023 %>%
-  rename('IBGE' = 'Ibge',
-        'Praticas_atividades_corporais' = 'Práticas.corporais...atividade',
-        'Verific_sit_vacina' = 'Verificação.da.situação.vacina')
+#prom_saude_2023 <- prom_saude_2023 %>%rename('IBGE' = 'Ibge','Praticas_atividades_corporais' = 'Práticas.corporais...atividade','Verific_sit_vacina' = 'Verificação.da.situação.vacina')
 
-pop_cad_2023 <- pop_cad_2023%>%
-  rename('POP_CADASTRADA_IBGE' = 'Qt..Total.de.cadastros...limitado.pela.população.IBGE.',
-         'Regiao' = 'Região')
+#pop_cad_2023 <- pop_cad_2023%>%rename('POP_CADASTRADA_IBGE' ='Qt..Total.de.cadastros...limitado.pela.população.IBGE.','Regiao' = 'Região')
 
-pop_cad_2023 <- pop_cad_2023 %>%
-  filter(POP_CADASTRADA_IBGE > 0)
+#pop_cad_2023 <- pop_cad_2023 %>%filter(POP_CADASTRADA_IBGE > 0)
 
-pse_2023 <- pse_2023 %>%
-  rename('IBGE' = 'Ibge')
+#pse_2023 <- pse_2023 %>%rename('IBGE' = 'Ibge')
 
-temas_saude_2023 <- temas_saude_2023 %>%
-  rename('IBGE' = 'Ibge',
-         'auto_cuid_doenc_cronic' = 'Autocuidado.de.pessoas.com.doe',
-         'Saude_reprodut' = 'Saúde.sexual.e.reprodutiva',
-         'Saude_bucal' = 'Saúde.bucal',
-         'Aliment_saudav' = 'Alimentação.saudável',
-         'Saude_mental' = 'Saúde.mental')
+#temas_saude_2023 <- temas_saude_2023 %>%rename('IBGE' = 'Ibge','auto_cuid_doenc_cronic' = 'Autocuidado.de.pessoas.com.doe','Saude_reprodut' = 'Saúde.sexual.e.reprodutiva','Saude_bucal' = 'Saúde.bucal','Aliment_saudav' = 'Alimentação.saudável','Saude_mental' = 'Saúde.mental')
 
-Bolsa_familia_2023 <- Bolsa_familia_2023 %>%
-  rename('perc_cob_ben_acomp' = 'Perc..cobertura.de.beneficiários.acompanhados....',
-         'UF_SIGLA' = 'Estado')
+#Bolsa_familia_2023 <- Bolsa_familia_2023 %>%rename('perc_cob_ben_acomp' ='Perc..cobertura.de.beneficiários.acompanhados....','UF_SIGLA' = 'Estado')
 
 ```
 
@@ -330,13 +334,13 @@ Bolsa_familia_2023 <- Bolsa_familia_2023 %>%
 
 # Tratamento dados - Temas de saúde 
 
-temas_saude_2023 <- temas_saude_2023%>%
-  rename('UF_SIGLA' = 'Uf')%>%
-  mutate(Municipio_UF = str_c(Municipio, UF_SIGLA, sep = " - "))%>%
-  select('IBGE', 'UF_SIGLA', 'Municipio_UF', 'Saude_bucal', 'Aliment_saudav',
-         'Saude_reprodut', 'Saude_mental', 'auto_cuid_doenc_cronic')
+#temas_saude_2023 <- temas_saude_2023%>%
+#  rename('UF_SIGLA' = 'Uf')%>%
+#  mutate(Municipio_UF = str_c(Municipio, UF_SIGLA, sep = " - "))%>%
+#  select('IBGE', 'UF_SIGLA', 'Municipio_UF', 'Saude_bucal', #'Aliment_saudav',
+#         'Saude_reprodut', 'Saude_mental', 'auto_cuid_doenc_cronic')
 
-base_temas_saude_2023 <- merge(pop_cad_2023, temas_saude_2023, by = "IBGE")
+#base_temas_saude_2023 <- merge(pop_cad_2023, temas_saude_2023, by = "IBGE")
 ```
 
 ```{r, echo=FALSE}

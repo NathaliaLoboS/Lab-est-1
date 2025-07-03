@@ -288,3 +288,159 @@ for (reg in unique(dados$regiao)) {
 }
 
 
+
+
+
+
+
+
+
+
+# Junta todos os bancos do IPEA
+pacman::p_load(tidyverse, ipeadatar)
+dados_ivs <- ipeadata("AVS_IVS", language = "br") %>%
+  filter(date == max(date)) %>%
+  select(tcode, IVS = value)
+dados_idhm <- ipeadata("IDHM", language = "br") %>%
+  filter(year(date) == 2021) %>% # Usando o ano de 2021 para garantir consistência
+  select(tcode, IDHM = value)
+dados_gini <- ipeadata("PNADCA_GINIUF", language = "br") %>%
+  filter(date == max(date)) %>%
+  select(tcode, GINI = value)
+dados_pib <- ipeadata("PIBPCE", language = 'br') %>%
+  filter(date == max(date)) %>%
+  select(tcode, PIB_per_capita = value)
+base_geografica <- tibble(
+  tcode = c(11, 12, 13, 14, 15, 16, 17, 21, 22, 23, 24, 25, 26, 27,
+            28, 29, 31, 32, 33, 35, 41, 42, 43, 50, 51, 52, 53),
+  estado = c("RO", "AC", "AM", "RR", "PA", "AP", "TO",
+             "MA", "PI", "CE", "RN", "PB", "PE", "AL",
+             "SE", "BA", "MG", "ES", "RJ", "SP",
+             "PR", "SC", "RS", "MS", "MT", "GO", "DF"),
+  regiao = c(rep("Norte", 7), rep("Nordeste", 9), rep("Sudeste", 4),
+             rep("Sul", 3), rep("Centro-Oeste", 4))
+)
+dados_consolidados <- base_geografica %>%
+  left_join(dados_ivs, by = "tcode") %>%
+  left_join(dados_idhm, by = "tcode") %>%
+  left_join(dados_gini, by = "tcode") %>%
+  left_join(dados_pib, by = "tcode")
+print(dados_consolidados)
+# write_csv(dados_consolidados, "indicadores_sociodemograficos_consolidados_uf.csv")
+
+
+
+
+
+
+
+
+
+# Junta todos o bancos
+
+# Por UF
+library(dplyr)
+library(purrr)
+library(stringr)
+lista_dados_estaduais <- list(
+  dados_gini = dados_GINI,
+  dados_idhm_uf = dados_IDHM,
+  dados_ivs = dados_IVS,
+  dados_pib_uf = dados_PIB,
+  pib_per_capita_uf = PIB_PER_CAPITA,
+  renda_per_capita_uf = UF_Renda_Per_Capita
+)
+padronizar_chave_uf <- function(dataframe, nome_original) {
+  nomes_possiveis <- c("tcode", "Cod UF", "UF", "Estado")
+  nome_chave <- intersect(nomes_possiveis, names(dataframe))
+  
+  if (length(nome_chave) > 0) {
+    nome_chave <- nome_chave[1] # Usa a primeira correspondência
+    cat("Ok: No dataframe '", nome_original, "', a chave '", nome_chave, "' foi encontrada.\n", sep = "")
+    
+    # Renomeia para 'codigo_uf' e converte para texto
+    dataframe %>%
+      rename(codigo_uf = all_of(nome_chave)) %>%
+      mutate(codigo_uf = as.character(codigo_uf))
+    
+  } else {
+    cat("Aviso: Nenhuma chave estadual encontrada para '", nome_original, "'. O dataframe não será modificado.\n", sep = "")
+    dataframe 
+  }
+}
+cat("\n--- Padronizando as chaves de junção ---\n")
+lista_estaduais_padronizada <- imap(lista_dados_estaduais, padronizar_chave_uf)
+lista_pronta_para_juncao <- keep(lista_estaduais_padronizada, ~ "codigo_uf" %in% names(.))
+cat("\n--- Unificando", length(lista_pronta_para_juncao), "tabelas estaduais... ---\n")
+tabela_estadual_consolidada <- reduce(
+  lista_pronta_para_juncao,
+  full_join,
+  by = "codigo_uf"
+)
+cat("\n\n--- TABELA ESTADUAL CONSOLIDADA COM SUCESSO! ---\n")
+cat("O resultado foi salvo no objeto 'tabela_estadual_consolidada'.\n\n")
+glimpse(tabela_estadual_consolidada)
+
+tabela_estadual_consolidada <- tabela_estadual_consolidada %>%
+  select(-UF_SIGLA.y,-UF_SIGLA.x.x,-UF_SIGLA.y.y,-estado,Renda_Per_capita_mensal)
+
+tabela_estadual_consolidada <- tabela_estadual_consolidada %>%
+  select(Codigo_uf = codigo_uf,UF_SIGLA = UF_SIGLA.x, Região, UF,
+         ,GINI,IDHM,IVS,PIB,Renda_Per_capita_mensal = value
+  )
+
+library(writexl)
+write_xlsx(tabela_estadual_consolidada, "tabela_estadual_consolidada.csv")
+
+
+# Por município
+library(dplyr)
+library(purrr)
+library(stringr)
+lista_dados_municipais <- list(
+  idhm_municipal = IDHM,
+  pib_per_capita_municipal = PIB_PER_CAPITA_Municipal
+)
+padronizar_chave_municipal <- function(dataframe, nome_original) {
+  nomes_possiveis <- c("Cod. Município", "IBGE", "cod_mun", "Cod.IBGE")
+  nome_chave <- intersect(nomes_possiveis, names(dataframe))
+  if (length(nome_chave) > 0) {
+    nome_chave <- nome_chave[1]
+    cat("Ok: No dataframe '", nome_original, "', a chave '", nome_chave, "' foi encontrada.\n", sep = "")
+    dataframe %>%
+      rename(codigo_municipio_ibge = all_of(nome_chave)) %>%
+      mutate(codigo_municipio_ibge = as.character(codigo_municipio_ibge))
+  } else {
+    cat("Aviso: Nenhuma chave municipal encontrada para '", nome_original, "'. O dataframe não será modificado.\n", sep = "")
+    dataframe
+  }
+}
+
+cat("\n--- Padronizando as chaves de junção ---\n")
+lista_municipais_padronizada <- imap(lista_dados_municipais, padronizar_chave_municipal)
+
+lista_pronta_para_juncao_mun <- keep(lista_municipais_padronizada, ~ "codigo_municipio_ibge" %in% names(.))
+
+cat("\n--- Unificando", length(lista_pronta_para_juncao_mun), "tabelas municipais... ---\n")
+
+tabela_municipal_consolidada <- reduce(
+  lista_pronta_para_juncao_mun,
+  full_join,
+  by = "codigo_municipio_ibge"
+)
+
+cat("\n\n--- TABELA MUNICIPAL CONSOLIDADA COM SUCESSO! ---\n")
+cat("O resultado foi salvo no objeto 'tabela_municipal_consolidada'.\n\n")
+
+glimpse(tabela_municipal_consolidada)
+
+
+tabela_municipal_consolidada  <- tabela_municipal_consolidada  %>%
+  select(-Codigo_Ajustado,-codigo_municipio_ibge,-Município.y,-IBGE_Completo)
+
+tabela_municipal_consolidada  <- tabela_municipal_consolidada  %>%
+  select(UF_SIGLA = UF_SIGLA.x, Codigo_Original, Município = Município.x,IDHM = IDHM_2010, PIB_per_capita
+  )
+
+library(writexl)
+write_xlsx(tabela_municipal_consolidada, "tabela_municipal_consolidada.csv")
