@@ -390,7 +390,7 @@ tabela_estadual_consolidada <- tabela_estadual_consolidada %>%
   )
 
 library(writexl)
-write_xlsx(tabela_estadual_consolidada, "tabela_estadual_consolidada.csv")
+write_xlsx(tabela_estadual_consolidada, "tabela_estadual_consolidada.xlsx")
 
 
 # Por município
@@ -443,4 +443,4 @@ tabela_municipal_consolidada  <- tabela_municipal_consolidada  %>%
   )
 
 library(writexl)
-write_xlsx(tabela_municipal_consolidada, "tabela_municipal_consolidada.csv")
+write_xlsx(tabela_municipal_consolidada, "tabela_municipal_consolidada.xlsx")
