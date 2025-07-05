@@ -13,6 +13,21 @@ write_csv(IVS, "DadosAtividadesePop/Socioeconomico/IVS.csv")
 # ultimo ano foi 2022
 # Brasil, regiao e estado
 
+IVS <- ipeadata("AVS_IVS", language = "br") %>%
+  filter(date == max(date)) %>%
+  filter(uname %in% c("Brasil", "Regiões")) %>%
+  mutate(
+    regiao = case_when(
+      tcode == 1 ~ "NORTE",
+      tcode == 2 ~ "NORDESTE",
+      tcode == 3 ~ "SUDESTE",
+      tcode == 4 ~ "SUL",
+      tcode == 5 ~ "CENTRO-OESTE"
+    )
+  ) %>% 
+  select(nivel = uname, IVS = value, regiao)
+
+
 ## Indice de desenvolvimento municipal - IDHM ----
 search_series("IDHM")  # series relacionadas
 print(search_series("IDHM"), n=38)
@@ -23,6 +38,10 @@ write_csv(IDHM, "DadosAtividadesePop/Socioeconomico/IDHM.csv")
 # ultimo ano foi 2021
 # Brasil e estados
 
+IDHM <- ipeadata("IDHM", language = "br") %>% 
+  filter(year(date) == 2021) %>%
+  filter(uname %in% c("Brasil")) %>% 
+  select(nivel = uname, IDHM = value)
 
 ## Produto interno bruto - PIB per capita ----
 search_series("PIB") # series relacionadas
@@ -50,8 +69,39 @@ GINI <- ipeadata("PNADCA_GINIUF", language = 'br') %>%
 write_csv(GINI, "DadosAtividadesePop/Socioeconomico/GINI.csv")
 
 
+GINI <- ipeadata("PNADCA_GINIUF", language = 'br') %>% 
+  filter(date == max(date)) %>%
+  filter(uname %in% c("Brasil", "Regiões")) %>%
+  mutate(
+    regiao = case_when(
+      tcode == 1 ~ "NORTE",
+      tcode == 2 ~ "NORDESTE",
+      tcode == 3 ~ "SUDESTE",
+      tcode == 4 ~ "SUL",
+      tcode == 5 ~ "CENTRO-OESTE"
+    )
+  ) %>% 
+  select(nivel = uname, GINI = value, regiao)
+
+############################
+PIB_per_capita <- data.frame(
+  nivel = "Brasil",
+  PIB_per_capita = 47802.02,
+  stringsAsFactors = FALSE
+)
 
 
+ind_socio_reg <- IVS %>%
+  mutate(nivel = as.character(nivel)) %>%
+  left_join(GINI %>% mutate(nivel = as.character(nivel)), by = c("nivel", "regiao")) %>%
+  left_join(IDHM %>% mutate(nivel = as.character(nivel)), by = "nivel") %>%
+  left_join(PIB_per_capita %>% mutate(nivel = as.character(nivel)), by = "nivel")
+
+ind_socio_reg <- ind_socio_reg %>%
+  mutate(nivel = case_when(
+    nivel == "Regiões" ~ "regiao",
+    nivel == "Brasil" ~ "Brasil"
+  ))
 
 
 
