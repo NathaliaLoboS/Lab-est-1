@@ -444,3 +444,89 @@ tabela_municipal_consolidada  <- tabela_municipal_consolidada  %>%
 
 library(writexl)
 write_xlsx(tabela_municipal_consolidada, "tabela_municipal_consolidada.xlsx")
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Sem rep
+library(dplyr)
+library(purrr)
+library(stringr)
+library(writexl)
+
+lista_dados_municipais <- list(
+  idhm_municipal = IDHM,
+  pib_per_capita_municipal = PIB_PER_CAPITA_Municipal
+)
+
+# Função para encontrar e renomear a coluna de código do município
+padronizar_chave_municipal <- function(dataframe, nome_original) {
+  nomes_possiveis <- c("Cod. Município", "IBGE", "cod_mun", "Cod.IBGE")
+  nome_chave <- intersect(nomes_possiveis, names(dataframe))
+  
+  if (length(nome_chave) > 0) {
+    nome_chave <- nome_chave[1]
+    cat("Ok: No dataframe '", nome_original, "', a chave '", nome_chave, "' foi encontrada.\n", sep = "")
+    dataframe %>%
+      rename(codigo_municipio_ibge = all_of(nome_chave)) %>%
+      mutate(codigo_municipio_ibge = as.character(codigo_municipio_ibge))
+  } else {
+    cat("Aviso: Nenhuma chave municipal encontrada para '", nome_original, "'. O dataframe não será modificado.\n", sep = "")
+    dataframe
+  }
+}
+
+cat("\n--- Padronizando as chaves de junção ---\n")
+lista_municipais_padronizada <- imap(lista_dados_municipais, padronizar_chave_municipal)
+
+lista_com_chave_padronizada <- keep(lista_municipais_padronizada, ~ "codigo_municipio_ibge" %in% names(.))
+
+cat("\n--- Removendo municípios duplicados de cada tabela ---\n")
+lista_pronta_para_juncao_mun <- map(lista_com_chave_padronizada, function(df) {
+  df %>% 
+    distinct(codigo_municipio_ibge, .keep_all = TRUE)
+})
+cat("Duplicatas removidas com sucesso.\n")
+
+
+cat("\n--- Unificando", length(lista_pronta_para_juncao_mun), "tabelas municipais... ---\n")
+
+# Une todas as tabelas da lista em uma única tabela consolidada
+tabela_municipal_consolidada <- reduce(
+  lista_pronta_para_juncao_mun,
+  full_join,
+  by = "codigo_municipio_ibge"
+)
+
+cat("\n\n--- TABELA MUNICIPAL CONSOLIDADA COM SUCESSO! ---\n")
+
+tabela_final <- tabela_municipal_consolidada %>%
+  mutate(
+    Município = coalesce(Município.x, Município.y),
+    UF_SIGLA = coalesce(UF_SIGLA.x, UF_SIGLA.y)
+  ) %>%
+  select(
+    codigo_municipio_ibge,
+    Município,
+    UF_SIGLA,
+    IDHM = matches("IDHM"),
+    PIB_per_capita = matches("PIB_per_capita")
+  )
+
+cat("\n\n--- TABELA FINAL PRONTA! ---\n")
+cat("O resultado foi salvo no objeto 'tabela_final'.\n\n")
+
+glimpse(tabela_final)
+
+write_xlsx(tabela_final, "tabela_municipal_consolidada_final.xlsx")
+
+cat("\nArquivo 'tabela_municipal_consolidada_final.xlsx' salvo com sucesso no seu diretório.\n")
